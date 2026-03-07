@@ -4,18 +4,8 @@ public class data : MonoBehaviour
 {
 
     public static int money;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+    public static bool baseUP;
     public static int baseUPlvl;
-
-=======
-    public static bool baseUP;
     public static int critUPlvl;
     public static int critValue;
->>>>>>> Stashed changes
-=======
-    public static bool baseUP;
-    public static int critUPlvl;
-    public static int critValue;
->>>>>>> Stashed changes
 }

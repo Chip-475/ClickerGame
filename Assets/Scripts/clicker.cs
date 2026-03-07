@@ -12,9 +12,9 @@ public class clicker : MonoBehaviour
     public void crit()
     {
         int r = UnityEngine.Random.Range(0, 100);
-        if (r < data.critUPlvl)
+        if (r <= data.critUPlvl)
         {
-            data.money += clickStr * data.critValue;
+            data.money += clickStr * 5;
         }
     }
 }

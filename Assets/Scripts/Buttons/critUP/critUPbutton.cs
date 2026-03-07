@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class critUPbutton1 : MonoBehaviour
+public class critUPbutton : MonoBehaviour
 {
 
     public critUPmanager manager;

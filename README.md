@@ -1,2 +1,2 @@
 # ClickerGame
-Group project
+Group project for HackaTime

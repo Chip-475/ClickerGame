@@ -542,6 +542,7 @@ GameObject:
   - component: {fileID: 529531080}
   - component: {fileID: 529531079}
   - component: {fileID: 529531078}
+  - component: {fileID: 529531081}
   m_Layer: 5
   m_Name: baseUP
   m_TagString: Untagged
@@ -614,7 +615,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 529531079}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 529531081}
+        m_TargetAssemblyTypeName: baseUPbutton, Assembly-CSharp
+        m_MethodName: baseUPclick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &529531079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -653,6 +666,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 529531076}
   m_CullTransparentMesh: 1
+--- !u!114 &529531081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529531076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7197bfd48518f8c48b9429669f1a0e94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::baseUPbutton
+  manager: {fileID: 2052279438}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -888,6 +914,7 @@ GameObject:
   - component: {fileID: 964061116}
   - component: {fileID: 964061115}
   - component: {fileID: 964061114}
+  - component: {fileID: 964061117}
   m_Layer: 5
   m_Name: clicker
   m_TagString: Untagged
@@ -958,7 +985,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 964061115}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 964061117}
+        m_TargetAssemblyTypeName: clicker, Assembly-CSharp
+        m_MethodName: click
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &964061115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -997,6 +1036,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 964061112}
   m_CullTransparentMesh: 1
+--- !u!114 &964061117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964061112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6965ddb77307579418fad4a0b66d5ab9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::clicker
 --- !u!1 &1012298062
 GameObject:
   m_ObjectHideFlags: 0
@@ -1769,7 +1820,7 @@ RectTransform:
   - {fileID: 529531077}
   - {fileID: 1163949935}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -94.553, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -2000,6 +2051,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2052279437}
+  - component: {fileID: 2052279439}
+  - component: {fileID: 2052279440}
+  - component: {fileID: 2052279438}
   m_Layer: 0
   m_Name: gameManager
   m_TagString: Untagged
@@ -2022,6 +2076,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2052279438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052279436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcbaf891a9def6b40a2597f0209048d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::baseUPmanager
+  baseUPbutton: {fileID: 529531076}
+  baseUPfake: {fileID: 1163949934}
+  header: {fileID: 1494079374}
+  cost: {fileID: 1206358834}
+  effect: {fileID: 1211389819}
+  fake_header: {fileID: 624388202}
+  fake_cost: {fileID: 1012298064}
+  fake_effect: {fileID: 282304844}
+  baseUPcost: 25
+  baseUPeffect: 0
+--- !u!114 &2052279439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052279436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f756bdce6443e8742906b71284d23653, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::data
+--- !u!114 &2052279440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052279436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6262f4f13da4ce14daba91fdf257519b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UImanager
+  moneyCounter: {fileID: 1970607058}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

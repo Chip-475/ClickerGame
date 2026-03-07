@@ -8,7 +8,6 @@ public class critUPmanager : MonoBehaviour
     public GameObject critUPfake;
     [Header("Texts")]
     public TMP_Text header;
-    public TMP_Text header2;
     public TMP_Text cost;
     public TMP_Text effect;
     [Header("Fake Texts")]
@@ -18,17 +17,17 @@ public class critUPmanager : MonoBehaviour
     [Header("Stats")]
     public int critUPcost;
     public int critUPeffect;
-  //public int critUPlvl;
+
     void Update()
     {
         if (data.money < critUPcost) { critUPbutton.SetActive(false); critUPfake.SetActive(true); }
         else { critUPbutton.SetActive(true); critUPfake.SetActive(false); }
 
-        header.text = "Crit levelUP<br>" + "Lv. " + data.critUPlvl;
+        header.text = "Crit Level UP<br>" + "Lv. " + data.critUPlvl;
         cost.text = "Cost: " + critUPcost;
-        effect.text = "" + critUPeffect;
-        fake_header.text = "Base Click UP<br>" + "Lv. " + data.critUPlvl;
+        effect.text = "" + critUPeffect + "%";
+        fake_header.text = "Crit Click UP<br>" + "Lv. " + data.critUPlvl;
         fake_cost.text = "Cost: " + critUPcost;
-        fake_effect.text = "" + critUPeffect;
+        fake_effect.text = "" + critUPeffect + "%";
     }
 }

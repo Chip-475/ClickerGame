@@ -16,7 +16,6 @@ public class baseUPmanager : MonoBehaviour
     public TMP_Text fake_cost;
     public TMP_Text fake_effect;
     [Header("Stats")]
-    public int baseUPlvl;
     public int baseUPcost;
     public int baseUPeffect;
 
@@ -25,14 +24,12 @@ public class baseUPmanager : MonoBehaviour
         if (data.money < baseUPcost) { baseUPbutton.SetActive(false); baseUPfake.SetActive(true); }
         else { baseUPbutton.SetActive(true); baseUPfake.SetActive(false); }
 
-        if (baseUPlvl > 0) data.baseUP = true;
-        else data.baseUP = false;
-
-        header.text = "Base Click UP<br>" + "Lv. " + baseUPlvl;
+        header.text = "Base Click UP<br>" + "Lv. " + data.baseUPlvl;
         cost.text = "Cost: " + baseUPcost;
         effect.text = "" + baseUPeffect;
-        fake_header.text = "Base Click UP<br>" + "Lv. " + baseUPlvl;
+        fake_header.text = "Base Click UP<br>" + "Lv. " + data.baseUPlvl;
         fake_cost.text = "Cost: " + baseUPcost;
         fake_effect.text = "" + baseUPeffect;
     }
+
 }

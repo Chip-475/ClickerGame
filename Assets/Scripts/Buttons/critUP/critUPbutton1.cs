@@ -5,7 +5,7 @@ public class critUPbutton1 : MonoBehaviour
 
     public critUPmanager manager;
 
-    public void baseUPclick()
+    public void critUPclick()
     {
         switch (data.critUPlvl)
         {

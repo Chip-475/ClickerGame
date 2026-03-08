@@ -1,17 +1,17 @@
 using System.Collections;
 using UnityEngine;
 
-public class critValue : MonoBehaviour
+public class critPerk : MonoBehaviour
 {
     public float duration = 30f;
     public bool isActive=false;
     IEnumerator critValuePerk()
     {
         isActive = true;
-        data.critValue = 3;
+        data.critDmg *= 2;
         yield return new WaitForSeconds(duration);
         isActive = false;
-        data.critValue = 2;
+        data.critDmg /= 2;
     }
     void onClick()
     {

@@ -2,7 +2,6 @@ using UnityEngine;
 using TMPro;
 public class clicker : MonoBehaviour
 {
-
     public static int clickStr = 1;
     public GameObject testo;
     public Transform bottone;

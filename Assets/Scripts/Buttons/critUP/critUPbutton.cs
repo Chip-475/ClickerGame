@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class critUPbutton : MonoBehaviour
 {
-
     public critUPmanager manager;
 
     public void critUPclick()

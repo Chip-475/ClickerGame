@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using TMPro;
 public class buttonManager : MonoBehaviour
 {
     [Header("Objects")] // piccola 
@@ -14,8 +14,8 @@ public class buttonManager : MonoBehaviour
     public TMP_Text fake_cost;
     public TMP_Text fake_effect;
     [Header("Stats")]  // statistiche 
-    public int baseCost;
-    public int baseEffect;
+    public int baseUPcost;
+    public int baseUPeffect;
     
     void Update()
     {
@@ -28,10 +28,5 @@ public class buttonManager : MonoBehaviour
         fake_header.text = "Base Click UP<br>" + "Lv. " + data.baseUPlvl;
         fake_cost.text = "Cost: " + baseUPcost;
         fake_effect.text = "" + baseUPeffect;
-    }
-
-    public void effect()
-    {
-        baseEffect = 0;
     }
 }

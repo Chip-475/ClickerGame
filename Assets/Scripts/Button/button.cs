@@ -6,7 +6,7 @@ public class button : MonoBehaviour
     public buttonManager manager;
 
     public void baseUPclick() // ogni stats in base al livello corrente
-    {
+    {   
         switch (data.baseUPlvl)
         {
             case 0:

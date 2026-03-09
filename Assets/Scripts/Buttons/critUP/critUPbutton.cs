@@ -11,22 +11,27 @@ public class critUPbutton : MonoBehaviour
             case 0:
                 data.critUPlvl++;
                 manager.critUPcost = 100;
+                data.money-=100;
                 return;
             case 1:
                 data.critUPlvl++;
                 manager.critUPcost = 250;
+                data.money-=250;
                 return;
             case 2:
                 data.critUPlvl++;
                 manager.critUPcost = 1000;
+                data.money -= 1000;
                 return;
             case 3:
                 data.critUPlvl++;
                 manager.critUPcost = 5000;
+                data.money-=5000;
                 return;
             case 4:
                 data.critUPlvl++;
                 manager.critUPcost = 10000;
+                data.money -= 10000;
                 return;
         }
     }

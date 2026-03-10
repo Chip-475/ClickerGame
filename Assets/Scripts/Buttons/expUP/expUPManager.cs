@@ -24,12 +24,12 @@ public class expUPManager : MonoBehaviour
         if (data.money < expUPcost) { expUPbutton.SetActive(false); expUPfake.SetActive(true); }
         else { expUPbutton.SetActive(true); expUPfake.SetActive(false); }
 
-        header.text = "Exp UP<br>" + "Lv. " + data.explvl;
+        header.text = "Click Exp UP<br>" + "Lv. " + data.explvl;
         cost.text = "Cost: " + expUPcost;
-        effect.text = "" + expUPeffect;
-        fake_header.text = "Exp UP<br>" + "Lv. " + data.explvl;
+        effect.text = "+" + expUPeffect;
+        fake_header.text = "Click Exp UP<br>" + "Lv. " + data.explvl;
         fake_cost.text = "Cost: " + expUPcost;
-        fake_effect.text = "" + expUPeffect;
+        fake_effect.text = "+" + expUPeffect;
     }
 
 }

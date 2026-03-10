@@ -13,9 +13,20 @@ public class cannonManager : MonoBehaviour
     IEnumerator cannon1()
     {
         shooting1 = true;
-        int r = Random.Range(0, 5);
+        int r = Random.Range(0, 3);
         Debug.Log(r);
-        cannon_1.transform.rotation = Quaternion.FromToRotation(cannon_1.transform.position, points[r].position);
+        while(cannon_1.transform.rotation != Quaternion.FromToRotation(cannon_1.transform.position, points[r].position))
+        {
+            cannon_1.transform.rotation =
+            Quaternion.RotateTowards
+            (
+                cannon_1.transform.rotation,
+                Quaternion.FromToRotation(cannon_1.transform.position, points[r].position),
+                step1
+            );
+            yield return new WaitForFixedUpdate();
+            step1 = Time.deltaTime * 15;
+        }
         yield return new WaitForSeconds(2);
         shooting1 = false;
         step1 = 0;
@@ -24,7 +35,7 @@ public class cannonManager : MonoBehaviour
     {
         shooting2 = true;
         int r = Random.Range(0, 5);
-        transform.rotation = Quaternion.Slerp(transform.rotation, points[r].rotation, time2);
+        transform.rotation = Quaternion.LookRotation(points[r].forward, Vector2.up);
         yield return new WaitForSeconds(1);
         yield return new WaitForSeconds(5);
         shooting2 = false;
@@ -38,7 +49,6 @@ public class cannonManager : MonoBehaviour
             {
                 StartCoroutine(cannon1());
             }
-            step1 = Time.deltaTime;
         }
         if (shoot2)
         {

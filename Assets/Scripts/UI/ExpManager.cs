@@ -20,8 +20,10 @@ public class ExpManager : MonoBehaviour
             {
                 if (data.exp > expreq)
                 {
+                    data.exp -= expreq;
                     explvl += 1;
                     expreq = (int)(100 * Mathf.Pow(explvl, 1.5f));
+
                 }
             }
     }

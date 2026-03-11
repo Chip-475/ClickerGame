@@ -6,7 +6,24 @@ public class clicker : MonoBehaviour
 {
     public static int clickStr = 1;
     public static int clickExp = 10;
+    public static bool autoClicker = false;
+    private float autoClickerTimer = 30f;
     public GameObject text;
+
+    IEnumerator autoclick()
+    {
+        click();
+        yield return new WaitForSeconds(0.2f);
+        autoClickerTimer -= 0.2f;
+    }
+    private void Update()
+    {
+        if (autoClicker)
+        {
+            StartCoroutine(autoclick());
+            autoClicker = false;
+        }
+    }
     IEnumerator critText(GameObject text)
     {
         GameObject text1 = GameObjectUtility.DuplicateGameObject(text);
@@ -17,14 +34,17 @@ public class clicker : MonoBehaviour
     public void click()
     {
         data.money += clickStr;
-        data.exp += clickExp;
-        int r = UnityEngine.Random.Range(0, 9);
-        if (r < data.critUPlvl)
+        if (!autoClicker)
         {
-            data.critMoney++;
-            data.exp += clickExp*data.critDmg;
-            data.money += clickStr * data.critDmg;
-            StartCoroutine(critText(text));
+            data.exp += clickExp;
+            int r = UnityEngine.Random.Range(0, 9);
+            if (r < data.critUPlvl)
+            {
+                data.critMoney++;
+                data.exp += clickExp * data.critDmg;
+                data.money += clickStr * data.critDmg;
+                StartCoroutine(critText(text));
+            }
         }
     }
 }

@@ -7,6 +7,7 @@ public class data : MonoBehaviour
     public static int baseUPlvl;
     public static int critUPlvl;
     public static int critDmg = 3;
-    public static int exp=0;
+    public static float exp=0;
     public static int explvl = 0;
+    public static float maxXp = 100;
 }

@@ -10,7 +10,7 @@ public class clicker : MonoBehaviour
     private float autoClickerTimer = 30f;
     public GameObject text;
 
-    IEnumerator autoclick()
+  /*  IEnumerator autoclick()
     {
         click();
         yield return new WaitForSeconds(0.2f);
@@ -23,7 +23,7 @@ public class clicker : MonoBehaviour
             StartCoroutine(autoclick());
             autoClicker = false;
         }
-    }
+    }*/
     IEnumerator critText(GameObject text)
     {
         GameObject text1 = GameObjectUtility.DuplicateGameObject(text);
@@ -33,7 +33,7 @@ public class clicker : MonoBehaviour
     }
     public void click()
     {
-        data.money += clickStr;
+        meteor.hp -= clickStr;
         if (!autoClicker)
         {
             data.exp += clickExp;
@@ -42,8 +42,9 @@ public class clicker : MonoBehaviour
             {
                 data.critMoney++;
                 data.exp += clickExp * data.critDmg;
-                data.money += clickStr * data.critDmg;
+                meteor.hp -= clickStr * data.critDmg;
                 StartCoroutine(critText(text));
+                Debug.Log(meteor.hp);
             }
         }
     }

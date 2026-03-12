@@ -4,26 +4,33 @@ using UnityEngine;
 public class meteor : MonoBehaviour
 {
     public GameObject met;
-    public static int hp;
-    public static int hpMax;
-    bool active;
-    IEnumerator createMeteor()
+    public static int hpMeteor;
+    public static int hpMaxMeteor;
+    bool x = true;
+    IEnumerator Meteor()
     {
-        active = true;
-        data.money += hpMax;
-        hpMax = Random.Range(data.meteorlvl * 3, data.meteorlvl * 5);
-        hp = hpMax;
+        data.money += hpMaxMeteor;
         met.SetActive(false);
-        yield return new WaitForSeconds(2f);
+        hpMaxMeteor = Random.Range(data.meteorlvl * 3, data.meteorlvl * 5);
+        yield return new WaitForSeconds(2);
         met.SetActive(true);
+        hpMeteor = hpMaxMeteor;
+        x = true;
+    }
+
+    private void Start()
+    {
+        hpMaxMeteor = Random.Range(data.meteorlvl * 3, data.meteorlvl * 5);
+        hpMeteor = hpMaxMeteor;
     }
 
     public void Update()
     {
-        if(hp<=0) active = false;
-        if (!active)
+        
+        if(x && hpMeteor <= 0)
         {
-            StartCoroutine(createMeteor());
+            StartCoroutine(Meteor());
+            x = false;
         }
     }
 }

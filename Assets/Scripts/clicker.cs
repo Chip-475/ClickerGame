@@ -33,7 +33,7 @@ public class clicker : MonoBehaviour
     }
     public void click()
     {
-        meteor.hp -= clickStr;
+        meteor.hpMeteor -= clickStr;
         if (!autoClicker)
         {
             data.exp += clickExp;
@@ -42,9 +42,9 @@ public class clicker : MonoBehaviour
             {
                 data.critMoney++;
                 data.exp += clickExp * data.critDmg;
-                meteor.hp -= clickStr * data.critDmg;
+                meteor.hpMeteor -= clickStr * data.critDmg;
                 StartCoroutine(critText(text));
-                Debug.Log(meteor.hp);
+                Debug.Log(meteor.hpMeteor);
             }
         }
     }

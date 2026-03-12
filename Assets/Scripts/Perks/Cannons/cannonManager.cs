@@ -3,7 +3,7 @@ using System.Collections;
 
 public class cannonManager : MonoBehaviour
 {
-    //WIP NON MODIFICARE O TI AMMAZZO LA FAMIGLIA
+    //WIP NON MODIFICARE DIO CANE BASTARDO
     public bool shoot1, shoot2;
     public GameObject cannon_1, cannon_2;
     [SerializeField] private Transform[] points = new Transform[6];

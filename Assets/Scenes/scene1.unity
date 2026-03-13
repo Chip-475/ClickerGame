@@ -4709,6 +4709,7 @@ GameObject:
   - component: {fileID: 2052279440}
   - component: {fileID: 2052279438}
   - component: {fileID: 2052279442}
+  - component: {fileID: 2052279443}
   m_Layer: 0
   m_Name: gameManager
   m_TagString: Untagged
@@ -4812,6 +4813,19 @@ MonoBehaviour:
   fake_effect: {fileID: 303557630}
   critUPcost: 25
   critUPeffect: 0
+--- !u!114 &2052279443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052279436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c746e00e9b75f47923494debde0b21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::meteor
+  met: {fileID: 964061112}
 --- !u!1 &2090107596
 GameObject:
   m_ObjectHideFlags: 0

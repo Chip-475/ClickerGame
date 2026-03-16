@@ -7,7 +7,7 @@ public class clicker : MonoBehaviour
     public static int clickStr = 1;
     public static int clickExp = 10;
     public static bool autoClicker = false;
-    private float autoClickerTimer = 30f;
+    //private float autoClickerTimer = 30f;
     public GameObject text;
 
   /*  IEnumerator autoclick()

@@ -11,4 +11,7 @@ public class data : MonoBehaviour
     public static int explvl = 0;
     public static float maxXp = 100;
     public static int meteorlvl = 1;
+
+    //perklist
+    public static int critPerkAmount=1;
 }

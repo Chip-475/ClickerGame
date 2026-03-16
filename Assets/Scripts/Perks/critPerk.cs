@@ -5,7 +5,7 @@ public class critPerk : MonoBehaviour
 {
     public float duration = 30f;
     public bool isActive=false;
-    IEnumerator critValuePerk()
+    public  IEnumerator critValuePerk()
     {
         isActive = true;
         data.critDmg *= 2;
@@ -13,11 +13,12 @@ public class critPerk : MonoBehaviour
         isActive = false;
         data.critDmg /= 2;
     }
-    void onClick()
+    public  void onClick()
     {
         if (!isActive)
         {
-            StartCoroutine(critValuePerk());    
+            StartCoroutine(critValuePerk());
+            data.critPerkAmount--;
         }
     }
 }

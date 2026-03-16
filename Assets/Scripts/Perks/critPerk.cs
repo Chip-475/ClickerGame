@@ -17,7 +17,7 @@ public class critPerk : MonoBehaviour
     {
         if (!isActive)
         {
-            StartCoroutine(critValuePerk());
+            StartCoroutine(critValuePerk());    
         }
     }
 }

@@ -4,7 +4,7 @@ public class expUPButton : MonoBehaviour
 {
     public expUPManager manager;
 
-    public void baseUPclick()
+    public void expUPclick()
     {
         switch(data.explvl)
         {

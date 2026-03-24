@@ -14,7 +14,7 @@ public abstract class SuperPets : MonoBehaviour
     public int getRarity() { return rarity; }
     public float getStamina() { return stamina; }
 
-   // abstract protected void livella(); //serve il button
+    // abstract protected void livella(); //serve il button
 
     protected void rigeneraStam()
     {

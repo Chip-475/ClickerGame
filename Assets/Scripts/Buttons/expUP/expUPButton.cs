@@ -6,39 +6,39 @@ public class expUPButton : MonoBehaviour
 
     public void expUPclick()
     {
-        switch(data.explvl)
+        switch(data.lvl)
         {
             case 0:
                 clicker.clickExp++;
-                data.explvl++;
+                data.lvl++;
                 manager.expUPeffect++;
                 manager.expUPcost = 100;
                 data.money -= 100;
                 return;
             case 1:
                 clicker.clickExp++;
-                data.explvl++;
+                data.lvl++;
                 manager.expUPeffect++;
                 manager.expUPcost = 250;
                 data.money -= 250;
                 return;
             case 2:
                 clicker.clickExp++;
-                data.explvl++;
+                data.lvl++;
                 manager.expUPeffect++;
                 manager.expUPcost = 1000;
                 data.money -= 1000;
                 return;
             case 3:
                 clicker.clickExp++;
-                data.explvl++;
+                data.lvl++;
                 manager.expUPeffect++;
                 manager.expUPcost = 5000;
                 data.money -= 5000;
                 return;
             case 4:
                 clicker.clickExp++;
-                data.explvl++;
+                data.lvl++;
                 manager.expUPeffect++;
                 manager.expUPcost = 10000;
                 data.money -= 10000;

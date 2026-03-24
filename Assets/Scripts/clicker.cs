@@ -36,12 +36,12 @@ public class clicker : MonoBehaviour
         meteor.hpMeteor -= clickStr;
         if (!autoClicker)
         {
-            data.exp += clickExp;
+            data.xp += clickExp;
             int r = UnityEngine.Random.Range(0, 9);
             if (r < data.critUPlvl)
             {
                 data.critMoney++;
-                data.exp += clickExp * data.critDmg;
+                data.xp += clickExp * data.critDmg;
                 meteor.hpMeteor -= clickStr * data.critDmg;
                 StartCoroutine(critText(text));
                 Debug.Log(meteor.hpMeteor);

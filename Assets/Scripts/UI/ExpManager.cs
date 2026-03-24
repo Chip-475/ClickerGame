@@ -1,30 +1,28 @@
-using JetBrains.Annotations;
-using UnityEditor.Experimental.GraphView;
+using System.Data;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class ExpManager : MonoBehaviour
+public class xpManager : MonoBehaviour
 {
-    public int explvl = 0;
-    public int expreq = 100;
+    public Image xpBar;
+
     void Update()
     {
-        if (explvl < 10)
+        xpBar.fillAmount = (float)data.xp / data.xpMax;
+        if (data.xp >= data.xpMax)
         {
-            if (data.exp > expreq)
+            if (data.lvl < 10)
             {
-                explvl += 1;
-                expreq += expreq / 3;
+                data.xp -= data.xpMax;
+                data.lvl += 1;
+                data.xpMax += data.xpMax / 3;
+            }
+            else
+            {
+                data.xp -= data.xpMax;
+                data.lvl += 1;
+                data.xpMax = (int)(100 * Mathf.Pow(data.lvl, 1.5f));
             }
         }
-        else
-            {
-                if (data.exp > expreq)
-                {
-                    data.exp -= expreq;
-                    explvl += 1;
-                    expreq = (int)(100 * Mathf.Pow(explvl, 1.5f));
-
-                }
-            }
     }
 }

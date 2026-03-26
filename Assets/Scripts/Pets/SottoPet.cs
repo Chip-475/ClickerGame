@@ -10,8 +10,14 @@ public class SottoPet : SuperPets
     private float timer = 0f;
     private Vector2 ultimaPos;
     bool muove;
+    
 
-    void awake()
+    void Start()
+    {
+        Debug.Log("Rarita " + rar);
+    }
+
+    void Awake()
     {
         //butttonLevelUP=GetComponent<>
         rb=GetComponent<Rigidbody2D>();

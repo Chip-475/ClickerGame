@@ -7,7 +7,6 @@ public enum rarita
 }
 public abstract class SuperPets : MonoBehaviour
 {
-    [SerializeField] private GameObject buttonLevelUP;
     protected int level; // da 1 a 10
     protected int rank;  // da 1-3 
     [SerializeField] protected rarita rar; // -1 common    0 rari   1 leggendari
@@ -28,15 +27,12 @@ public abstract class SuperPets : MonoBehaviour
         stamina+=Mathf.Clamp(stamina, 0f, 100f);
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-   /* void Start()
+    public virtual void levelUp() // cosi si puoo fare l'ovveride
     {
-        
-    }*/
-    /*
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }*/
+         if(level<10)
+         {
+            level++;
+            //Debug.log("SIIII");
+         }
+    }
 }

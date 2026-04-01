@@ -14,6 +14,8 @@ public class PerkManager : MonoBehaviour
     public GameObject baseClickPerkButtonFake;
     public TMP_Text headerbaseClickPerk;
     public TMP_Text headerbaseClickPerkFake;
+    public TMP_Text amountbaseClickPerk;
+    public TMP_Text amountbaseClickPerkFake;
     void Update()
     {
         //crit perk
@@ -33,8 +35,8 @@ public class PerkManager : MonoBehaviour
         }
         //click perk
         {
-            headercrit.text = "Click X2:" + data.clickPerk + "<br> duration:30 seconds";
-            headercritfake.text = "Click X2:" + data.clickPerk + "<br> duration:30 seconds";
+            amountbaseClickPerk.text = "Amount:" + data.clickPerk;
+            amountbaseClickPerkFake.text = "Amount:" + data.clickPerk;
             if (data.clickPerk > 0)
             {
                 baseClickPerkButton.SetActive(true);

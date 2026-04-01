@@ -70,6 +70,7 @@ public class cannonManager : MonoBehaviour
             if (!shooting1)
             {
                 StartCoroutine(cannon1());
+                Debug.Log(gameObject.name);
             }
         }
         if (shoot2 && data.fuel2 >= shootCost2)

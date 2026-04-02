@@ -14,11 +14,12 @@ public class SuperPets : MonoBehaviour
     protected int rank = 1;
     [SerializeField] protected SuperPets pet2;
 
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if(Input.GetKeyDown(KeyCode.F))
         {
-            if (pet2 != null)
+            if(pet2 != null)
             {
                 this.TentaFusione();
             }
@@ -42,4 +43,6 @@ public class SuperPets : MonoBehaviour
         stamina++;
         if (stamina > 100) stamina = 100;
     }
+
+
 }

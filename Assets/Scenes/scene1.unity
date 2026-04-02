@@ -1912,6 +1912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SottoPet
   rar: 0
+  pet2: {fileID: 0}
   zona: {fileID: 1039929486}
   muovi: 3
   tempAttesa: 2
@@ -5052,6 +5053,7 @@ GameObject:
   - component: {fileID: 1506158488}
   - component: {fileID: 1506158487}
   - component: {fileID: 1506158490}
+  - component: {fileID: 1506158491}
   m_Layer: 5
   m_Name: LevelUp
   m_TagString: Untagged
@@ -5191,7 +5193,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -5207,6 +5209,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1506158491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506158485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e7ed72b232d2264780582051b61fe7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonPet
+  buttonLevelUP: {fileID: 1506158485}
+  pet: {fileID: 556084898}
 --- !u!1 &1516086878
 GameObject:
   m_ObjectHideFlags: 0

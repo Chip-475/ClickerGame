@@ -1,4 +1,4 @@
- using UnityEngine;
+using UnityEngine;
 
 public class ButtonPet : MonoBehaviour
 {
@@ -8,17 +8,5 @@ public class ButtonPet : MonoBehaviour
     {
         Debug.Log("SIIII");
     }
-
-    /*
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }*/
 }
+   

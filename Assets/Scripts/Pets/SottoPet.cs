@@ -44,9 +44,9 @@ public class SottoPet : SuperPets
             timer = 0f;
         }
         ultimaPos = rb.position;
-        verificaBottone();
+        //verificaBottone();
     }
-    private void verificaBottone()
+ /*   private void verificaBottone()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -62,7 +62,7 @@ public class SottoPet : SuperPets
             }
             else Debug.Log("nessun collider");
         }
-    }
+    }*/
 
     private void riposa()
     {

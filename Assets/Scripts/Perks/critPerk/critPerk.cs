@@ -4,21 +4,21 @@ using UnityEngine;
 public class critPerk : MonoBehaviour
 {
     public float duration = 30f;
-    public bool isActive=false;
+    static public bool isActive=false;
     public  IEnumerator critValuePerk()
     {
+        data.critPerkAmount--;
         isActive = true;
         data.critDmg *= 2;
         yield return new WaitForSeconds(duration);
-        isActive = false;
         data.critDmg /= 2;
+        isActive = false;
     }
     public  void onClick()
     {
         if (!isActive)
         {
             StartCoroutine(critValuePerk());
-            data.critPerkAmount--;
         }
     }
 }

@@ -2,8 +2,10 @@ using UnityEngine;
 
 public class baseClickPickUp : MonoBehaviour
 {
-    public void crituppickup()
+    public void critUpPickup()
     {
         data.clickPerk++;
+        //animationPH
+        Destroy(gameObject);
     }
 }

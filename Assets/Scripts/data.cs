@@ -1,6 +1,7 @@
+using System;
 using UnityEngine;
 
-public class data : MonoBehaviour
+public static class data
 {
     //resources
     public static int money = 100000;

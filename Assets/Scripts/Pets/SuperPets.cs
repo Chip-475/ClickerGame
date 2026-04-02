@@ -1,36 +1,45 @@
 using UnityEngine;
-public abstract class SuperPets : MonoBehaviour
+public enum rarita
 {
-    [SerializeField] private GameObject buttonLevelUP;
-    protected int level; // da 1 a 10
-    protected int rank;  // da 1-3
-    protected int rarity; // -1 common    0 rari   1 leggendari
-    protected float stamina=100f; // da 0 a 100;
-    protected float staminaRate=10f;
+    common,
+    rare,
+    leggend
+}
+public class SuperPets : MonoBehaviour
+{
+    protected int stamina;
+    protected string nomeSpecie;
+    [SerializeField] protected rarita rar;
+    protected int livello = 1;
+    protected int rank = 1;
+    [SerializeField] protected SuperPets pet2;
 
-
-    public int getLevel() { return level; }
-    public int getRank() { return rank; }
-    public int getRarity() { return rarity; }
-    public float getStamina() { return stamina; }
-
-    // abstract protected void livella(); //serve il button
-
-    protected void rigeneraStam()
-    {
-        stamina+=staminaRate * Time.deltaTime;
-        stamina+=Mathf.Clamp(stamina, 0f, 100f);
-    }
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-   /* void Start()
-    {
-        
-    }*/
-    /*
-    // Update is called once per frame
     void Update()
     {
-        
-    }*/
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            if (pet2 != null)
+            {
+                this.TentaFusione();
+            }
+        }
+    }
+
+    public void TentaFusione()
+    {
+        if (this.nomeSpecie != pet2.nomeSpecie) return;
+        if (this.rar != pet2.rar) return;
+        if (this.livello < 10 || pet2.livello < 10) return;
+        if (this.rank != pet2.rank || this.rank >= 3) return;
+
+        rank++;
+        livello = 1;
+        Destroy(pet2.gameObject);
+    }
+
+    public void rigeneraStam()
+    {
+        stamina++;
+        if (stamina > 100) stamina = 100;
+    }
 }

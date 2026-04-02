@@ -4,23 +4,49 @@ using TMPro;
 
 public class PerkManager : MonoBehaviour
 {
+    //crit perk
     public GameObject critPerkButton;
     public GameObject critPerkButtonFake;
-    public TMP_Text header;
-    public TMP_Text headerfake;
+    public TMP_Text headercrit;
+    public TMP_Text headercritfake;
+    //base click perk
+    public GameObject baseClickPerkButton;
+    public GameObject baseClickPerkButtonFake;
+    public TMP_Text headerbaseClickPerk;
+    public TMP_Text headerbaseClickPerkFake;
+    public TMP_Text amountbaseClickPerk;
+    public TMP_Text amountbaseClickPerkFake;
     void Update()
     {
-        header.text = "Crit Damage UP:"+ data.critPerkAmount+ "<br> duration:30 seconds";
-        headerfake.text = "Crit Damage UP:" + data.critPerkAmount + "<br> duration:30 seconds";
-        if (data.critPerkAmount > 0)
+        //crit perk
         {
-            critPerkButton.SetActive(true);
-            critPerkButtonFake.SetActive(false);
+            headercrit.text = "Crit Damage UP:" + data.critPerkAmount + "<br> duration:30 seconds";
+            headercritfake.text = "Crit Damage UP:" + data.critPerkAmount + "<br> duration:30 seconds";
+            if (data.critPerkAmount > 0)
+            {
+                critPerkButton.SetActive(true);
+                critPerkButtonFake.SetActive(false);
+            }
+            else
+            {
+                critPerkButton.SetActive(false);
+                critPerkButtonFake.SetActive(true);
+            }
         }
-        else
+        //click perk
         {
-            critPerkButton.SetActive(false);
-            critPerkButtonFake.SetActive(true);
+            amountbaseClickPerk.text = "Amount:" + data.clickPerk;
+            amountbaseClickPerkFake.text = "Amount:" + data.clickPerk;
+            if (data.clickPerk > 0)
+            {
+                baseClickPerkButton.SetActive(true);
+                baseClickPerkButtonFake.SetActive(false);
+            }
+            else
+            {
+                baseClickPerkButton.SetActive(false);
+                baseClickPerkButtonFake.SetActive(true);
+            }
         }
     }
 }

@@ -3,7 +3,7 @@ using UnityEngine;
 public class data : MonoBehaviour
 {
     //resources
-    public static int money = 100000;
+    public static int money = 100;
     public static int critMoney;
 
     //upgrades

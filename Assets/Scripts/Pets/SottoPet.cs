@@ -1,16 +1,17 @@
 using UnityEngine;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class SottoPet : SuperPets
 {
     private ButtonPet b1;
-    [SerializeField] private Transform zona;
-    [SerializeField] private float muovi=3f;
-    [SerializeField] private float tempAttesa=2f;
+    [SerializeField] private GameObject zona;
+    [SerializeField] private float muovi = 3f;
+    [SerializeField] private float tempAttesa = 2f;
     private Rigidbody2D rb;
     private float timer = 0f;
     private Vector2 ultimaPos;
     bool muove;
-    
+
 
     void Start()
     {
@@ -19,9 +20,9 @@ public class SottoPet : SuperPets
 
     void Awake()
     {
-        b1=GetComponent<ButtonPet>();
-        rb=GetComponent<Rigidbody2D>();
-        ultimaPos=rb.transform.position;
+        b1 = GetComponentInChildren<ButtonPet>();
+        rb = GetComponent<Rigidbody2D>();
+        ultimaPos = rb.transform.position;
     }
 
     // Update is called once per frame
@@ -36,7 +37,7 @@ public class SottoPet : SuperPets
                 muove = false;
                 riposa();
             }
-            if (Vector2.Distance(rb.position, zona.position) < 0.3f) rigeneraStam();
+            if (Vector2.Distance(rb.position, zona.transform.position) < 0.3f) rigeneraStam();
         }
         else
         {
@@ -47,8 +48,9 @@ public class SottoPet : SuperPets
     }
     private void verificaBottone()
     {
-        if (Input.GetMouseButtonDown(0))   
+        if (Input.GetMouseButtonDown(0))
         {
+            Debug.Log("Click rilevato");
             Vector2 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
             RaycastHit2D hit = Physics2D.Raycast(worldPos, Vector2.zero);
@@ -58,15 +60,14 @@ public class SottoPet : SuperPets
                 Debug.Log("Hai cliccato: " + hit.collider.gameObject.name);
                 hit.collider.GetComponent<ButtonPet>()?.levelUp();
             }
+            else Debug.Log("nessun collider");
         }
     }
 
-
-
     private void riposa()
     {
-        Vector2 direzione=(zona.position-transform.position).normalized;
-        rb.linearVelocity=direzione*muovi;
+        Vector2 direzione = (zona.transform.position - transform.position).normalized;
+        rb.linearVelocity = direzione * muovi;
         stamina = 100;
         if (stamina >= 100) muove = true;
     }

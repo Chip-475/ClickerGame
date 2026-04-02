@@ -6,7 +6,6 @@ public class ButtonPet : MonoBehaviour
     public SuperPets pet;
     public void levelUp()
     {
-        pet.levelUp();
         Debug.Log("SIIII");
     }
 

@@ -7,21 +7,19 @@ public class perkManager : MonoBehaviour
     [Header("critPerk")]
     public GameObject critPerkButton;
     public GameObject critPerkButton_fake;
-    public TMP_Text headercrit;
-    public TMP_Text headercrit_fake;
+    public TMP_Text critPerk_amount;
+    public TMP_Text critPerkFake_amount;
     [Header("clickPerk")]
     public GameObject baseClickPerkButton;
     public GameObject baseClickPerkButton_fake;
-    public TMP_Text baseClickPerk_header;
-    public TMP_Text baseClickPerkFake_header;
     public TMP_Text baseClickPerk_amount;
     public TMP_Text baseClickPerkFake_amount;
     void Update()
     {
 
         {
-            headercrit.text = "Crit Damage UP:" + data.critPerkAmount + "<br> duration:30 seconds";
-            headercrit_fake.text = "Crit Damage UP:" + data.critPerkAmount + "<br> duration:30 seconds";
+            critPerk_amount.text = "Amount:" + data.critPerkAmount;
+            baseClickPerkFake_amount.text = "Amount:" + data.critPerkAmount;
             if (data.critPerkAmount > 0 && !critPerk.isActive)
             {
                 critPerkButton.SetActive(true);

@@ -10,6 +10,11 @@ public class meteor : MonoBehaviour
     IEnumerator Meteor()
     {
         data.money += hpMaxMeteor;
+        if (goldMeteorPerk.isActive)
+        {
+            data.money += hpMaxMeteor;
+            goldMeteorPerk.isActive=false;
+        }
         met.SetActive(false);
         hpMaxMeteor = Random.Range(data.meteorlvl * 3, data.meteorlvl * 5);
         yield return new WaitForSeconds(2);

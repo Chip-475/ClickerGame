@@ -18,6 +18,7 @@ public class data : MonoBehaviour
     public static int fuel1;
     public static int fuel2;
     //perklist
-    public static int critPerkAmount=1;
+    public static int critPerkAmount = 1;   
     public static int clickPerk = 1;
+    public static int goldMeteor = 1;
 }

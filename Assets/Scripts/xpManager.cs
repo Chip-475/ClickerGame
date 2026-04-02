@@ -8,7 +8,7 @@ public class xpManager : MonoBehaviour
 
     void Update()
     {
-        xpBar.fillAmount = (float)data.xp / data.xpMax;
+        xpBar.fillAmount = data.xpMax / data.xp;
         if (data.xp >= data.xpMax)
         {
             if (data.lvl < 10)

@@ -37,7 +37,11 @@ public class SottoPet : SuperPets
                 muove = false;
                 riposa();
             }
+<<<<<<< Updated upstream
             if (Vector2.Distance(rb.position, zona.transform.position) < 0.3f) rigeneraStam();
+=======
+            if (Vector2.Distance(rb.position, zona.transform.position) < 0.3f) RigeneraStam();
+>>>>>>> Stashed changes
         }
         else
         {
@@ -58,11 +62,15 @@ public class SottoPet : SuperPets
             if (hit.collider != null)
             {
                 Debug.Log("Hai cliccato: " + hit.collider.gameObject.name);
-                hit.collider.GetComponent<ButtonPet>()?.levelUp();
+                hit.collider.GetComponent<ButtonPet>()?.LevelUp();
             }
             else Debug.Log("nessun collider");
         }
+<<<<<<< Updated upstream
     }*/
+=======
+    }
+>>>>>>> Stashed changes
 
     private void riposa()
     {

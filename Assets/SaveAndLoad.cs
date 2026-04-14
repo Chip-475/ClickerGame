@@ -23,7 +23,6 @@ public class SaveAndLoad : MonoBehaviour
         SaveData inv = new SaveData();
 
         inv.money = data.money;
-        inv.critMoney = data.critMoney;
 
         inv.baseUPlvl = data.baseUPlvl;
         inv.critUPlvl = data.critUPlvl;
@@ -51,7 +50,6 @@ public class SaveAndLoad : MonoBehaviour
         SaveData inv = JsonUtility.FromJson<SaveData>(File.ReadAllText(Application.persistentDataPath + "/save.json"));
 
         data.money = inv.money;
-        data.critMoney = inv.critMoney;
 
         data.baseUPlvl = inv.baseUPlvl;
         data.critUPlvl = inv.critUPlvl;
@@ -76,7 +74,6 @@ public class SaveData
 {
     //resources
     public int money;
-    public int critMoney;
 
     //upgrades
     public int baseUPlvl;

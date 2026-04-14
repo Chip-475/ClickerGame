@@ -5,8 +5,8 @@ public static class data
 {
     //resources
     public static int money = 100;
-    public static int critMoney;
-
+    public static int PerkLimit=5;
+    public static int totalPerk = 0;
     //upgrades
     public static int baseUPlvl;
     public static int critUPlvl = 100;

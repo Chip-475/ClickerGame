@@ -1,12 +1,12 @@
 using UnityEngine;
 
-public class baseClickPickUp : MonoBehaviour
+public class GoldMeteorPickUp : MonoBehaviour
 {
-    public void critUpPickup()
+    public void goldmeteorPickup()
     {
         if (data.PerkLimit > data.totalPerk)
         {
-            data.clickPerk++;
+            data.goldMeteor++;
             //animationPH
             Destroy(gameObject);
         }

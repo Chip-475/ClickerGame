@@ -4,19 +4,28 @@ using TMPro;
 
 public class perkManager : MonoBehaviour
 {
+    public TMP_Text perkCap;
     [Header("critPerk")]
     public GameObject critPerkButton;
     public GameObject critPerkButton_fake;
     public TMP_Text critPerk_amount;
     public TMP_Text critPerkFake_amount;
+
     [Header("clickPerk")]
     public GameObject baseClickPerkButton;
     public GameObject baseClickPerkButton_fake;
     public TMP_Text baseClickPerk_amount;
     public TMP_Text baseClickPerkFake_amount;
+
+    [Header("clickPerk")]
+    public GameObject GMPerkButton;
+    public GameObject GMPerkButton_fake;
+    public TMP_Text GMPerk_amount;
+    public TMP_Text GMPerkFake_amount;
     void Update()
     {
-
+        data.totalPerk = data.clickPerk + data.critPerkAmount + data.goldMeteor;
+        perkCap.text = data.totalPerk + "/" + data.PerkLimit;
         {
             critPerk_amount.text = "Amount:" + data.critPerkAmount;
             baseClickPerkFake_amount.text = "Amount:" + data.critPerkAmount;
@@ -31,7 +40,6 @@ public class perkManager : MonoBehaviour
                 critPerkButton_fake.SetActive(true);
             }
         } //crit perk
-
         {
             baseClickPerk_amount.text = "Amount:" + data.clickPerk;
             baseClickPerkFake_amount.text = "Amount:" + data.clickPerk;
@@ -47,5 +55,20 @@ public class perkManager : MonoBehaviour
             }
 
         } //click perk
+        {
+            GMPerk_amount.text = "Amount:" + data.clickPerk;
+            GMPerkFake_amount.text = "Amount:" + data.clickPerk;
+            if (data.goldMeteor > 0 && !goldMeteorPerk.isActive)
+            {
+                GMPerkButton.SetActive(true);
+                GMPerkButton_fake.SetActive(false);
+            }
+            else
+            {
+                GMPerkButton.SetActive(false);
+                GMPerkButton_fake.SetActive(true);
+            }
+
+        } //gold meteor
     }
 }

@@ -40,7 +40,6 @@ public class clicker : MonoBehaviour
             int r = UnityEngine.Random.Range(0, 9);
             if (r < data.critUPlvl)
             {
-                data.critMoney++;
                 data.xp += clickExp * data.critDmg;
                 meteor.hpMeteor -= clickStr * data.critDmg;
                 StartCoroutine(critText(text));

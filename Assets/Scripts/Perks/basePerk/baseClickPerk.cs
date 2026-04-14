@@ -3,11 +3,7 @@ using System.Collections;
 public class baseClickPerk : MonoBehaviour
 {
     public float duration = 30f;
-<<<<<<< Updated upstream:Assets/Scripts/Perks/basePerk/baseClickPerk.cs
     static public bool isActive = false;
-=======
-    public static bool isActive = false;
->>>>>>> Stashed changes:Assets/Scripts/Perks/baseClickPerk.cs
     public IEnumerator ClickPerk()
     {
         data.clickPerk--;

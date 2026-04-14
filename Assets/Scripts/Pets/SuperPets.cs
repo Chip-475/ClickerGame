@@ -1,22 +1,4 @@
 using UnityEngine;
-<<<<<<< Updated upstream
-public enum rarita
-{
-    common,
-    rare,
-    leggend
-}
-public class SuperPets : MonoBehaviour
-{
-    protected int stamina;
-    protected string nomeSpecie;
-    [SerializeField] protected rarita rar;
-    protected int livello = 1;
-    protected int rank = 1;
-    [SerializeField] protected SuperPets pet2;
-
-
-=======
 public enum Rarita
 {
     Common,
@@ -47,40 +29,18 @@ public class SuperPets : MonoBehaviour
     {
         AggiornaPotenza();
     }
->>>>>>> Stashed changes
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F))
         {
-<<<<<<< Updated upstream
-            if(pet2 != null)
-            {
-                this.TentaFusione();
-=======
             if (pet2 != null)
             {
                 TentaFusione();
->>>>>>> Stashed changes
             }
 
         }
     }
 
-<<<<<<< Updated upstream
-    public void TentaFusione()
-    {
-        if (this.nomeSpecie != pet2.nomeSpecie) return;
-        if (this.rar != pet2.rar) return;
-        if (this.livello < 10 || pet2.livello < 10) return;
-        if (this.rank != pet2.rank || this.rank >= 3) return;
-
-        rank++;
-        livello = 1;
-        Destroy(pet2.gameObject);
-    }
-
-    public void rigeneraStam()
-=======
 
     public void TentaFusione()
     {
@@ -96,14 +56,11 @@ public class SuperPets : MonoBehaviour
     }
 
     public void RigeneraStam()
->>>>>>> Stashed changes
     {
         stamina++;
         if (stamina > 100) stamina = 100;
     }
 
-<<<<<<< Updated upstream
-=======
     public int GetLivello()
     {
         return livello;
@@ -180,6 +137,5 @@ public class SuperPets : MonoBehaviour
         float bonusRank = 1f + ((rank - 1) * 0.60f);
         potenzaAttuale = potenzaBase * moltiplicatoreRarita * bonusLivello * bonusRank;
     }
->>>>>>> Stashed changes
 
 }

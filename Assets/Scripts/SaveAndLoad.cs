@@ -3,7 +3,7 @@ using System.Collections;
 using System.IO;
 using UnityEngine;
 
-public class SaveAndLoad : MonoBehaviour
+/*public class SaveAndLoad : MonoBehaviour
 {
     IEnumerator autoSave()
     {
@@ -97,4 +97,4 @@ public class SaveData
     public int critPerkAmount;
     public int clickPerk;
     public int goldMeteor;
-}
+}*/

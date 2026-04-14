@@ -37,20 +37,16 @@ public class SottoPet : SuperPets
                 muove = false;
                 riposa();
             }
-<<<<<<< Updated upstream
-            if (Vector2.Distance(rb.position, zona.transform.position) < 0.3f) rigeneraStam();
-=======
             if (Vector2.Distance(rb.position, zona.transform.position) < 0.3f) RigeneraStam();
->>>>>>> Stashed changes
         }
         else
         {
             timer = 0f;
         }
         ultimaPos = rb.position;
-        //verificaBottone();
+        verificaBottone();
     }
- /*   private void verificaBottone()
+    private void verificaBottone()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -66,11 +62,7 @@ public class SottoPet : SuperPets
             }
             else Debug.Log("nessun collider");
         }
-<<<<<<< Updated upstream
-    }*/
-=======
     }
->>>>>>> Stashed changes
 
     private void riposa()
     {

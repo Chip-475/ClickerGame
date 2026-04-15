@@ -4,7 +4,7 @@ using UnityEngine;
 public static class data
 {
     //resources
-    public static int money = 100;
+    public static int money = 10000;
     public static int PerkLimit=5;
     public static int totalPerk = 0;
 
@@ -22,6 +22,8 @@ public static class data
     public static int lvl;
 
     //cannon management
+    public static bool cannon1;
+    public static bool cannon2;
     public static int fuel1;
     public static int fuel2;
 

@@ -7,11 +7,14 @@ public static class data
     public static int money = 100;
     public static int PerkLimit=5;
     public static int totalPerk = 0;
+
     //upgrades
     public static int baseUPlvl;
     public static int critUPlvl = 100;
     public static int critDmg = 3;
     public static int meteorlvl = 1;
+    public static int cannonFireRatelvl;
+    public static int cannonDepotlvl;
 
     //exp
     public static int xp = 1;

@@ -7,6 +7,7 @@ public static class data
     public static int money = 10000;
     public static int PerkLimit=5;
     public static int totalPerk = 0;
+    public static int meteorCrushed = 0;
 
     //upgrades
     public static int baseUPlvl;
@@ -24,8 +25,8 @@ public static class data
     //cannon management
     public static bool cannon1;
     public static bool cannon2;
-    public static int fuel1;
-    public static int fuel2;
+    public static int fuel1=1;
+    public static int fuel2=1;
 
     //perklist
     public static int critPerkAmount = 1;

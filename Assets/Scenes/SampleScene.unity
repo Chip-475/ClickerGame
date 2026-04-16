@@ -7611,8 +7611,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e1587c2ca133e44e86fa3cdab8a89b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::cannonManager
-  shoot1: 0
-  shoot2: 0
+  shoot1: 1
+  shoot2: 1
   cannon_1: {fileID: 560388773}
   cannon_2: {fileID: 1394196748}
   shootCost1: 0

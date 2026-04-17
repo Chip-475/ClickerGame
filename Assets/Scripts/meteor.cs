@@ -10,7 +10,6 @@ public class meteor : MonoBehaviour
     public static int hpMeteor;
     public static int hpMaxMeteor;
     bool x = true;
-    
     private void meteorLvl()
     {
         data.meteorCrushed++;
@@ -18,10 +17,10 @@ public class meteor : MonoBehaviour
     }
     IEnumerator Meteor()
     {
-        data.money += hpMaxMeteor;
+        data.money += hpMaxMeteor; //* petManager.globalMoneyMod;
         if (goldMeteorPerk.isActive)
         {
-            data.money += hpMaxMeteor;
+            data.money += hpMaxMeteor; //*petManager.globalMoneyMod * 4;
             goldMeteorPerk.isActive=false;
         }
         met.SetActive(false);
@@ -44,8 +43,12 @@ public class meteor : MonoBehaviour
         metHp.text =hpMeteor +"/"+ hpMaxMeteor;
         if(x && hpMeteor <= 0)
         {
-            StartCoroutine(Meteor());
-            x = false;
+            transform.localScale -= Vector3.one * 2f * Time.deltaTime;
+            if (transform.localScale.x < 0)
+            {
+                StartCoroutine(Meteor());
+                x = false;
+            }
         }
     }
 }

@@ -1,6 +1,6 @@
 using UnityEngine;
 using static UnityEngine.RuleTile.TilingRuleOutput;
-
+using UnityEngine.UI;
 public class SottoPet : SuperPets
 {
     private ButtonPet b1;
@@ -44,24 +44,6 @@ public class SottoPet : SuperPets
             timer = 0f;
         }
         ultimaPos = rb.position;
-        verificaBottone();
-    }
-    private void verificaBottone()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Debug.Log("Click rilevato");
-            Vector2 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-            RaycastHit2D hit = Physics2D.Raycast(worldPos, Vector2.zero);
-
-            if (hit.collider != null)
-            {
-                Debug.Log("Hai cliccato: " + hit.collider.gameObject.name);
-                hit.collider.GetComponent<ButtonPet>()?.LevelUp();
-            }
-            else Debug.Log("nessun collider");
-        }
     }
 
     private void riposa()

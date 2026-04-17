@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a8c28fcdcfd70034eb66e436fdae1e29
+guid: ebbf802772b57de40996aa3df1f12c4f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5333349321414413341
-    second: cannon_0
+      213: -7281344781606998382
+    second: cannonbar_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cannon_0
+      name: cannonbar_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 0
-        width: 47
-        height: 122
+        x: 77
+        y: 55
+        width: 484
+        height: 98
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3e3f50aac032cf5b0800000000000000
-      internalID: -5333349321414413341
+      spriteID: 29eab25df7773fa90800000000000000
+      internalID: -7281344781606998382
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      cannon_0: -5333349321414413341
+      cannonbar_0: -7281344781606998382
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -18,10 +18,10 @@ public class meteor : MonoBehaviour
     }
     IEnumerator Meteor()
     {
-        data.money += hpMaxMeteor;
+        data.money += hpMaxMeteor * petManager.globalMoneyMod;
         if (goldMeteorPerk.isActive)
         {
-            data.money += hpMaxMeteor;
+            data.money += hpMaxMeteor * petManager.globalMoneyMod * 4;
             goldMeteorPerk.isActive=false;
         }
         met.SetActive(false);

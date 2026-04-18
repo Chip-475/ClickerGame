@@ -9,11 +9,14 @@ public class petManager : MonoBehaviour
         epic,
         legendary
     }
+    public static float petCritMod;
+    public static int petMoneyMod = 1;
 
     [System.Serializable]
     public class pet
     {
         [Header("Identifier")]
+        public int index;
         public string name;
         public Sprite sprite;
         public rarity rarity;
@@ -23,16 +26,14 @@ public class petManager : MonoBehaviour
         public int baseCost;
         public int rank;
         public float moneyMod;
-        public float critMod;
 
         [Header("Post Start")]
         public int finalCost;
         public float finalMoneyMod;
-        public int finalCritMod;
+        public float finalCritMod;
     }
 
     public pet[] petList = new pet[0];
-    public static int globalMoneyMod = 1;
 
     public void getCost(pet[] petList)
     {
@@ -87,8 +88,41 @@ public class petManager : MonoBehaviour
         
         for (int i = 0;i <= petList.Length; i++)
         {
-            globalMoneyMod *= (int)petList[i].finalMoneyMod;
+            petMoneyMod *= (int)petList[i].finalMoneyMod;
         }
+    }
+    public void getCritMod(pet[] petList)
+    {
+        for (int i = 0; i <= petList.Length; i++)
+        {
+            float x = 0;
+            switch (petList[0].rarity)
+            {
+                case (rarity.common):
+                    petList[i].finalCritMod = 2.5f * petList[i].lvl * petList[i].rank;
+                    break;
+                case (rarity.rare):
+                    petList[i].finalCritMod = 1.5f * petList[i].lvl * petList[i].rank;
+                    break;
+                case (rarity.epic):
+                    petList[i].finalCritMod = 2f * petList[i].lvl * petList[i].rank;
+                    break;
+                case (rarity.legendary):
+                    petList[i].finalCritMod = 2.5f * petList[i].rank * (petList[i].lvl/25);
+                    break;
+                default:
+                    petList[i].finalCritMod = 0;
+                    break;
+            }
+            x += petList[i].finalCritMod;
+            Mathf.Clamp(x, 0, 25);
+            petCritMod = x;
+        }
+    }
+
+    public pet[] petGetter()
+    {
+        return petList;
     }
 
 }

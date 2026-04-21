@@ -2,40 +2,7 @@ using UnityEngine;
 
 public class petManager : MonoBehaviour
 {
-    public enum rarity
-    {
-        common,
-        rare,
-        epic,
-        legendary
-    }
-    public static float petCritMod;
-    public static int petMoneyMod = 1;
-
-    [System.Serializable]
-    public class pet
-    {
-        [Header("Identifier")]
-        public int index;
-        public string name;
-        public Sprite sprite;
-        public rarity rarity;
-
-        [Header("Stats")]
-        public int lvl;
-        public int baseCost;
-        public int rank;
-        public float moneyMod;
-
-        [Header("Post Start")]
-        public int finalCost;
-        public float finalMoneyMod;
-        public float finalCritMod;
-    }
-
-    public pet[] petList = new pet[0];
-
-    public void getCost(pet[] petList)
+    public void getCost(petData[] petList)
     {
         int finalCost;
 
@@ -59,26 +26,26 @@ public class petManager : MonoBehaviour
                     finalCost = 0;
                     break;
             }
-            petList[i].finalCost = finalCost;
+            petList[i].finalUPcost = finalCost;
         }
     }
-    public void getMoneyMod(pet[] petList)
+    public void getMoneyMod(petData[] petList)
     {
         for (int i = 0; i <= petList.Length; i++)
         {
             switch (petList[0].rarity)
             {
                 case (rarity.common):
-                    petList[i].finalMoneyMod = petList[i].moneyMod * petList[i].lvl;
+                    petList[i].finalMoneyMod = petList[i].baseMoneyMod * petList[i].lvl;
                     break;
                 case (rarity.rare):
-                    petList[i].finalMoneyMod = petList[i].moneyMod * petList[i].lvl * 1.3f;
+                    petList[i].finalMoneyMod = petList[i].baseMoneyMod * petList[i].lvl * 1.3f;
                     break;
                 case (rarity.epic):
-                    petList[i].finalMoneyMod = petList[i].moneyMod * petList[i].lvl * 1.6f;
+                    petList[i].finalMoneyMod = petList[i].baseMoneyMod * petList[i].lvl * 1.6f;
                     break;
                 case (rarity.legendary):
-                    petList[i].finalMoneyMod = petList[i].moneyMod * petList[i].lvl * 2;
+                    petList[i].finalMoneyMod = petList[i].baseMoneyMod * petList[i].lvl * 2;
                     break;
                 default:
                     petList[i].finalMoneyMod = 1;
@@ -88,10 +55,10 @@ public class petManager : MonoBehaviour
         
         for (int i = 0;i <= petList.Length; i++)
         {
-            petMoneyMod *= (int)petList[i].finalMoneyMod;
+            data.globalMoneyMod *= (int)petList[i].finalMoneyMod;
         }
     }
-    public void getCritMod(pet[] petList)
+    public void getCritMod(petData[] petList)
     {
         for (int i = 0; i <= petList.Length; i++)
         {
@@ -116,13 +83,7 @@ public class petManager : MonoBehaviour
             }
             x += petList[i].finalCritMod;
             Mathf.Clamp(x, 0, 25);
-            petCritMod = x;
+            data.globalCritMod = x;
         }
     }
-
-    public pet[] petGetter()
-    {
-        return petList;
-    }
-
 }

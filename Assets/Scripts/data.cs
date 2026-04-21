@@ -32,4 +32,8 @@ public static class data
     public static int critPerkAmount = 1;
     public static int clickPerk = 1;
     public static int goldMeteor = 1;
+
+    //pets
+    public static float globalMoneyMod;
+    public static float globalCritMod;
 }

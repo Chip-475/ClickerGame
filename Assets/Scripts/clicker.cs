@@ -33,7 +33,7 @@ public class clicker : MonoBehaviour
     }
     public void click()
     {
-        int critRate = (int)(data.critUPlvl + petManager.petCritMod * 10);
+        int critRate = (int)(data.critUPlvl + data.globalCritMod * 10);
         meteor.hpMeteor -= clickStr;
         if (!autoClicker)
         {

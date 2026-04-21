@@ -1,21 +1,30 @@
+using System.Buffers.Text;
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class meteor : MonoBehaviour
 {
     public GameObject met;
+    public TMP_Text metHp;
     public static int hpMeteor;
     public static int hpMaxMeteor;
     bool x = true;
+    private void meteorLvl()
+    {
+        data.meteorCrushed++;
+        data.meteorlvl = (int)(15 * (1 + data.meteorCrushed/3 * 0.05f) * Mathf.Pow(1.05f, data.meteorCrushed/3));
+    }
     IEnumerator Meteor()
     {
-        data.money += hpMaxMeteor;
+        data.money += hpMaxMeteor; //* petManager.globalMoneyMod;
         if (goldMeteorPerk.isActive)
         {
-            data.money += hpMaxMeteor;
+            data.money += hpMaxMeteor; //*petManager.globalMoneyMod * 4;
             goldMeteorPerk.isActive=false;
         }
         met.SetActive(false);
+        meteorLvl();
         hpMaxMeteor = Random.Range(data.meteorlvl * 3, data.meteorlvl * 5);
         yield return new WaitForSeconds(2);
         met.SetActive(true);
@@ -31,11 +40,15 @@ public class meteor : MonoBehaviour
 
     public void Update()
     {
-        
+        metHp.text =hpMeteor +"/"+ hpMaxMeteor;
         if(x && hpMeteor <= 0)
         {
-            StartCoroutine(Meteor());
-            x = false;
+            transform.localScale -= Vector3.one * 2f * Time.deltaTime;
+            if (transform.localScale.x < 0)
+            {
+                StartCoroutine(Meteor());
+                x = false;
+            }
         }
     }
 }

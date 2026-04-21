@@ -10,9 +10,9 @@ public class critText : MonoBehaviour
         {
             if(Screen.height > Screen.width)
             {
-                spstX = Random.Range(-Screen.width / 3, Screen.width / 3);
-                spstY = Random.Range(-Screen.height / 6, Screen.height / 6);
-            }else if(Screen.height < Screen.width)
+                spstX = Random.Range(-Screen.width / 2.5f, Screen.width / 2.5f);
+                spstY = Random.Range(-Screen.height / 2.5f, Screen.height / 2.5f);
+            }/*else if(Screen.height < Screen.width)
             {
                 spstX = Random.Range(-Screen.width / 6, Screen.width / 6);
                 spstY = Random.Range(-Screen.height / 3, Screen.height / 3);
@@ -21,7 +21,7 @@ public class critText : MonoBehaviour
             {
                 spstX = Random.Range(-Screen.width / 4, Screen.width / 4);
                 spstY = Random.Range(-Screen.height / 4, Screen.height / 4);
-            }
+            }*/
         } while (spstX > -75 && spstX < 75 && spstY > -75 && spstY < 75);
         transform.position += new Vector3(spstX, spstY);
         Destroy(gameObject, 1);

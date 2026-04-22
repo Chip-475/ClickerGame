@@ -3,15 +3,36 @@ using UnityEngine;
 public class critUPbutton : MonoBehaviour
 {
     public critUPmanager manager;
-    public float baseCost = 100;
-    public float rawCost = 100;
+
     public void critUPclick()
     {
-        if (data.critUPlvl < 51)
+        switch (data.critUPlvl)
         {
-            data.critUPlvl++;
-            rawCost = baseCost * Mathf.Pow(1.13f, data.critUPlvl) * Mathf.Pow(data.critUPlvl + 1, 1.4f);
-            manager.critUPcost = Mathf.RoundToInt(rawCost / 50f) * 50;
+            case 0:
+                data.critUPlvl++;
+                manager.critUPcost = 100;
+                data.money-=100;
+                return;
+            case 1:
+                data.critUPlvl++;
+                manager.critUPcost = 250;
+                data.money-=250;
+                return;
+            case 2:
+                data.critUPlvl++;
+                manager.critUPcost = 1000;
+                data.money -= 1000;
+                return;
+            case 3:
+                data.critUPlvl++;
+                manager.critUPcost = 5000;
+                data.money-=5000;
+                return;
+            case 4:
+                data.critUPlvl++;
+                manager.critUPcost = 10000;
+                data.money -= 10000;
+                return;
         }
     }
 }

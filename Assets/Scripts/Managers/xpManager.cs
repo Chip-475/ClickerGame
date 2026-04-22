@@ -6,13 +6,10 @@ using UnityEngine.UI;
 public class xpManager : MonoBehaviour
 {
     public Image xpBar;
-    public Image LevelUpImg;
     public TMP_Text lvl;
     public TMP_Text exp;
-    public static Vector3 Image_Pos=new Vector3(0,700,0);
     void Unlock()
     {
-        Instantiate(LevelUpImg, Image_Pos, Quaternion.identity);
         switch (data.lvl)
         {
             case 5:

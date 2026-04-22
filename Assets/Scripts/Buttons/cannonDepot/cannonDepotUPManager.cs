@@ -64,8 +64,8 @@ public class cannonDepotUPManager : MonoBehaviour
 
         }
 
-        data.fuel1 = 100 + (data.cannonDepotlvl * 10);
-        data.fuel2 = 100 + (data.cannonDepotlvl * 10);
+        data.fuel1 = cannonManager.getmaxFuel1();
+        data.fuel2 = cannonManager.getmaxFuel2();
     }
 }
 

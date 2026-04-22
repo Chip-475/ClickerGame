@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 828cc4746fe4e9447a2674c7e59dda2f
+guid: 16633b6bfbd6d1147810a03b74768646
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8930794477870202577
-    second: cannoncounter_0
+      213: 1321142509957342022
+    second: cannon 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cannoncounter_0
+      name: cannon 1_0
       rect:
         serializedVersion: 2
-        x: 84
-        y: 64
-        width: 428
-        height: 82
+        x: 0
+        y: 16
+        width: 710
+        height: 384
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1de397f924e80fb70800000000000000
-      internalID: 8930794477870202577
+      spriteID: 643eca3fc14a55210800000000000000
+      internalID: 1321142509957342022
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      cannoncounter_0: 8930794477870202577
+      cannon 1_0: 1321142509957342022
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

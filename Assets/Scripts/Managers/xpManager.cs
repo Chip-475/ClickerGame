@@ -1,13 +1,10 @@
 using System.Data;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class xpManager : MonoBehaviour
 {
     public Image xpBar;
-    public TMP_Text lvl;
-    public TMP_Text exp;
     void Unlock()
     {
         switch (data.lvl)
@@ -16,10 +13,10 @@ public class xpManager : MonoBehaviour
                 //petlimit=1
                 break;
             case 10:
-                //petlimit=2
+                //perklimit=2
                 break;
             case 20:
-                //petlimit=3
+                //perklimit=3
                 break;
 
         }
@@ -31,9 +28,7 @@ public class xpManager : MonoBehaviour
     }
     void Update()
     {
-        xpBar.fillAmount = (float)data.xp/ data.xpMax;
-        lvl.text = "livello:"+data.lvl;
-        exp.text = data.xp+"/"+data.xpMax;
+        xpBar.fillAmount = data.xpMax / data.xp;
         if (data.xp >= data.xpMax)
         {
             Unlock();

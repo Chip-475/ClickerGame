@@ -6,7 +6,7 @@ public enum Rarita1
 {
     Common,
     Rare,
-    Legend
+    Leggend
 }
 [Serializable]
 public struct petData

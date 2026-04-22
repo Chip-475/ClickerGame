@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d9e11996357d0f04a9223e32d0ce99bb
+guid: 16633b6bfbd6d1147810a03b74768646
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3161377183836907632
-    second: meteorite_0
+      213: 1321142509957342022
+    second: cannon 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: meteorite_0
+      name: cannon 1_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 10
-        width: 219
-        height: 195
+        x: 0
+        y: 16
+        width: 710
+        height: 384
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 078af9b8cc77fdb20800000000000000
-      internalID: 3161377183836907632
+      spriteID: 643eca3fc14a55210800000000000000
+      internalID: 1321142509957342022
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      meteorite_0: 3161377183836907632
+      cannon 1_0: 1321142509957342022
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

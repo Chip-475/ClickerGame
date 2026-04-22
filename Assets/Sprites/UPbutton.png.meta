@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f1de9e11e97322641a51658f0cb3a32c
+guid: 9560715df51fa9841b935a7ee76554a1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3533950297644522795
-    second: Botton_background_0
+      213: -6290383780921539244
+    second: UPbutton_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 96
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Botton_background_0
+      name: UPbutton_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 720
-        height: 400
+        width: 96
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b2ddcf0721d1b0130800000000000000
-      internalID: 3533950297644522795
+      spriteID: 4550b45774114b8a0800000000000000
+      internalID: -6290383780921539244
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Botton_background_0: 3533950297644522795
+      UPbutton_0: -6290383780921539244
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

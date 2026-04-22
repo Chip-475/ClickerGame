@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9710a9750ae7b6e4db23d8c626a0ba9a
+guid: a8c28fcdcfd70034eb66e436fdae1e29
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4865680543947171445
-    second: Shop_background_0
+      213: -5333349321414413341
+    second: cannon_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Shop_background_0
+      name: cannon_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 8
         y: 0
-        width: 156
-        height: 322
+        width: 47
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b89df732351a97cb0800000000000000
-      internalID: -4865680543947171445
+      spriteID: 3e3f50aac032cf5b0800000000000000
+      internalID: -5333349321414413341
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Shop_background_0: -4865680543947171445
+      cannon_0: -5333349321414413341
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,7 +1,7 @@
 using UnityEngine;
 public enum Rarita
 {
-    Common,     
+    Common,
     Rare,
     Leggend
 }
@@ -13,7 +13,6 @@ public class SuperPets : MonoBehaviour
     [SerializeField] protected int rank = 1;
     [SerializeField] SuperPets pet2;
     [SerializeField] protected int livelloMax = 10;
-    [SerializeField] protected int consumaStamina=2;
 
 
     [Header("Statistiche Pet")]
@@ -32,12 +31,13 @@ public class SuperPets : MonoBehaviour
     }
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             if (pet2 != null)
             {
                 TentaFusione();
             }
+
         }
     }
 
@@ -85,11 +85,11 @@ public class SuperPets : MonoBehaviour
     {
         float moltiplicatoreRarita = 1f;
 
-        if (rar==Rarita.Rare)
+        if (rar == Rarita.Rare)
         {
             moltiplicatoreRarita = 2f;
         }
-        else if (rar==Rarita.Leggend)
+        else if (rar == Rarita.Leggend)
         {
             moltiplicatoreRarita = 4f;
         }
@@ -104,12 +104,13 @@ public class SuperPets : MonoBehaviour
     {
         if (livello >= livelloMax) return false;
         if (data.money < GetCostoLevelUp()) return false;
+
         return true;
     }
 
     public bool ProvaLevelUp()
     {
-        if(!PuoLevelUp()) return false;
+        if (!PuoLevelUp()) return false;
 
         int costo = GetCostoLevelUp();
 
@@ -119,7 +120,6 @@ public class SuperPets : MonoBehaviour
 
         return true;
     }
-
     protected void AggiornaPotenza()
     {
         float moltiplicatoreRarita = 1f;

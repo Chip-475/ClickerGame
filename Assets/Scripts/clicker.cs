@@ -33,12 +33,13 @@ public class clicker : MonoBehaviour
     }
     public void click()
     {
+        int critRate = (int)(data.critUPlvl + data.globalCritMod * 10);
         meteor.hpMeteor -= clickStr;
         if (!autoClicker)
         {
             data.xp += clickExp;
-            int r = UnityEngine.Random.Range(0, 9);
-            if (r < data.critUPlvl)
+            int r = UnityEngine.Random.Range(0, critRate);
+            if (r < critRate)
             {
                 data.xp += clickExp * data.critDmg;
                 meteor.hpMeteor -= clickStr * data.critDmg;

@@ -1,7 +1,9 @@
+using NUnit.Framework;
 using System;
 using UnityEngine;
+using System.Collections.Generic;
 
-public static class data
+public class data
 {
     //resources
     public static int money = 10000;
@@ -34,6 +36,7 @@ public static class data
     public static int goldMeteor = 1;
 
     //pets
+    public List<PetInstance> pets= new List<PetInstance>();
     public static float globalMoneyMod;
     public static float globalCritMod;
 }

@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05c72bd9525b3344b8fc9e868ff34edd, type: 3}
+  m_Name: PetDatabase
+  m_EditorClassIdentifier: Assembly-CSharp::petDB
+  allPets:
+  - {fileID: 11400000, guid: 6f9bac60e182f3f49bdf0b6ff30c78c6, type: 2}
+  - {fileID: 11400000, guid: 8ea2c50c8dcce8945adc878e647ac48a, type: 2}
+  - {fileID: 11400000, guid: 1098a316dc95fb549809fe057b45b258, type: 2}
+  - {fileID: 11400000, guid: fa7c1769e9adc6b4985c87759dc4d330, type: 2}
+  - {fileID: 11400000, guid: 2c9f645ec4eca704aaa8f9293eddff24, type: 2}
+  - {fileID: 11400000, guid: e5ea1f75d7ed6f64e85868b4273686af, type: 2}
+  - {fileID: 11400000, guid: fa7effe2f5e36434bb098c6ac1898a32, type: 2}
+  - {fileID: 11400000, guid: aa3248d9c28437c458674aedec31c5eb, type: 2}
+  - {fileID: 11400000, guid: e71329cd547c99e46bf073a766023f52, type: 2}
+  - {fileID: 11400000, guid: 5c6ae06ec6ce3e6429efe8afa1bc12b1, type: 2}
+  - {fileID: 11400000, guid: 781e504095294bf49993c02022a84759, type: 2}
+  - {fileID: 11400000, guid: 1e52f4e6bd7f49c4fa4d541ef6759c56, type: 2}
+  - {fileID: 11400000, guid: da9229dc912b2f14697abb1db6bae091, type: 2}
+  - {fileID: 11400000, guid: f66c86768fe0e854aac654cf3b069037, type: 2}
+  - {fileID: 11400000, guid: 9fe9e3e289f161a4c98e79882ff5fad3, type: 2}
+  - {fileID: 11400000, guid: dc41a6bf1d01de4478c870c95dec7f2f, type: 2}
+  - {fileID: 11400000, guid: 3860313a53a26eb478de0b4f8327f479, type: 2}
+  - {fileID: 11400000, guid: 2cef12ff3a3cd9b4893f1264abeb20de, type: 2}
+  - {fileID: 11400000, guid: 82abb2e4e1aab484e873289553ba60d4, type: 2}
+  - {fileID: 11400000, guid: 8ffd2a07fef928541af5d3f42386717b, type: 2}
+  - {fileID: 11400000, guid: 4ad1af0158aa97b4b8a6d42c2682dd22, type: 2}
+  - {fileID: 11400000, guid: 1a057da39540f5e419820521800d793a, type: 2}
+  - {fileID: 11400000, guid: 41fa5525a09bfe748a122f03db443699, type: 2}
+  - {fileID: 11400000, guid: e1102302c122688479d0b2d9326c1e81, type: 2}
+  - {fileID: 11400000, guid: 35ed7c011d2e6cb42911c9e33688feef, type: 2}
+  - {fileID: 11400000, guid: a097bcc1006abfb46b456de455dc4c6f, type: 2}

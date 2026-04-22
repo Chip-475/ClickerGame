@@ -18,9 +18,6 @@ public class petData : ScriptableObject
     public Sprite sprite;
     public rarity rarity;
 
-    public int lvl;
-    public int rank;
-
     public float baseMoneyMod;
     public float baseCritMod;
     public float baseUPcost;
@@ -29,7 +26,7 @@ public class petData : ScriptableObject
     public float finalCritMod;
     public float finalUPcost;
 
-    private void Awake()
+    /*private void Awake()
     {
         Math.Clamp(lvl, 1, 10);
         Math.Clamp(rank, 1, 5);
@@ -57,5 +54,5 @@ public class petData : ScriptableObject
                 break;
         }
         Debug.Log("Pet Created");
-    }
+    }*/
 }

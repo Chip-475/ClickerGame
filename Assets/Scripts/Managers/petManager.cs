@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class petManager : MonoBehaviour
 {
-    public void getCost(petData[] petList)
+    /*public void getCost(petData[] petList)
     {
         int finalCost;
 
@@ -85,5 +85,5 @@ public class petManager : MonoBehaviour
             Mathf.Clamp(x, 0, 25);
             data.globalCritMod = x;
         }
-    }
+    }*/
 }

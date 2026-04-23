@@ -10,7 +10,8 @@ public class clicker : MonoBehaviour
     public static bool autoClicker = false;
     //private float autoClickerTimer = 30f;
     public GameObject text;
-    /*IEnumerator autoclick()
+
+  /*  IEnumerator autoclick()
     {
         click();
         yield return new WaitForSeconds(0.2f);
@@ -33,8 +34,8 @@ public class clicker : MonoBehaviour
     }
     public void click()
     {
-        //audioManager.manager.playSFX(clickSFX, transform, 1f);
-        int critRate = (int)(data.critUPlvl + data.globalCritMod*10);
+        audioManager.manager.playSFX(clickSFX, transform, 1f);
+        int critRate = (int)(data.critUPlvl + data.globalCritMod * 10);
         meteor.hpMeteor -= clickStr;
         if (!autoClicker)
         {

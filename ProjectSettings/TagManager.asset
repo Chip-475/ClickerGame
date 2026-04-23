@@ -4,8 +4,8 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - ArrivalPoint1
   - ArrivalPoint2
+  - ArrivalPoint1
   layers:
   - Default
   - TransparentFX

@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class audioManager : MonoBehaviour
 {
-    public static audioManager manager;
+    public  static audioManager manager;
     public AudioSource source;
 
     void Awake()
     {
-        if (manager == null)
+        if(manager == null)
         {
             manager = this;
         }

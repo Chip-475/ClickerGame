@@ -15,25 +15,32 @@ public class perkScript : MonoBehaviour
 
     public perkType type;
 
-    IEnumerator move()
+    IEnumerator move(GameObject _arrivalPoint)
     {
-        Debug.Log("CR");
-        int moveTime = 2;
+        float moveTime = 100;
         float t = 0;
-        while (t < moveTime)
+        while (t < moveTime && transform.position != _arrivalPoint.transform.position)
         {
-            Debug.Log("CR");
             t += Time.deltaTime;
-            transform.position = Vector3.Lerp(transform.position, arrivalPoint.transform.position, t / moveTime);
-            yield return new WaitForEndOfFrame();
+            transform.position = Vector3.Lerp(transform.position, _arrivalPoint.transform.position, 1 - Mathf.Pow(1 - (t / moveTime), 3));
+            yield return null;
         }
     }
 
     private void Start()
     {
         parentObject = gameObject.transform.parent.gameObject;
-        arrivalPoint = GameObject.FindGameObjectWithTag("ArrivalPoint");
-        StartCoroutine(move());
+        if(parentObject.tag == "ArrivalPoint1")
+        {
+            arrivalPoint = GameObject.Find("arrivalPoint1");
+        }
+        else if(parentObject.tag == "ArrivalPoint2")
+        {
+            arrivalPoint = GameObject.Find("arrivalPoint2");
+        }
+        transform.parent = GameObject.Find("safeArea").transform;
+        StartCoroutine(move(arrivalPoint));
+        print(transform.parent.name);
         Destroy(gameObject, 5);
     }
 

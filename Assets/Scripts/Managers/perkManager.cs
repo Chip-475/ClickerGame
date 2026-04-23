@@ -24,7 +24,7 @@ public class perkManager : MonoBehaviour
     public TMP_Text GMPerkFake_amount;
     void Update()
     {
-        data.totalPerk = data.clickPerk + data.critPerkAmount + data.goldMeteor;
+        data.totalPerk = data.clickPerkAmount + data.critPerkAmount + data.goldMeteorAmount;
         perkCap.text = data.totalPerk + "/" + data.PerkLimit;
         {
             critPerk_amount.text = "Amount:" + data.critPerkAmount;
@@ -41,9 +41,9 @@ public class perkManager : MonoBehaviour
             }
         } //crit perk
         {
-            baseClickPerk_amount.text = "Amount:" + data.clickPerk;
-            baseClickPerkFake_amount.text = "Amount:" + data.clickPerk;
-            if (data.clickPerk > 0 && !baseClickPerk.isActive)
+            baseClickPerk_amount.text = "Amount:" + data.clickPerkAmount;
+            baseClickPerkFake_amount.text = "Amount:" + data.clickPerkAmount;
+            if (data.clickPerkAmount > 0 && !baseClickPerk.isActive)
             {
                 baseClickPerkButton.SetActive(true);
                 baseClickPerkButton_fake.SetActive(false);
@@ -56,9 +56,9 @@ public class perkManager : MonoBehaviour
 
         } //click perk
         {
-            GMPerk_amount.text = "Amount:" + data.clickPerk;
-            GMPerkFake_amount.text = "Amount:" + data.clickPerk;
-            if (data.goldMeteor > 0 && !goldMeteorPerk.isActive)
+            GMPerk_amount.text = "Amount:" + data.clickPerkAmount;
+            GMPerkFake_amount.text = "Amount:" + data.clickPerkAmount;
+            if (data.goldMeteorAmount > 0 && !goldMeteorPerk.isActive)
             {
                 GMPerkButton.SetActive(true);
                 GMPerkButton_fake.SetActive(false);

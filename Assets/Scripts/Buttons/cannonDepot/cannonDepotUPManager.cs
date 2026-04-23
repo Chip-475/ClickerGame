@@ -17,7 +17,6 @@ public class cannonDepotUPManager : MonoBehaviour
 
     [Header("Upgrade Data")]
     public int[] levelCosts = { 200, 500, 1000, 2500, 5000 };
-    public cannonManager cannonManager;
 
     public int CurrentCost
     {
@@ -41,7 +40,7 @@ public class cannonDepotUPManager : MonoBehaviour
         if (upgradeButton != null) upgradeButton.SetActive(canBuy);
         if (fakeButton != null) fakeButton.SetActive(!canBuy);
 
-        int depotValue = cannonManager != null ? cannonManager.depotBonusPerLevel : 0;
+        int depotValue = data.depotBonusPerLevel;
 
         string headerText = "Cannon Depot UP<br>Lv. " + data.cannonDepotlvl;
         string costText = IsMaxLevel ? "MAX" : "Cost: " + CurrentCost;
@@ -58,14 +57,7 @@ public class cannonDepotUPManager : MonoBehaviour
 
     public void RefillNewCapacity()
     {
-        if (cannonManager == null)
-        {
-            return;
-
-        }
-
         data.fuel1 = 100 + (data.cannonDepotlvl * 10);
         data.fuel2 = 100 + (data.cannonDepotlvl * 10);
     }
 }
-

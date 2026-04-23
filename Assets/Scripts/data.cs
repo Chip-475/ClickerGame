@@ -1,4 +1,3 @@
-using NUnit.Framework;
 using System;
 using UnityEngine;
 using System.Collections.Generic;
@@ -29,14 +28,16 @@ public class data
     public static bool cannon2;
     public static int fuel1=1;
     public static int fuel2=1;
+    public static float fireRateReductionPerLevel;
+    public static int depotBonusPerLevel;
 
     //perklist
     public static int critPerkAmount = 1;
-    public static int clickPerk = 1;
-    public static int goldMeteor = 1;
+    public static int clickPerkAmount = 1;
+    public static int goldMeteorAmount = 1;
 
     //pets
-    public List<PetInstance> pets= new List<PetInstance>();
+    public static List<PetInstance> pets= new List<PetInstance>();
     public static float globalMoneyMod;
     public static float globalCritMod;
 }

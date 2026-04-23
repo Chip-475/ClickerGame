@@ -6,7 +6,7 @@ public class GoldMeteorPickUp : MonoBehaviour
     {
         if (data.PerkLimit > data.totalPerk)
         {
-            data.goldMeteor++;
+            data.goldMeteorAmount++;
             //animationPH
             Destroy(gameObject);
         }

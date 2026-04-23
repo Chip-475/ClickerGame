@@ -1,7 +1,7 @@
 using UnityEngine;
 
 public class petManager : MonoBehaviour
-{
+{   
     /*public void getCost(petData[] petList)
     {
         int finalCost;

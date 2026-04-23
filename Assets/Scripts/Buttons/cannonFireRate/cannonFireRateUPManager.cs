@@ -18,7 +18,6 @@ public class cannonFireRateUPManager : MonoBehaviour
 
     [Header("Upgrade Data")]
     public int[] levelCosts = { 150, 300, 600, 1200, 2500 };
-    public cannonManager cannonManager;
 
     public int CurrentCost
     {
@@ -47,7 +46,7 @@ public class cannonFireRateUPManager : MonoBehaviour
             fakeButton.SetActive(!canBuy);
         }
 
-        float reduction = cannonManager != null ? cannonManager.fireRateReductionPerLevel : 0f;
+        float reduction = data.fireRateReductionPerLevel;
         string headerText = "Cannon Fire Rate UP<br>Lv. " + data.cannonFireRatelvl;
         string costText = IsMaxLevel ? "MAX" : "Cost: " + CurrentCost;
         string effectText = "-" + reduction.ToString("0.00") + "s";

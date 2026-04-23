@@ -1,9 +1,13 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
+
 [Serializable]
 public class PetInstance 
 {
-    public string petID;
+    [FormerlySerializedAs("petID")]
+    public string petId;
+    public string petName;
     public int rank;
     public int Petlvl;
 

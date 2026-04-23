@@ -4,13 +4,13 @@ using System.Collections;
 using UnityEditor;
 public class clicker : MonoBehaviour
 {
+    public AudioClip clickSFX;
     public static int clickStr = 1;
     public static int clickExp = 10;
     public static bool autoClicker = false;
     //private float autoClickerTimer = 30f;
     public GameObject text;
-
-  /*  IEnumerator autoclick()
+    /*IEnumerator autoclick()
     {
         click();
         yield return new WaitForSeconds(0.2f);
@@ -33,7 +33,8 @@ public class clicker : MonoBehaviour
     }
     public void click()
     {
-        int critRate = (int)(data.critUPlvl + data.globalCritMod * 10);
+        //audioManager.manager.playSFX(clickSFX, transform, 1f);
+        int critRate = (int)(data.critUPlvl + data.globalCritMod*10);
         meteor.hpMeteor -= clickStr;
         if (!autoClicker)
         {

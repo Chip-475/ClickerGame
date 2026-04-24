@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class audioManager : MonoBehaviour
 {
     public static audioManager manager;
     public AudioSource source;
+    public AudioMixer mixer;
 
     void Awake()
     {
@@ -20,5 +22,18 @@ public class audioManager : MonoBehaviour
         audioSource.volume = volume;
         audioSource.Play();
         Destroy(audioSource.gameObject, audioSource.clip.length);
+    }
+
+    public void setMaster(float volume)
+    {
+        mixer.SetFloat("master", Mathf.Log10(volume) * 20);
+    }
+    public void setSFX(float volume)
+    {
+        mixer.SetFloat("sfx", Mathf.Log10(volume) * 20);
+    }
+    public void setBGM(float volume)
+    {
+        mixer.SetFloat("bgm", Mathf.Log10(volume) * 20);
     }
 }

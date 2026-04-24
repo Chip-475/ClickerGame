@@ -9,4 +9,9 @@ public class petBox : MonoBehaviour
     public TMP_Text petName;
     public TMP_Text petRank;
     public PetInstance pet;
+    public TMP_Text lvlUPCost;
+    public GameObject lvlUPButton;
+    public GameObject lvlUPButtonFake;
+    public GameObject RankUPButton;
+    public GameObject RankUPButtonFake;
 }

@@ -20,7 +20,7 @@ public class petData : ScriptableObject
 
     public float baseMoneyMod;
     public float baseCritMod;
-    public float baseUPcost;
+    public int baseUPcost=100;
 
     public float finalMoneyMod;
     public float finalCritMod;

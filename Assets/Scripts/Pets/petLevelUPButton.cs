@@ -1,19 +1,40 @@
+using TMPro;
 using UnityEngine;
 
 public class petLevelUPButton : MonoBehaviour
 {
-    int index = 0;
+    [SerializeField] private TMP_Text costText;
+    [SerializeField] private petStats stats;
+    public petBox box;
+    public int cost;
+
+    private void Update()
+    {
+        petBox box = GetComponentInParent<petBox>();
+        cost=stats.UpgradeCost(box.pet);
+        costText.text=cost.ToString();
+        if (cost < data.money)
+        {
+            box.lvlUPButton.SetActive(true);
+            box.lvlUPButtonFake.SetActive(false);
+        }
+        else
+        {
+            box.lvlUPButton.SetActive(false);
+            box.lvlUPButtonFake.SetActive(true);
+        }
+    }
     public void lvlUP()
     {
-        string id=GetComponentInParent<petBox>().pet.petId;
-        foreach(var p in data.pets)
+        string id = box.pet.petId;
+        for (int index = 0; index < data.pets.Count; index++)
         {
-            if(id==p.petId)
+            if (id == data.pets[index].petId)
             {
                 data.pets[index].Petlvl++;
-                
+                data.money -= cost;
+                break;
             }
-            index++;
         }
     }
 }

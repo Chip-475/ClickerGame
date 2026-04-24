@@ -531,7 +531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cabae674d399ca419f7a8eeeb14b442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PetUI
-  petPrefab: {fileID: 7021666155829056582, guid: 2eac475bf1a321a4a8102c63f1ad0539, type: 3}
+  petPrefab: {fileID: 7987076488031492732, guid: 9b3a0b0d4ed135c469fc57c46ba5be55, type: 3}
   parent: {fileID: 381834575}
 --- !u!1 &72565000
 GameObject:

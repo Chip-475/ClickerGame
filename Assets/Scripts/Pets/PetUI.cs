@@ -9,23 +9,6 @@ public class PetUI : MonoBehaviour
 
 
     private int oldPet;
-
-    public void Setup(petData data)
-    {
-        /*petData = data; // salva il riferimento al pet
-
-        petImage.sprite = data.sprite; // prende l'immagine dallo ScriptableObject
-        nameText.text = data.petName; // scrive il nome
-        //levelText.text = "Lv. " + data.lvl; // mostra il livello
-
-        // pulisce eventuali listener vecchi
-        upgradeButton.onClick.RemoveAllListeners();
-        rankUpButton.onClick.RemoveAllListeners();
-
-        // assegna le funzioni ai bottoni
-        upgradeButton.onClick.AddListener(Upgrade);
-        rankUpButton.onClick.AddListener(RankUp);*/
-    }
     private void Start()
     {
         buildUI();

@@ -9,6 +9,7 @@ public class petStats : MonoBehaviour
 
         petData data = GetPetData(pet);
         float baseCost = data.baseUPcost;
+        finalCost = (int)baseCost * ((1+(int)data.rarity)*pet.Petlvl);
         pet.currentUPcost = finalCost;
 
         return finalCost;

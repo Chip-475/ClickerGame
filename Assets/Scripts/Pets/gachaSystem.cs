@@ -69,7 +69,7 @@ public class gachaSystem : MonoBehaviour
         }
         return null;
     }
-        public petData getRarity(rarity r)
+    public petData getRarity(rarity r)
     {
         var list = new System.Collections.Generic.List<petData>();
         foreach (var p in database.allPets)

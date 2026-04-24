@@ -10,7 +10,7 @@ public class PetInstance
     public string petName;
     public int rank;
     public int Petlvl;
-
+    public int lvlUPCost;
     public float currentMoneyMod;
     public float currentCritMod;
     public float currentUPcost;

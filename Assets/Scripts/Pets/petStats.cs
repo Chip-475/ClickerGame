@@ -4,6 +4,11 @@ public class petStats : MonoBehaviour
 {
     [SerializeField] private petDB db;
     private int finalCost;
+    private void Start()
+    {
+        getGlobalBonus();
+    }
+
     public int UpgradeCost(PetInstance pet)
     {
 
@@ -27,30 +32,72 @@ public class petStats : MonoBehaviour
 
         return null;
     }
-    /*private void Awake()
+    public int getMaxlvl(PetInstance pet)
     {
-        switch (petData.rarity)
+        return 10 * pet.rank;
+    }
+    public int getLvl(PetInstance pet)
+    {
+        return pet.Petlvl;
+    }
+    public int getRarity(PetInstance pet)
+    {
+        petData data = GetPetData(pet);
+        return (int)data.rarity;
+    }
+    public float getCritBonus(PetInstance pet)
+    {
+        float progress=(pet.Petlvl-1f)/(getMaxlvl(pet));
+        int ratityValue = getRarity(pet);
+        return progress * (7f + ratityValue * 6f);
+    }
+    public float getMoneyBonus(PetInstance pet)
+    {
+        float progress = (pet.Petlvl - 1f) / (getMaxlvl(pet));
+        int ratityValue = getRarity(pet);
+        return 1f+progress * (1f + ratityValue);
+    }
+
+    public int GetEquippedPetCount()
+    {
+        int equippedCount = 0;
+        foreach (var pet in data.pets)
         {
-            case rarity.common:
-                baseMoneyMod = 1.1f;
-                baseCritMod = 0.1f;
-                finalUPcost = 50;
-                break;
-            case rarity.rare:
-                baseMoneyMod = 1.25f;
-                baseCritMod = 0.25f;
-                finalUPcost = 250;
-                break;
-            case rarity.epic:
-                baseMoneyMod = 1.5f;
-                baseCritMod = 0.5f;
-                finalUPcost = 500;
-                break;
-            case rarity.legendary:
-                baseMoneyMod = 2f;
-                baseCritMod = 1f;
-                finalUPcost = 1000;
-                break;
+            if (pet.isEquipped)
+            {
+                equippedCount++;
+            }
         }
-    }*/
+
+        return equippedCount;
+    }
+
+    public bool CanEquip(PetInstance pet)
+    {
+        if (pet.isEquipped && GetEquippedPetCount() < data.maxEquippedPets)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public void getGlobalBonus()
+    {
+        data.globalMoneyMod = 1f;
+        data.globalCritMod = 0f;
+
+        foreach (var pet in data.pets)
+        {
+            pet.currentMoneyMod = getMoneyBonus(pet);
+            pet.currentCritMod = getCritBonus(pet);
+
+            if (!pet.isEquipped)
+            {
+                continue;
+            }
+
+            data.globalMoneyMod *= pet.currentMoneyMod;
+            data.globalCritMod += pet.currentCritMod;
+        }
+    }
 }

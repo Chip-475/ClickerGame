@@ -14,4 +14,7 @@ public class petBox : MonoBehaviour
     public GameObject lvlUPButtonFake;
     public GameObject RankUPButton;
     public GameObject RankUPButtonFake;
+    public GameObject equipButton;
+    public GameObject equipButtonFake;
+    public GameObject unequipButton;
 }

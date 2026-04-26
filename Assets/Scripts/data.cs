@@ -38,6 +38,7 @@ public class data
 
     //pets
     public static List<PetInstance> pets= new List<PetInstance>();
+    public static int maxEquippedPets = 0;
     public static float globalMoneyMod;
     public static float globalCritMod;
 }

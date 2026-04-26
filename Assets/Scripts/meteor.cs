@@ -103,11 +103,12 @@ public class meteor : MonoBehaviour
 
     IEnumerator MeteorRespawn()
     {
-        data.money += hpMaxMeteor;
+        int reward = Mathf.RoundToInt(hpMaxMeteor * data.globalMoneyMod);
+        data.money += reward;
 
         if (goldMeteorPerk.isActive)
         {
-            data.money += hpMaxMeteor;
+            data.money += reward;
             goldMeteorPerk.isActive = false;
         }
 

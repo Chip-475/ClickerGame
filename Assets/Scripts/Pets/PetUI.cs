@@ -6,7 +6,7 @@ public class PetUI : MonoBehaviour
 {
     public GameObject petPrefab;
     public GameObject parent;
-
+    [SerializeField] private petStats stats;
 
     private int oldPet;
     private void Start()
@@ -31,10 +31,13 @@ public class PetUI : MonoBehaviour
         foreach (var p in data.pets)
         {
             var petInst = Instantiate(petPrefab, parent.transform);
-            petInst.GetComponent<petBox>().pet = p;
-            petInst.GetComponent<petBox>().petName.text = p.petName;
-            petInst.GetComponent<petBox>().petLevel.text = "" + p.Petlvl;
-            petInst.GetComponent<petBox>().petRank.text = "" + p.rank;
+            var box = petInst.GetComponent<petBox>();
+            box.pet = p;
+            box.petName.text = p.petName;
+            box.petLevel.text = p.Petlvl.ToString() + "/" + p.rank * 10;
+            box.petRank.text = "" + p.rank;
         }
+        oldPet = data.pets.Count;
+        stats.getGlobalBonus();
     }
 }

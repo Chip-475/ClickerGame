@@ -17,14 +17,17 @@ public class xpManager : MonoBehaviour
         switch (data.lvl)
         {
             case 5:
+                data.maxEquippedPets = 1;
                 break;
             case 10:
+                data.maxEquippedPets = 2;
                 break;
             case 20:
+                data.maxEquippedPets = 3;
                 break;
         }
 
-        data.money += data.lvl * 50;
+        data.money += Mathf.RoundToInt(data.lvl * 50 * data.globalMoneyMod);
 
         if (data.lvl % 5 == 0)
         {

@@ -16,11 +16,9 @@ MonoBehaviour:
   petName: Polar Bear
   sprite: {fileID: 0}
   rarity: 2
-  lvl: 0
-  rank: 0
   baseMoneyMod: 1.1
   baseCritMod: 0.1
-  baseUPcost: 0
+  baseUPcost: 500
   finalMoneyMod: 0
   finalCritMod: 0
   finalUPcost: 50

@@ -14,7 +14,7 @@ public class xpManager : MonoBehaviour
     public CanvasGroup levelUpCanvas;
     void Unlock()
     {
-        switch (data.lvl)
+        switch (data.lvl+1)
         {
             case 5:
                 data.maxEquippedPets = 1;
@@ -37,6 +37,7 @@ public class xpManager : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(data.maxEquippedPets);
         xpBar.fillAmount = (float)data.xp / data.xpMax;
         lvl.text = "livello:" + data.lvl;
         exp.text = data.xp + "/" + data.xpMax;

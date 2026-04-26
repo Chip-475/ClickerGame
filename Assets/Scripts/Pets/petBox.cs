@@ -17,4 +17,5 @@ public class petBox : MonoBehaviour
     public GameObject equipButton;
     public GameObject equipButtonFake;
     public GameObject unequipButton;
+    public TMP_Text equippedText;
 }

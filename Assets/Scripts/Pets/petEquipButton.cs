@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class petEquipButton : MonoBehaviour
 {
-    [SerializeField] private TMP_Text buttonText;
     [SerializeField] private petStats stats;
 
     private petBox box;
@@ -19,33 +18,53 @@ public class petEquipButton : MonoBehaviour
     {
         box = GetComponentInParent<petBox>();
         bool canEquip = stats.CanEquip(box.pet);
-        box.equipButton.SetActive(canEquip);
-        if(box.pet.isEquipped == false&&!canEquip && stats.GetEquippedPetCount() > data.maxEquippedPets)
+        if(box.pet.isEquipped == false&&!canEquip && stats.GetEquippedPetCount() >= data.maxEquippedPets)
         {
+            box.equipButton.SetActive(false);
             box.equipButtonFake.SetActive(true);
-        }else if(box.pet.isEquipped==true)
+            box.unequipButton.SetActive(false);
+        }
+        else if(box.pet.isEquipped==true)
         {
+            box.equipButton.SetActive(false);
             box.unequipButton.SetActive(true);
+            box.equipButtonFake.SetActive(false);
+        }
+        else
+        {
+            box.equipButton.SetActive(true);
+            box.equipButtonFake.SetActive(false);
+            box.unequipButton.SetActive(false);
         }
     }
-
-    public void ToggleEquip()
+    public void equip()
     {
         foreach (var pet in data.pets)
         {
-            if (pet.petId != box.pet.petId)
+            if (pet.petId == box.pet.petId)
             {
-                continue;
-            }
-            if (!pet.isEquipped && !stats.CanEquip(pet))
-            {
+                pet.isEquipped = true;
+                stats.getGlobalBonus();
+                Debug.Log(data.globalCritMod + " " + data.globalMoneyMod);
+                PetSave.Save(new data());
+                ui.buildUI();
                 return;
             }
-            pet.isEquipped = !pet.isEquipped;
-            stats.getGlobalBonus();
-            PetSave.Save(new data());
-            ui.buildUI();
-            return;
+        }
+    }
+    public void unequip()
+    {
+        foreach (var pet in data.pets)
+        {
+            if (pet.petId == box.pet.petId)
+            {
+                pet.isEquipped = false;
+                stats.getGlobalBonus();
+                Debug.Log(data.globalCritMod + " " + data.globalMoneyMod);
+                PetSave.Save(new data());
+                ui.buildUI();
+                return;
+            }
         }
     }
 }

@@ -74,11 +74,7 @@ public class petStats : MonoBehaviour
 
     public bool CanEquip(PetInstance pet)
     {
-        if (pet.isEquipped && GetEquippedPetCount() < data.maxEquippedPets)
-        {
-            return true;
-        }
-        return false;
+        return !pet.isEquipped && GetEquippedPetCount() < data.maxEquippedPets;
     }
 
     public void getGlobalBonus()

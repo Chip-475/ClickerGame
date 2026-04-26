@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.UIElements;
 
 public class PetUI : MonoBehaviour
 {
     public GameObject petPrefab;
     public GameObject parent;
+    public TMP_Text equippedText;
     [SerializeField] private petStats stats;
 
     private int oldPet;
@@ -15,6 +17,7 @@ public class PetUI : MonoBehaviour
     }
     private void Update()
     {
+        equippedText.text = stats.GetEquippedPetCount() + "/" + data.maxEquippedPets;
         if (data.pets.Count != oldPet)
         {
             oldPet = data.pets.Count;

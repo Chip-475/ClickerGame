@@ -12,6 +12,7 @@ public class PetInstance
     public int Petlvl;
     public bool isEquipped;
     public int lvlUPCost;
+    public int sellValue;
     public float currentMoneyMod;
     public float currentCritMod;
     public float currentUPcost;

@@ -6,37 +6,103 @@ using UnityEngine.UI;
 public class xpManager : MonoBehaviour
 {
     public Image xpBar;
+
+
+    public GameObject lock1;
+    public GameObject lock2;
+    public GameObject lock3;
+    public GameObject lock4;
+    public GameObject lock5;
+
+
+    public GameObject egg1;
+    public GameObject egg2;
+    public GameObject egg3;
+    public GameObject egg4;
+    public GameObject egg5;
+
+    public GameObject shop;
+
+
     public TMP_Text lvl;
     public TMP_Text exp;
+
+
+    private bool unlock1=false, unlock2=false, unlock3=false, unlock4=false, unlock5=false, unlock6=false;
+
+
     [Header("Level Up UI")]
     public GameObject levelUpPanel;
     public TMP_Text levelUpText;
     public CanvasGroup levelUpCanvas;
     void Unlock()
     {
-        switch (data.lvl+1)
+        if (data.lvl >= 5&&!unlock1)
         {
-            case 5:
-                data.maxEquippedPets = 1;
-                break;
-            case 10:
-                data.maxEquippedPets = 2;
-                break;
-            case 20:
-                data.maxEquippedPets = 3;
-                break;
+            unlock1 = true;
+            lock1.SetActive(false);
+            data.maxEquippedPets = 1;
+        }
+        if (data.lvl >= 10 && !unlock2)
+        {
+            unlock2 = true;
+            data.maxEquippedPets= 2;
+            lock1.SetActive(false);
+            lock2.SetActive(false);
+        }
+        if (data.lvl >= 15 && !unlock3)
+        {
+            unlock3 = true;
+            lock1.SetActive(false);
+            lock2.SetActive(false);
+            lock3.SetActive(false);
+        }
+        if (data.lvl >= 20 && !unlock4)
+        {
+            unlock4 = true;
+            data.maxEquippedPets = 3;
+        }
+        if (data.lvl >= 25 && !unlock5)
+        {
+            unlock5 = true;
+            lock1.SetActive(false);
+            lock2.SetActive(false);
+            lock3.SetActive(false);
+            lock4.SetActive(false);
+        }
+        if (data.lvl >= 30 && !unlock6)
+        {
+            unlock6 = true;
+            lock1.SetActive(false);
+            lock2.SetActive(false);
+            lock3.SetActive(false);
+            lock4.SetActive(false);
+            lock5.SetActive(false);
         }
 
-        data.money += Mathf.RoundToInt(data.lvl * 50 * data.globalMoneyMod);
+            data.money += Mathf.RoundToInt(data.lvl * 50 * data.globalMoneyMod);
 
         if (data.lvl % 5 == 0)
         {
             data.PerkLimit++;
         }
     }
+    void Start()
+    {
+        lock1.transform.SetParent(shop.transform);
+        lock2.transform.SetParent(shop.transform);
+        lock3.transform.SetParent(shop.transform);
+        lock4.transform.SetParent(shop.transform);
+        lock5.transform.SetParent(shop.transform);
+    }
 
     void Update()
     {
+        egg1.SetActive(unlock1);
+        egg2.SetActive(unlock2);
+        egg3.SetActive(unlock3);
+        egg4.SetActive(unlock4);
+        egg5.SetActive(unlock5);
         Debug.Log(data.maxEquippedPets);
         xpBar.fillAmount = (float)data.xp / data.xpMax;
         lvl.text = "livello:" + data.lvl;
@@ -44,11 +110,9 @@ public class xpManager : MonoBehaviour
 
         if (data.xp >= data.xpMax)
         {
-            Unlock();
-
             data.xp -= data.xpMax;
             data.lvl += 1;
-
+            Unlock();
             if (data.lvl < 10)
                 data.xpMax += data.xpMax / 3;
             else

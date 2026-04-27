@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class data
 {
     //resources
-    public static int money = 10000;
+    public static int money = 100000;
     public static int PerkLimit=5;
     public static int totalPerk = 0;
     public static int meteorCrushed = 0;

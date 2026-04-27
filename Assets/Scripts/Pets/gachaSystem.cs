@@ -29,6 +29,7 @@ public class gachaSystem : MonoBehaviour
     {
         if (egg == 1)
         {
+            Debug.Log("uovo1");
             int roll = Random.Range(0, 100);
             if (roll < 80) return getRarity(rarity.common);
             if (roll < 95) return getRarity(rarity.rare);
@@ -37,6 +38,7 @@ public class gachaSystem : MonoBehaviour
         }
         if (egg == 2)
         {
+            Debug.Log("uovo2");
             int roll = Random.Range(0, 100);
             if (roll < 75) return getRarity(rarity.common);
             if (roll < 87) return getRarity(rarity.rare);
@@ -45,6 +47,7 @@ public class gachaSystem : MonoBehaviour
         }
         if (egg == 3)
         {
+            Debug.Log("uovo3");
             int roll = Random.Range(0, 100);
             if (roll < 65) return getRarity(rarity.common);
             if (roll < 82) return getRarity(rarity.rare);
@@ -53,6 +56,7 @@ public class gachaSystem : MonoBehaviour
         }
         if (egg == 4)
         {
+            Debug.Log("uovo4");
             int roll = Random.Range(0, 100);
             if (roll < 30) return getRarity(rarity.common);
             if (roll < 70) return getRarity(rarity.rare);
@@ -61,6 +65,7 @@ public class gachaSystem : MonoBehaviour
         }
         if (egg == 5)
         {
+            Debug.Log("uovo5");
             int roll = Random.Range(0, 100);
             if (roll < 20) return getRarity(rarity.common);
             if (roll < 60) return getRarity(rarity.rare);

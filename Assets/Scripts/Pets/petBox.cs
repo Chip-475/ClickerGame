@@ -18,4 +18,6 @@ public class petBox : MonoBehaviour
     public GameObject equipButtonFake;
     public GameObject unequipButton;
     public TMP_Text equippedText;
+    public GameObject sellButton;
+    public TMP_Text sellText;
 }

@@ -96,4 +96,8 @@ public class petStats : MonoBehaviour
             data.globalCritMod += pet.currentCritMod;
         }
     }
+    public int getSellValue(PetInstance pet)
+    {
+        return (getRarity(pet) + 1) * pet.rank + (pet.Petlvl * 10);
+    }
 }

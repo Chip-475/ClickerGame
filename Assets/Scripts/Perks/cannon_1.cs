@@ -12,6 +12,7 @@ public class cannon_1 : MonoBehaviour
 
     [Header("fire rate")]
     public float baseFireTime = 1f;
+    public float baseWaitingTime = 7.5f;
     public float fireRateReductionPerLevel = 0.05f;
 
     [Header("depot")]
@@ -47,7 +48,7 @@ public class cannon_1 : MonoBehaviour
 
         Instantiate(perk[r], shootPoint.transform.position, Quaternion.identity, shootPoint.transform);
 
-        yield return new WaitForSeconds(7.5f);
+        yield return new WaitForSeconds(0);
 
         data.fuel1 -= shootCost1;
 

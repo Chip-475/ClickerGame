@@ -23,6 +23,7 @@ public class perkScript : MonoBehaviour
         {
             t += Time.deltaTime;
             transform.position = Vector3.Lerp(transform.position, _arrivalPoint.transform.position, 1 - Mathf.Pow(1 - (t / moveTime), 3));
+            if(transform.position==_arrivalPoint.transform.position ) { yield return null; }
             yield return null;
         }
     }

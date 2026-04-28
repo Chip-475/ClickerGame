@@ -2,61 +2,53 @@ using UnityEngine;
 using TMPro;
 public class cannonFireRateUPManager : MonoBehaviour
 {
+    private const int CostStep = 50;
     [Header("oggetti")]
     public GameObject upgradeButton;
     public GameObject fakeButton;
 
     [Header("testo")]
     public TMP_Text header;
-    public TMP_Text effect;
     public TMP_Text cost;
 
     [Header("fake testo")]
     public TMP_Text fakeHeader;
-    public TMP_Text fakeEffect;
     public TMP_Text fakeCost;
 
-    [Header("Upgrade Data")]
-    public int[] levelCosts = { 150, 300, 600, 1200, 2500 };
+    [Header("Stats")]
+    public int fireRateUPCost;
+    public int maxLevel = 50;
+    public int startingCost = 300;
 
-    public int CurrentCost
-    {
-        get
-        {
-            if (data.cannonFireRatelvl >= levelCosts.Length)
-            {
-                return -1;
-            }
-            return levelCosts[data.cannonFireRatelvl];
-        }
-    }
-
-    public bool IsMaxLevel => data.cannonFireRatelvl >= CurrentCost;
+    public bool IsMaxLevel = false;
 
     void Update()
     {
-        bool canBuy = !IsMaxLevel && data.money >= CurrentCost;
-
-        if (upgradeButton != null)
+        if (data.lvl >= maxLevel && !IsMaxLevel)
         {
-            upgradeButton.SetActive(canBuy);
-        }
-        if (fakeButton != null)
-        {
-            fakeButton.SetActive(!canBuy);
+            IsMaxLevel = true;
         }
 
-        float reduction = data.fireRateReductionPerLevel;
+        fireRateUPCost = GetCostForLevel();
+
+        if (data.money >= fireRateUPCost && !IsMaxLevel && data.cannon1) { fakeButton.SetActive(false); upgradeButton.SetActive(true); }
+        else { upgradeButton.SetActive(false); fakeButton.SetActive(true); }
+
         string headerText = "Cannon Fire Rate UP<br>Lv. " + data.cannonFireRatelvl;
-        string costText = IsMaxLevel ? "MAX" : "Cost: " + CurrentCost;
-        string effectText = "-" + reduction.ToString("0.00") + "s";
+        string costText ="Cost: " + fireRateUPCost;
 
-        if (header != null) header.text = headerText;
-        if (cost != null) cost.text = costText;
-        if (effect != null) effect.text = effectText;
-
-        if (fakeHeader != null) fakeHeader.text = headerText;
-        if (fakeCost != null) fakeCost.text = costText;
-        if (fakeEffect != null) fakeEffect.text = effectText;
+        header.text = headerText;
+        cost.text = costText;
+        fakeHeader.text = headerText;
+        fakeCost.text = costText;
+        if (IsMaxLevel)
+        {
+            fakeCost.text = "MAX LVL";
+        }
+    }
+    public int GetCostForLevel()
+    {
+        float rawCost = startingCost * Mathf.Pow(1.30f, data.lvl);
+        return Mathf.RoundToInt(rawCost / CostStep) * CostStep;
     }
 }

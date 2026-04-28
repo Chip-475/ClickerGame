@@ -15,7 +15,7 @@ public class data
     public static int critUPlvl = 0;
     public static int critDmg = 3;
     public static int meteorlvl = 1;
-    public static int cannonFireRatelvl;
+    public static int cannonFireRatelvl=50;
     public static int cannonDepotlvl;
 
     //exp

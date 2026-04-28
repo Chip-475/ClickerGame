@@ -6,12 +6,8 @@ public class cannonFireRateUPButton : MonoBehaviour
 
     public void UpgradeFireRate()
     {
-        if (manager == null || manager.IsMaxLevel)
-        {
-            return;
-        }
 
-        int cost = manager.CurrentCost;
+        int cost = manager.fireRateUPCost;
         if (data.money >= cost)
         {
             return;

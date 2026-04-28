@@ -5429,7 +5429,7 @@ GameObject:
   - component: {fileID: 685781521}
   m_Layer: 5
   m_Name: safeArea
-  m_TagString: Untagged
+  m_TagString: safeArea
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9111,6 +9111,7 @@ MonoBehaviour:
   shootCost1: 0
   step: 0
   baseFireTime: 1
+  baseWaitingTime: 7.5
   fireRateReductionPerLevel: 0.05
   baseMaxFuel1: 100
   depotBonusPerLevel: 25

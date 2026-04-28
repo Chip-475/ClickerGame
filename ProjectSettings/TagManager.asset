@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ArrivalPoint1
   - ArrivalPoint2
+  - safeArea
   layers:
   - Default
   - TransparentFX

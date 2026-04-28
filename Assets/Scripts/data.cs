@@ -12,7 +12,7 @@ public class data
 
     //upgrades
     public static int baseUPlvl;
-    public static int critUPlvl = 100;
+    public static int critUPlvl = 0;
     public static int critDmg = 3;
     public static int meteorlvl = 1;
     public static int cannonFireRatelvl;
@@ -27,7 +27,6 @@ public class data
     public static bool cannon1;
     public static bool cannon2;
     public static int fuel1=1;
-    public static int fuel2=1;
     public static float fireRateReductionPerLevel;
     public static int depotBonusPerLevel;
 

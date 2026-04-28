@@ -3,6 +3,7 @@ using TMPro;
 
 public class expUPManager : MonoBehaviour
 {
+    private const int CostStep = 50;
 
     [Header("Objects")]
     public GameObject expUPbutton;
@@ -10,26 +11,41 @@ public class expUPManager : MonoBehaviour
     [Header("Texts")]
     public TMP_Text header;
     public TMP_Text cost;
-    public TMP_Text effect;
     [Header("Fake Texts")]
     public TMP_Text fake_header;
     public TMP_Text fake_cost;
-    public TMP_Text fake_effect;
     [Header("Stats")]
     public int expUPcost;
-    public int expUPeffect;
+    public int maxLevel = 50;
+    public int startingCost = 300;
+
+    public bool IsMaxLevel = false;
 
     void Update()
     {
-        if (data.money < expUPcost) { expUPbutton.SetActive(false); expUPfake.SetActive(true); }
-        else { expUPbutton.SetActive(true); expUPfake.SetActive(false); }
+        if (data.lvl >= maxLevel && !IsMaxLevel)
+        {
+            IsMaxLevel = true;
+        }
+
+        expUPcost = GetCostForLevel();
+
+        if (data.money >= expUPcost && !IsMaxLevel) { expUPfake.SetActive(false); expUPbutton.SetActive(true); }
+        else { expUPbutton.SetActive(false); expUPfake.SetActive(true); }
 
         header.text = "Click Exp UP<br>" + "Lv. " + data.lvl;
         cost.text = "Cost: " + expUPcost;
-        effect.text = "+" + expUPeffect;
         fake_header.text = "Click Exp UP<br>" + "Lv. " + data.lvl;
         fake_cost.text = "Cost: " + expUPcost;
-        fake_effect.text = "+" + expUPeffect;
+        if (IsMaxLevel)
+        {
+            fake_cost.text = "MAX LVL";
+        }
     }
 
+    public int GetCostForLevel()
+    {
+        float rawCost = startingCost * Mathf.Pow(1.34f, data.lvl);
+        return Mathf.RoundToInt(rawCost / CostStep) * CostStep;
+    }
 }

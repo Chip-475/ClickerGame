@@ -58,6 +58,5 @@ public class cannonDepotUPManager : MonoBehaviour
     public void RefillNewCapacity()
     {
         data.fuel1 = 100 + (data.cannonDepotlvl * 10);
-        data.fuel2 = 100 + (data.cannonDepotlvl * 10);
     }
 }

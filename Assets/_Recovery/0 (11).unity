@@ -460,7 +460,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &54421860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1738,7 +1738,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Increase chance of a critical hit
+  m_text: Effect
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2414,7 +2414,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0.0000067754945, y: 0}
-  m_SizeDelta: {x: -964.1333, y: 300}
+  m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &381834577
 MonoBehaviour:
@@ -5000,7 +5000,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 685781517}
+  m_Father: {fileID: 1573777567}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -5141,7 +5141,7 @@ GameObject:
   - component: {fileID: 621678721}
   - component: {fileID: 621678720}
   - component: {fileID: 621678719}
-  - component: {fileID: 621678722}
+  - component: {fileID: 621678718}
   m_Layer: 5
   m_Name: ExpUP
   m_TagString: Untagged
@@ -5171,6 +5171,19 @@ RectTransform:
   m_AnchoredPosition: {x: 328.7, y: -30.173}
   m_SizeDelta: {x: 290, y: 186}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &621678718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621678716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5f0d1b80f4557b44acd500c905d31c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::critUPbutton
+  manager: {fileID: 2052279442}
 --- !u!114 &621678719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5215,9 +5228,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 621678722}
-        m_TargetAssemblyTypeName: expUPButton, Assembly-CSharp
-        m_MethodName: expUPclick
+      - m_Target: {fileID: 621678718}
+        m_TargetAssemblyTypeName: critUPbutton, Assembly-CSharp
+        m_MethodName: critUPclick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5265,19 +5278,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 621678716}
   m_CullTransparentMesh: 1
---- !u!114 &621678722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 621678716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 785d7f00e13fca44781b2d16221b249e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::expUPButton
-  manager: {fileID: 2052279446}
 --- !u!1 &652310241
 GameObject:
   m_ObjectHideFlags: 0
@@ -5316,7 +5316,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Increase exp gained per click
+  m_text: Effect
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5453,9 +5453,6 @@ RectTransform:
   - {fileID: 1202331738}
   - {fileID: 1198255060}
   - {fileID: 1715073929}
-  - {fileID: 618992703}
-  - {fileID: 2090107597}
-  - {fileID: 2117689322}
   m_Father: {fileID: 1573777567}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -6211,7 +6208,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &753917326
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7756,7 +7753,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Increase exp gained per click
+  m_text: Effect
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9444,7 +9441,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Increase base click damage
+  m_text: Effect
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11426,7 +11423,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Increase base click damage
+  m_text: Effect
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -12028,7 +12025,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Increase chance of a critical hit
+  m_text: Effect
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -14289,6 +14286,9 @@ RectTransform:
   m_Children:
   - {fileID: 2131910635}
   - {fileID: 685781517}
+  - {fileID: 618992703}
+  - {fileID: 2090107597}
+  - {fileID: 2117689322}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -94.553, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -18632,10 +18632,10 @@ GameObject:
   - component: {fileID: 2052279440}
   - component: {fileID: 2052279438}
   - component: {fileID: 2052279442}
-  - component: {fileID: 2052279446}
   - component: {fileID: 2052279443}
   - component: {fileID: 2052279444}
   - component: {fileID: 2052279445}
+  - component: {fileID: 2052279446}
   - component: {fileID: 2052279447}
   - component: {fileID: 2052279448}
   m_Layer: 0
@@ -18676,12 +18676,12 @@ MonoBehaviour:
   baseUPfake: {fileID: 1016506057}
   header: {fileID: 1323719906}
   cost: {fileID: 223203817}
+  effect: {fileID: 1231308284}
   fake_header: {fileID: 306848860}
   fake_cost: {fileID: 1060075587}
+  fake_effect: {fileID: 1041855428}
   baseUPcost: 25
-  maxLevel: 50
-  startingCost: 250
-  IsMaxLevel: 0
+  baseUPeffect: 0
 --- !u!114 &2052279440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18723,12 +18723,12 @@ MonoBehaviour:
   critUPfake: {fileID: 534808130}
   header: {fileID: 203122168}
   cost: {fileID: 867415902}
+  effect: {fileID: 1338958625}
   fake_header: {fileID: 1216570989}
   fake_cost: {fileID: 1713638557}
+  fake_effect: {fileID: 303557630}
   critUPcost: 25
-  maxLevel: 50
-  startingCost: 350
-  IsMaxLevel: 0
+  critUPeffect: 0
 --- !u!114 &2052279443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18801,12 +18801,12 @@ MonoBehaviour:
   expUPfake: {fileID: 600519590}
   header: {fileID: 31351910}
   cost: {fileID: 1540203858}
+  effect: {fileID: 899665057}
   fake_header: {fileID: 1363458196}
   fake_cost: {fileID: 1737854708}
+  fake_effect: {fileID: 652310242}
   expUPcost: 0
-  maxLevel: 50
-  startingCost: 300
-  IsMaxLevel: 0
+  expUPeffect: 0
 --- !u!114 &2052279447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19238,7 +19238,7 @@ RectTransform:
   - {fileID: 38583311}
   - {fileID: 344085853}
   - {fileID: 1014339402}
-  m_Father: {fileID: 685781517}
+  m_Father: {fileID: 1573777567}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -19394,7 +19394,7 @@ RectTransform:
   - {fileID: 324141449}
   - {fileID: 411656750}
   - {fileID: 1023893945}
-  m_Father: {fileID: 685781517}
+  m_Father: {fileID: 1573777567}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -19672,6 +19672,6 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 1573777567}
   - {fileID: 1866892007}
+  - {fileID: 2052279437}
   - {fileID: 1260806236}
   - {fileID: 709006311}
-  - {fileID: 2052279437}

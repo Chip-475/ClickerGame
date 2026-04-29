@@ -5,13 +5,13 @@ public class cannonDepotUPButton : MonoBehaviour
     public cannonDepotUPManager manager;
     public void UpgradeDepot()
     {
-        if (manager == null || manager.IsMaxLevel)
+        if (manager.IsMaxLevel)
         {
             return;
         }
 
-        int cost = manager.CurrentCost;
-        if (data.money >= cost)
+        int cost = manager.depotUpCost;
+        if (data.money < cost)
         {
             return;
         }

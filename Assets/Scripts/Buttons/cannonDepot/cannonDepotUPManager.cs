@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 public class cannonDepotUPManager : MonoBehaviour
 {
+    private const int CostStep = 50;
     [Header("oggetti")]
     public GameObject upgradeButton;
     public GameObject fakeButton;
@@ -16,47 +17,41 @@ public class cannonDepotUPManager : MonoBehaviour
     public TMP_Text fakeCost;
 
     [Header("Upgrade Data")]
-    public int[] levelCosts = { 200, 500, 1000, 2500, 5000 };
+    public int startingCost = 500;
+    public int maxLevel = 50;
+    public int depotUpCost;
 
-    public int CurrentCost
-    {
-        get
-        {
-            if (data.cannonDepotlvl >= levelCosts.Length)
-            {
-                return -1;
-            }
-            return levelCosts[data.cannonDepotlvl];
-        }
-    }
-
-    public bool IsMaxLevel => data.cannonDepotlvl >= levelCosts.Length;
+    public bool IsMaxLevel =false;
 
 
     void Update()
     {
-        bool canBuy = !IsMaxLevel && data.money >= CurrentCost;
+        if (data.cannonDepotlvl >= maxLevel&&!IsMaxLevel)
+        {
+            IsMaxLevel = true;
+        }
+        depotUpCost = GetCostForLevel();
 
-        if (upgradeButton != null) upgradeButton.SetActive(canBuy);
-        if (fakeButton != null) fakeButton.SetActive(!canBuy);
+        if (data.money >= depotUpCost && !IsMaxLevel && data.cannon1) { fakeButton.SetActive(false); upgradeButton.SetActive(true); }
+        else { upgradeButton.SetActive(false); fakeButton.SetActive(true); }
 
-        int depotValue = data.depotBonusPerLevel;
-
-        string headerText = "Cannon Depot UP<br>Lv. " + data.cannonDepotlvl;
-        string costText = IsMaxLevel ? "MAX" : "Cost: " + CurrentCost;
-        string effectText = "+" + depotValue + " cap";
-
-        if (header != null) header.text = headerText;
-        if (cost != null) cost.text = costText;
-        if (effect != null) effect.text = effectText;
-
-        if (fakeHeader != null) fakeHeader.text = headerText;
-        if (fakeCost != null) fakeCost.text = costText;
-        if (fakeEffect != null) fakeEffect.text = effectText;
+        header.text = "Upgrade Deposit<br>" + "Lv. " + data.cannonDepotlvl;
+        cost.text = "Cost: " + depotUpCost;
+        fakeHeader.text = "Upgrade Deposit<br>" + "Lv. " + data.cannonDepotlvl;
+        fakeCost.text = "Cost: " + depotUpCost;
+        if (IsMaxLevel)
+        {
+            fakeCost.text = "MAX LVL";
+        }
     }
 
     public void RefillNewCapacity()
     {
         data.fuel1 = 100 + (data.cannonDepotlvl * 10);
+    }
+    public int GetCostForLevel()
+    {
+        float rawCost = startingCost * Mathf.Pow(1.33f, data.cannonDepotlvl);
+        return Mathf.RoundToInt(rawCost / CostStep) * CostStep;
     }
 }

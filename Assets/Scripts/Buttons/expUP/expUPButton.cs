@@ -7,7 +7,7 @@ public class expUPButton : MonoBehaviour
     public void expUPclick()
     {
         int cost = manager.expUPcost;
-        if (data.money < cost)
+        if (data.money < cost&&manager.IsMaxLevel)
         {
             return;
         }

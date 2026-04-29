@@ -32,11 +32,11 @@ public class petRankUpButton : MonoBehaviour
             {
                 continue;
             }
-            if (otherPet.Petlvl != stats.getMaxlvl(otherPet))
+            if (otherPet.Petlvl < stats.getMaxlvl(otherPet))
             {
                 continue;
             }
-            if (otherPet.Petlvl == 5)
+            if (otherPet.rank == 5)
             {
                 continue;
             }
@@ -77,14 +77,14 @@ public class petRankUpButton : MonoBehaviour
                         {
                             continue;
                         }
-                        if (otherPet.Petlvl != stats.getMaxlvl(otherPet))
+                        if (otherPet.Petlvl < stats.getMaxlvl(otherPet))
                         {
                             continue;
                         }
                         pet2 = otherPet;
                         break;
                     }
-                    data.pets[index].rank+=pet2.rank;
+                    data.pets[index].rank += pet2.rank;
                     Mathf.Clamp(data.pets[index].rank, 0, 5);
                     data.pets[index].Petlvl = 1;
                     data.pets.Remove(pet2);

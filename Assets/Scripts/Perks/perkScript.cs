@@ -66,6 +66,10 @@ public class perkScript : MonoBehaviour
                 data.goldMeteorAmount++;
                 Destroy(gameObject);
                 break;
+            case perkType.autoClick:
+                data.autoclickAmount++;
+                Destroy (gameObject); 
+                break;
         }
     }
 }

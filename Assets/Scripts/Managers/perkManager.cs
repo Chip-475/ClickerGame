@@ -22,6 +22,12 @@ public class perkManager : MonoBehaviour
     public GameObject GMPerkButton_fake;
     public TMP_Text GMPerk_amount;
     public TMP_Text GMPerkFake_amount;
+
+    [Header("autoClicker")]
+    public GameObject autoClickerPerkButton;
+    public GameObject autoClickerPerkButton_fake;
+    public TMP_Text autoClickerPerk_amount;
+    public TMP_Text autoClickerPerkFake_amount;
     void Update()
     {
         data.totalPerk = data.clickPerkAmount + data.critPerkAmount + data.goldMeteorAmount;
@@ -70,5 +76,20 @@ public class perkManager : MonoBehaviour
             }
 
         } //gold meteor
+        {
+            autoClickerPerk_amount.text = "Amount:" + data.autoclickAmount;
+            autoClickerPerkFake_amount.text = "Amount:" + data.autoclickAmount;
+            if (data.autoclickAmount > 0 && !baseClickPerk.isActive)
+            {
+                autoClickerPerkButton.SetActive(true);
+                autoClickerPerkButton_fake.SetActive(false);
+            }
+            else
+            {
+                autoClickerPerkButton.SetActive(false);
+                autoClickerPerkButton_fake.SetActive(true);
+            }
+
+        }
     }
 }

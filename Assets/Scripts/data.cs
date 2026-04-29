@@ -5,23 +5,23 @@ using System.Collections.Generic;
 public class data
 {
     //resources
-    public static int money = 100000;
+    public static int money = 10000000;
     public static int PerkLimit=5;
     public static int totalPerk = 0;
     public static int meteorCrushed = 0;
 
     //upgrades
-    public static int baseUPlvl;
-    public static int critUPlvl = 0;
-    public static int critDmg = 3;
+    public static int baseUPlvl=1;
+    public static int critUPlvl = 1;
+    public static int critDmg = 2;
     public static int meteorlvl = 1;
-    public static int cannonFireRatelvl=50;
-    public static int cannonDepotlvl;
+    public static int cannonFireRatelvl=1;
+    public static int cannonDepotlvl=1;
 
     //exp
-    public static int xp = 1;
+    public static int xp = 0;
     public static int xpMax = 10;
-    public static int lvl;
+    public static int lvl=1;
 
     //cannon management
     public static bool cannon1;
@@ -34,6 +34,7 @@ public class data
     public static int critPerkAmount = 1;
     public static int clickPerkAmount = 1;
     public static int goldMeteorAmount = 1;
+    public static int autoclickAmount = 1;
 
     //pets
     public static List<PetInstance> pets= new List<PetInstance>();

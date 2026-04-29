@@ -3,6 +3,7 @@ using TMPro;
 public class cannonFireRateUPManager : MonoBehaviour
 {
     private const int CostStep = 50;
+
     [Header("oggetti")]
     public GameObject upgradeButton;
     public GameObject fakeButton;
@@ -17,14 +18,14 @@ public class cannonFireRateUPManager : MonoBehaviour
 
     [Header("Stats")]
     public int fireRateUPCost;
-    public int maxLevel = 50;
+    public int maxLevel = 25;
     public int startingCost = 300;
 
     public bool IsMaxLevel = false;
 
     void Update()
     {
-        if (data.lvl >= maxLevel && !IsMaxLevel)
+        if (data.cannonFireRatelvl >= maxLevel && !IsMaxLevel)
         {
             IsMaxLevel = true;
         }
@@ -34,13 +35,10 @@ public class cannonFireRateUPManager : MonoBehaviour
         if (data.money >= fireRateUPCost && !IsMaxLevel && data.cannon1) { fakeButton.SetActive(false); upgradeButton.SetActive(true); }
         else { upgradeButton.SetActive(false); fakeButton.SetActive(true); }
 
-        string headerText = "Cannon Fire Rate UP<br>Lv. " + data.cannonFireRatelvl;
-        string costText ="Cost: " + fireRateUPCost;
-
-        header.text = headerText;
-        cost.text = costText;
-        fakeHeader.text = headerText;
-        fakeCost.text = costText;
+        header.text = "Upgrade Fire Rate<br>" + "Lv. " + data.cannonFireRatelvl;
+        cost.text = "Cost: " + fireRateUPCost;
+        fakeHeader.text = "Upgrade Fire Rate<br>" + "Lv. " + data.cannonFireRatelvl;
+        fakeCost.text = "Cost: " + fireRateUPCost;
         if (IsMaxLevel)
         {
             fakeCost.text = "MAX LVL";
@@ -48,7 +46,7 @@ public class cannonFireRateUPManager : MonoBehaviour
     }
     public int GetCostForLevel()
     {
-        float rawCost = startingCost * Mathf.Pow(1.30f, data.lvl);
+        float rawCost = startingCost * Mathf.Pow(1.30f, data.cannonFireRatelvl);
         return Mathf.RoundToInt(rawCost / CostStep) * CostStep;
     }
 }

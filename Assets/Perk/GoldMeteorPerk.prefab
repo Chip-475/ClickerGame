@@ -84,7 +84,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 286780122976551845}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -147,4 +147,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::perkScript
   parentObject: {fileID: 0}
   arrivalPoint: {fileID: 0}
+  targetPosition: {x: 0, y: 0, z: 0}
+  moveTime: 0.5
   type: 2

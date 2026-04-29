@@ -7,7 +7,7 @@ public class baseUPbutton : MonoBehaviour
     public void baseUPclick()
     {
         int cost = manager.baseUPcost;
-        if (data.money < cost)
+        if (data.money <= cost&&!manager.IsMaxLevel)
         {
             return;
         }

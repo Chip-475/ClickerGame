@@ -45,6 +45,6 @@ public class baseUPmanager : MonoBehaviour
     public int GetCostForLevel()
     {
         float rawCost = 250f * Mathf.Pow(1.32f, data.baseUPlvl);
-        return Mathf.RoundToInt(rawCost / 50f) * 50;
+        return Mathf.RoundToInt(rawCost / CostStep) * CostStep;
     }
 }

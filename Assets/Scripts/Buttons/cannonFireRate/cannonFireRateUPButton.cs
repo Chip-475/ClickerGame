@@ -8,7 +8,7 @@ public class cannonFireRateUPButton : MonoBehaviour
     {
 
         int cost = manager.fireRateUPCost;
-        if (data.money >= cost)
+        if (data.money < cost&&!manager.IsMaxLevel)
         {
             return;
         }

@@ -49,8 +49,5 @@ public class CannonUnlockManager : MonoBehaviour
             cannonUnlockbutton.SetActive(false);
             cannonUnlockfake.SetActive(true);
         }
-        cost.text = "Cost: " + cost;
-        fake_cost.text = "Cost: " + cost;
-        
     }
 }

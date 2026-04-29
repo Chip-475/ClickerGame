@@ -1,7 +1,5 @@
 using UnityEngine;
-using UnityEngine.Rendering;
 using System.Collections;
-using Unity.VisualScripting;
 
 public class cannon_2 : MonoBehaviour
 {
@@ -12,6 +10,7 @@ public class cannon_2 : MonoBehaviour
 
     [Header("fire rate")]
     public float baseFireTime = 1f;
+    public float baseWaitingTime = 7.5f;
     public float fireRateReductionPerLevel = 0.05f;
 
     [Header("depot")]
@@ -26,16 +25,15 @@ public class cannon_2 : MonoBehaviour
     {
         shooting2 = true;
 
-        int x = UnityEngine.Random.Range(-500, 500);
-        int y = 50;
+        int x = UnityEngine.Random.Range(-410, -230);
+        int y = UnityEngine.Random.Range(200, 520);
         int r = UnityEngine.Random.Range(0, perk.Length);
 
         Quaternion targetRotation = Quaternion.FromToRotation(cannon2.transform.position, new Vector3(x, y, 0));
 
         while (cannon2.transform.rotation != targetRotation)
         {
-            cannon2.transform.rotation = Quaternion.RotateTowards
-            (
+            cannon2.transform.rotation = Quaternion.RotateTowards(
                 cannon2.transform.rotation,
                 targetRotation,
                 step
@@ -45,12 +43,18 @@ public class cannon_2 : MonoBehaviour
 
         yield return new WaitForSeconds(baseFireTime - (fireRateReductionPerLevel * data.cannonFireRatelvl));
 
-        Instantiate(perk[r], shootPoint.transform.position, Quaternion.identity, shootPoint.transform);
+        GameObject safeArea = GameObject.Find("safeArea");
+        GameObject perkInstance = Instantiate(perk[r], shootPoint.transform.position, Quaternion.identity, safeArea.transform);
 
-        yield return new WaitForSeconds(7.5f);
+        perkScript perkScriptComponent = perkInstance.GetComponent<perkScript>();
+        if (perkScriptComponent != null)
+        {
+            perkScriptComponent.SetTargetPosition(GameObject.Find("arrivalPoint2").transform.position);
+        }
+
+        yield return new WaitForSeconds(baseWaitingTime - (fireRateReductionPerLevel * data.cannonFireRatelvl));
 
         data.fuel1 -= shootCost2;
-
         shooting2 = false;
     }
 
@@ -65,10 +69,9 @@ public class cannon_2 : MonoBehaviour
 
         data.fuel1 = Mathf.Clamp(data.fuel1, 0, 100 + (data.cannonDepotlvl * 10));
 
-        if (shoot2 && data.fuel1 > shootCost2 && !shooting2)
+        if (shoot2 && data.fuel1 > shootCost2 && !shooting2&&data.PerkLimit!=data.totalPerk)
         {
             StartCoroutine(_cannon1());
         }
-
     }
 }

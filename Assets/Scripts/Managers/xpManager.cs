@@ -28,7 +28,7 @@ public class xpManager : MonoBehaviour
     public TMP_Text exp;
 
 
-    private bool unlock1=false, unlock2=false, unlock3=false, unlock4=false, unlock5=false, unlock6=false;
+    private bool unlock1 = false, unlock2 = false, unlock3 = false, unlock4 = false, unlock5 = false;
 
 
     [Header("Level Up UI")]
@@ -62,17 +62,9 @@ public class xpManager : MonoBehaviour
             unlock4 = true;
             data.maxEquippedPets = 3;
         }
-        if (data.lvl >= 25 && !unlock5)
+        if (data.lvl >= 30 && !unlock5)
         {
             unlock5 = true;
-            lock1.SetActive(false);
-            lock2.SetActive(false);
-            lock3.SetActive(false);
-            lock4.SetActive(false);
-        }
-        if (data.lvl >= 30 && !unlock6)
-        {
-            unlock6 = true;
             lock1.SetActive(false);
             lock2.SetActive(false);
             lock3.SetActive(false);

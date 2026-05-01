@@ -17,7 +17,7 @@ public class perkManager : MonoBehaviour
     public TMP_Text baseClickPerk_amount;
     public TMP_Text baseClickPerkFake_amount;
 
-    [Header("clickPerk")]
+    [Header("GoldMeteorPerk")]
     public GameObject GMPerkButton;
     public GameObject GMPerkButton_fake;
     public TMP_Text GMPerk_amount;
@@ -30,11 +30,11 @@ public class perkManager : MonoBehaviour
     public TMP_Text autoClickerPerkFake_amount;
     void Update()
     {
-        data.totalPerk = data.clickPerkAmount + data.critPerkAmount + data.goldMeteorAmount;
+        data.totalPerk = data.clickPerkAmount + data.critPerkAmount + data.goldMeteorAmount + data.autoclickAmount;
         perkCap.text = data.totalPerk + "/" + data.PerkLimit;
         {
             critPerk_amount.text = "Amount:" + data.critPerkAmount;
-            baseClickPerkFake_amount.text = "Amount:" + data.critPerkAmount;
+            critPerkFake_amount.text = "Amount:" + data.critPerkAmount;
             if (data.critPerkAmount > 0 && !critPerk.isActive)
             {
                 critPerkButton.SetActive(true);
@@ -62,8 +62,8 @@ public class perkManager : MonoBehaviour
 
         } //click perk
         {
-            GMPerk_amount.text = "Amount:" + data.clickPerkAmount;
-            GMPerkFake_amount.text = "Amount:" + data.clickPerkAmount;
+            GMPerk_amount.text = "Amount:" + data.goldMeteorAmount;
+            GMPerkFake_amount.text = "Amount:" + data.goldMeteorAmount;
             if (data.goldMeteorAmount > 0 && !goldMeteorPerk.isActive)
             {
                 GMPerkButton.SetActive(true);
@@ -79,7 +79,7 @@ public class perkManager : MonoBehaviour
         {
             autoClickerPerk_amount.text = "Amount:" + data.autoclickAmount;
             autoClickerPerkFake_amount.text = "Amount:" + data.autoclickAmount;
-            if (data.autoclickAmount > 0 && !baseClickPerk.isActive)
+            if (data.autoclickAmount > 0 && !clicker.autoClicker)
             {
                 autoClickerPerkButton.SetActive(true);
                 autoClickerPerkButton_fake.SetActive(false);
@@ -90,6 +90,6 @@ public class perkManager : MonoBehaviour
                 autoClickerPerkButton_fake.SetActive(true);
             }
 
-        }
+        }//autoClicker
     }
 }

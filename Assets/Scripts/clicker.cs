@@ -1,41 +1,59 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
-using UnityEditor;
 public class clicker : MonoBehaviour
 {
     public AudioClip clickSFX;
     public static int clickStr = 1;
     public static int clickExp = 10;
-    public static bool autoClicker = false;
-    //private float autoClickerTimer = 30f;
     public GameObject text;
-    /*IEnumerator autoclick()
+
+
+    [Header ("autoClicker")]
+    [SerializeField] autoClickerManager autoclick;
+    public static bool autoClicker = false;
+    public const float AutoClickerDuration = 30f;
+    public bool isAutoClicking = false;
+    public float autoClickerTimer;
+    
+
+
+    public void StartAutoClicker()
     {
-        click();
-        yield return new WaitForSeconds(0.2f);
-        autoClickerTimer -= 0.2f;
+        autoClickerTimer = AutoClickerDuration;
+        autoClicker = true;
+        Debug.Log("autocliker");
     }
+
+
     private void Update()
     {
         if (autoClicker)
         {
-            StartCoroutine(autoclick());
-            autoClicker = false;
+            if (autoClickerTimer <= 0f)
+            {
+                autoClicker = false;
+                isAutoClicking = false;
+            }
+
+            if (!isAutoClicking)
+            {
+                StartCoroutine(autoclick.autoclick());
+            }
         }
-    }*/
+    }
     IEnumerator critText(GameObject text)
     {
-        GameObject text1 = GameObjectUtility.DuplicateGameObject(text);
+        GameObject text1 = Instantiate(text, transform.position, Quaternion.identity);
         text1.SetActive(true);
-        Instantiate(text1, transform.position, Quaternion.identity);
         yield return null;
     }
     public void click()
     {
         //audioManager.manager.playSFX(clickSFX, transform, 1f);
-        int critRate = (int)(data.critUPlvl + data.globalCritMod*10);
+        int critRate = (int)(data.critUPlvl + data.globalCritMod);
         meteor.hpMeteor -= clickStr;
+        Debug.Log("click");
         if (!autoClicker)
         {
             data.xp += clickExp;

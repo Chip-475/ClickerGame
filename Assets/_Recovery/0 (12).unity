@@ -2386,7 +2386,7 @@ GameObject:
   - component: {fileID: 286781019}
   - component: {fileID: 286781018}
   - component: {fileID: 286781017}
-  - component: {fileID: 286781020}
+  - component: {fileID: 286781016}
   m_Layer: 5
   m_Name: CritPerk
   m_TagString: Untagged
@@ -2416,6 +2416,19 @@ RectTransform:
   m_AnchoredPosition: {x: 226.17989, y: 235.00002}
   m_SizeDelta: {x: 400, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &286781016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286781014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cb5f5605ca7a2f43ab1863f994d3967, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::baseClickPerk
+  duration: 30
 --- !u!114 &286781017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2460,8 +2473,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 286781020}
-        m_TargetAssemblyTypeName: critPerk, Assembly-CSharp
+      - m_Target: {fileID: 286781016}
+        m_TargetAssemblyTypeName: baseClickPerk, Assembly-CSharp
         m_MethodName: onClick
         m_Mode: 1
         m_Arguments:
@@ -2510,19 +2523,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 286781014}
   m_CullTransparentMesh: 1
---- !u!114 &286781020
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 286781014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 105568f77fd8a674686e7b9bd18796a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::critPerk
-  duration: 30
 --- !u!1 &303557629
 GameObject:
   m_ObjectHideFlags: 0
@@ -9172,7 +9172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::clicker
   clickSFX: {fileID: 0}
   text: {fileID: 6158913496238992392}
-  autoclick: {fileID: 2052279450}
+  autoclick: {fileID: 0}
   isAutoClicking: 0
   autoClickerTimer: 0
 --- !u!1 &985827368
@@ -19414,7 +19414,6 @@ GameObject:
   - component: {fileID: 2052279445}
   - component: {fileID: 2052279447}
   - component: {fileID: 2052279448}
-  - component: {fileID: 2052279450}
   m_Layer: 0
   m_Name: gameManager
   m_TagString: Untagged
@@ -19652,19 +19651,6 @@ MonoBehaviour:
   maxLevel: 25
   startingCost: 300
   IsMaxLevel: 0
---- !u!114 &2052279450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2052279436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97563a497a1b8d54eb2a6aa9ee81c6c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::autoClickerManager
-  click: {fileID: 964061117}
 --- !u!1 &2053047654
 GameObject:
   m_ObjectHideFlags: 0

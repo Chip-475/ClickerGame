@@ -2,11 +2,12 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEngine.InputSystem.LowLevel.InputStateHistory;
 
 public class xpManager : MonoBehaviour
 {
     public Image xpBar;
-
+    public AudioClip lvlupSFX;
 
     public GameObject lock1;
     public GameObject lock2;
@@ -73,7 +74,7 @@ public class xpManager : MonoBehaviour
         }
 
             data.money += Mathf.RoundToInt(data.lvl * 50 * data.globalMoneyMod);
-
+            data.totalMoney += Mathf.RoundToInt(data.lvl * 50 * data.globalMoneyMod);
         if (data.lvl % 5 == 0)
         {
             data.PerkLimit++;
@@ -117,7 +118,7 @@ public class xpManager : MonoBehaviour
     {
         levelUpPanel.SetActive(true);
         RectTransform rect = levelUpPanel.GetComponent<RectTransform>();
-        
+        audioManager.manager.playSFX(lvlupSFX, transform, data.sfx);
         if (data.lvl % 5 == 0)
         {
             if(data.lvl!=5&&data.lvl!=10&&data.lvl!=20) levelUpText.text = "Level: " + data.lvl + "<br>Obtained:" + data.lvl * 50+"<br>New Perk Cap:"+data.PerkLimit;

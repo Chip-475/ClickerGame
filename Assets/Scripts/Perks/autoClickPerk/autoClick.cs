@@ -8,7 +8,7 @@ public class autoClick : MonoBehaviour
     {
 
         data.autoclickAmount--;
-        click.StartAutoClicker();
+        click.startAutoclicker();
         
     }
 

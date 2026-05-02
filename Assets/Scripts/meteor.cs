@@ -5,12 +5,14 @@ using UnityEngine;
 public class meteor : MonoBehaviour
 {
     public GameObject met;
+    public AudioClip explodeSFX;
     public TMP_Text metHp;
     public static int hpMeteor;
     public static int hpMaxMeteor;
     bool isAlive = true;
     public RectTransform rect;
     Vector2 targetPos = Vector2.zero;
+    //for hackclub reviewer:fuck this shit don't even try to understand why this work
     void Start()
     {
         ResetMeteor();
@@ -81,7 +83,7 @@ public class meteor : MonoBehaviour
 
         Vector3 start = Vector3.one;
         Vector3 pop = Vector3.one * 1.4f;
-
+        audioManager.manager.playSFX(explodeSFX, transform, data.sfx);
         while (t < popTime)
         {
             t += Time.deltaTime;
@@ -105,10 +107,11 @@ public class meteor : MonoBehaviour
     {
         int reward = Mathf.RoundToInt(hpMaxMeteor * data.globalMoneyMod);
         data.money += reward;
-
+        data.totalMoney += reward;
         if (goldMeteorPerk.isActive)
         {
             data.money += reward;
+            data.totalMoney += reward;
             goldMeteorPerk.isActive = false;
         }
 

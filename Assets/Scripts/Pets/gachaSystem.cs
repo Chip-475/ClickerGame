@@ -27,6 +27,7 @@ public class gachaSystem : MonoBehaviour
     }
     public petData GetPet(int egg)
     {
+        data.totalOpenedEggs++;
         if (egg == 1)
         {
             Debug.Log("uovo1");

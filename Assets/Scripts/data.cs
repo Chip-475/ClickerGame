@@ -1,14 +1,18 @@
 using System;
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.InputSystem.LowLevel;
 
 public class data
 {
     //resources
     public static int money = 10000000;
+    public static long totalMoney;
     public static int PerkLimit=5;
     public static int totalPerk = 0;
     public static int meteorCrushed = 0;
+    public static int perkUsed;
+    public static int totalClicks;
 
     //upgrades
     public static int baseUPlvl=1;
@@ -41,4 +45,10 @@ public class data
     public static int maxEquippedPets = 0;
     public static float globalMoneyMod;
     public static float globalCritMod;
+    public static int totalOpenedEggs;
+
+    //music
+    public static float master;
+    public static float music;
+    public static float sfx;
 }

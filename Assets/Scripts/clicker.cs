@@ -31,6 +31,7 @@ public class clicker : MonoBehaviour
     public void click()
     {
         audioManager.manager.playSFX(clickSFX, transform, data.sfx);
+        data.totalClicks++;
         int critRate = (int)(data.critUPlvl + data.globalCritMod);
         meteor.hpMeteor -= clickStr;
         Debug.Log("click");

@@ -7,6 +7,7 @@ public class baseClickPerk : MonoBehaviour
     public IEnumerator ClickPerk()
     {
         data.clickPerkAmount--;
+        data.perkUsed++;
         isActive = true;
         clicker.clickStr *= 2;
         yield return new WaitForSeconds(duration);

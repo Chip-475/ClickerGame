@@ -8,6 +8,7 @@ public class autoClick : MonoBehaviour
     {
 
         data.autoclickAmount--;
+        data.perkUsed++;
         click.startAutoclicker();
         
     }

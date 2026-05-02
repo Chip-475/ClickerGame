@@ -12,7 +12,7 @@ public class statsManager : MonoBehaviour
     public TMP_Text totalClicks;
 
     [Header("Upgrades")]
-    public TMP_Text baseUPlvl;
+    public TMP_Text totalDMG;
     public TMP_Text critRate;
 
     [Header("Pets")]
@@ -22,6 +22,17 @@ public class statsManager : MonoBehaviour
 
     void Update()
     {
-        
+        totalMoney.text = data.totalMoney.ToString();
+        currentMoney.text=data.money.ToString();
+        perkLimit.text=data.PerkLimit.ToString();
+        crushedMeteor.text=data.meteorCrushed.ToString();
+        level.text=data.lvl.ToString();
+        perkUsed.text=data.perkUsed.ToString();
+        totalClicks.text=data.totalClicks.ToString();
+        totalDMG.text=clicker.clickStr.ToString();
+        critRate.text=clicker.critRate.ToString();
+        moneyModifier.text=data.globalMoneyMod.ToString();
+        critModifier.text=data.globalCritMod.ToString();
+        eggsOpened.text=data.totalOpenedEggs.ToString();
     }
 }

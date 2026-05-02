@@ -7,7 +7,7 @@ public class cannon_1 : MonoBehaviour
     public GameObject cannon1, shootPoint;
     public int shootCost1;
     public float step;
-
+    public static int totalDepot;
     [Header("fire rate")]
     public float baseFireTime = 1f;
     public float baseWaitingTime = 7.5f;
@@ -57,6 +57,7 @@ public class cannon_1 : MonoBehaviour
 
     private void Start()
     {
+        totalDepot = 100 + (data.cannonDepotlvl * 10);
         step = Time.deltaTime * 15f;
     }
 
@@ -64,7 +65,7 @@ public class cannon_1 : MonoBehaviour
     {
         shoot1 = data.cannon1;
 
-        data.fuel1 = Mathf.Clamp(data.fuel1, 0, 100 + (data.cannonDepotlvl * 10));
+        data.fuel1 = Mathf.Clamp(data.fuel1, 0, totalDepot);
 
         if (shoot1 && data.fuel1 > shootCost1 && !shooting1&&data.PerkLimit != data.totalPerk)
         {

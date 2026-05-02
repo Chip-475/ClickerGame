@@ -9,6 +9,7 @@ public class goldMeteorPerk : MonoBehaviour
         {
             isActive = true;
             data.critPerkAmount--;
+            data.perkUsed++;
         }
     }
 }

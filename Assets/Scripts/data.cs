@@ -43,12 +43,12 @@ public class data
     //pets
     public static List<PetInstance> pets= new List<PetInstance>();
     public static int maxEquippedPets = 0;
-    public static float globalMoneyMod;
+    public static float globalMoneyMod=1;
     public static float globalCritMod;
     public static int totalOpenedEggs;
 
     //music
-    public static float master;
-    public static float music;
-    public static float sfx;
+    public static float master = 1f;
+    public static float music = 1f;
+    public static float sfx = 1f;
 }

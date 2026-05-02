@@ -67,7 +67,7 @@ public class cannon_2 : MonoBehaviour
     {
         shoot2 = data.cannon2;
 
-        data.fuel1 = Mathf.Clamp(data.fuel1, 0, 100 + (data.cannonDepotlvl * 10));
+        data.fuel1 = Mathf.Clamp(data.fuel1, 0, cannon_1.totalDepot);
 
         if (shoot2 && data.fuel1 > shootCost2 && !shooting2&&data.PerkLimit!=data.totalPerk)
         {

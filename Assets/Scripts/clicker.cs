@@ -7,7 +7,7 @@ public class clicker : MonoBehaviour
     public static int clickStr = 1;
     public static int clickExp = 10;
     public GameObject text;
-
+    public static int critRate;
 
     [Header("autoClicker")]
     [SerializeField] autoClickerManager autoclick;
@@ -24,7 +24,7 @@ public class clicker : MonoBehaviour
     }
     IEnumerator critText(GameObject text)
     {
-        GameObject text1 = Instantiate(text, transform.position, Quaternion.identity);
+        GameObject text1 = Instantiate(text, transform.position, Quaternion.identity,transform);
         text1.SetActive(true);
         yield return null;
     }
@@ -32,17 +32,17 @@ public class clicker : MonoBehaviour
     {
         audioManager.manager.playSFX(clickSFX, transform, data.sfx);
         data.totalClicks++;
-        int critRate = (int)(data.critUPlvl + data.globalCritMod);
+        critRate = (int)(data.critUPlvl + data.globalCritMod);
         meteor.hpMeteor -= clickStr;
         Debug.Log("click");
         data.xp += clickExp;
-        int r = UnityEngine.Random.Range(0, critRate);
+        int r = UnityEngine.Random.Range(0, 100);
         if (r < critRate)
         {
             data.xp += clickExp * data.critDmg;
             meteor.hpMeteor -= clickStr * data.critDmg;
             StartCoroutine(critText(text));
-            Debug.Log(meteor.hpMeteor);
+            Debug.Log("crit");
         }
     }
 }

@@ -8,6 +8,7 @@ public class critPerk : MonoBehaviour
     public  IEnumerator critValuePerk()
     {
         data.critPerkAmount--;
+        data.perkUsed++;
         isActive = true;
         data.critDmg *= 2;
         yield return new WaitForSeconds(duration);

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::petData
   id: 
   petName: Dragon
-  sprite: {fileID: 0}
+  sprite: {fileID: 3428391033546482049, guid: 72d941aee9cd35346a4c22eb71285a0d, type: 3}
   rarity: 3
   baseMoneyMod: 1.1
   baseCritMod: 0.1

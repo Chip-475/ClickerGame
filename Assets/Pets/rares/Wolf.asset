@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::petData
   id: 
   petName: Wolf
-  sprite: {fileID: 0}
+  sprite: {fileID: 7444046612802208997, guid: e247da662ff6a434898094dff5444679, type: 3}
   rarity: 1
   baseMoneyMod: 1.1
   baseCritMod: 0.1

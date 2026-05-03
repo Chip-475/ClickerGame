@@ -14,10 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::petData
   id: 
   petName: Racoon
-  sprite: {fileID: 0}
+  sprite: {fileID: -7092979417079772619, guid: ee333dfd05f913f4fa59731b0e41c04c, type: 3}
   rarity: 0
-  lvl: 0
-  rank: 0
   baseMoneyMod: 1.1
   baseCritMod: 0.1
   baseUPcost: 50

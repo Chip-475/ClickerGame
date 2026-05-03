@@ -12,6 +12,6 @@ public class Fuel : MonoBehaviour
         {
             return;
         }
-        data.fuel1 += 100;
+        data.fuel1 += 50;
     }
 }

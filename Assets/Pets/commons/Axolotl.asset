@@ -14,10 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::petData
   id: 
   petName: Axolotl
-  sprite: {fileID: 0}
+  sprite: {fileID: -7726925030949883860, guid: ae1a15c43f6e20349885f5c0893659b3, type: 3}
   rarity: 0
-  lvl: 0
-  rank: 0
   baseMoneyMod: 1.1
   baseCritMod: 0.1
   baseUPcost: 50

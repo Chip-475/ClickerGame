@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c79153894b6b0674392a28cbdbf168d3, type: 3}
-  m_Name: Sperm Whale
+  m_Name: panda
   m_EditorClassIdentifier: Assembly-CSharp::petData
   id: 
-  petName: Sperm Whale
-  sprite: {fileID: 0}
+  petName: panda
+  sprite: {fileID: 7143765114743541545, guid: 3317188f3658b9747b2b57bdcdb0f360, type: 3}
   rarity: 2
   baseMoneyMod: 1.1
   baseCritMod: 0.1

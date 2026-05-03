@@ -3,9 +3,11 @@ using System.Collections;
 
 public class cannon_2 : MonoBehaviour
 {
+    private const int DefaultShootCost2 = 30;
+
     public bool shoot2;
     public GameObject cannon2, shootPoint;
-    public int shootCost2;
+    public int shootCost2 = DefaultShootCost2;
     public float step;
 
     [Header("fire rate")]
@@ -24,6 +26,7 @@ public class cannon_2 : MonoBehaviour
     IEnumerator _cannon1()
     {
         shooting2 = true;
+        data.fuel1 -= shootCost2;
 
         int x = UnityEngine.Random.Range(-410, -230);
         int y = UnityEngine.Random.Range(200, 520);
@@ -53,13 +56,16 @@ public class cannon_2 : MonoBehaviour
         }
 
         yield return new WaitForSeconds(baseWaitingTime - (fireRateReductionPerLevel * data.cannonFireRatelvl));
-
-        data.fuel1 -= shootCost2;
         shooting2 = false;
     }
 
     private void Start()
     {
+        if (shootCost2 <= 0)
+        {
+            shootCost2 = DefaultShootCost2;
+        }
+
         step = Time.deltaTime * 15f;
     }
 
@@ -69,7 +75,7 @@ public class cannon_2 : MonoBehaviour
 
         data.fuel1 = Mathf.Clamp(data.fuel1, 0, cannon_1.totalDepot);
 
-        if (shoot2 && data.fuel1 > shootCost2 && !shooting2&&data.PerkLimit!=data.totalPerk)
+        if (shoot2 && data.fuel1 >= shootCost2 && !shooting2 && data.PerkLimit != data.totalPerk)
         {
             StartCoroutine(_cannon1());
         }

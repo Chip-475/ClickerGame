@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::petData
   id: 
   petName: Snake
-  sprite: {fileID: 0}
+  sprite: {fileID: -8688392260014441854, guid: 728de804006702f4eba944aac3b98343, type: 3}
   rarity: 1
   baseMoneyMod: 1.1
   baseCritMod: 0.1

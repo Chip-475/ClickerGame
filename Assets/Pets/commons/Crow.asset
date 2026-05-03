@@ -14,10 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::petData
   id: 
   petName: Crow
-  sprite: {fileID: 0}
+  sprite: {fileID: 1388154641894931755, guid: d56051eb99119104bb473c6dd8ae30b6, type: 3}
   rarity: 0
-  lvl: 0
-  rank: 0
   baseMoneyMod: 1.1
   baseCritMod: 0.1
   baseUPcost: 50

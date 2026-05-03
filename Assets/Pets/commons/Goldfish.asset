@@ -14,10 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::petData
   id: 
   petName: Goldfish
-  sprite: {fileID: 0}
+  sprite: {fileID: 207719912552959656, guid: 5fe89cccdf3de2f4cbdb62f3bdd3c1ca, type: 3}
   rarity: 0
-  lvl: 0
-  rank: 0
   baseMoneyMod: 1.1
   baseCritMod: 0.1
   baseUPcost: 50

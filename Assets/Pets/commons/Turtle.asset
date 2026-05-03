@@ -14,10 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::petData
   id: 
   petName: Turtle
-  sprite: {fileID: 0}
+  sprite: {fileID: -5223110998193562096, guid: bfd2af0c3536ae346bb39af592ff0b26, type: 3}
   rarity: 0
-  lvl: 0
-  rank: 0
   baseMoneyMod: 1.1
   baseCritMod: 0.1
   baseUPcost: 50

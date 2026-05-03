@@ -3,9 +3,11 @@ using System.Collections;
 
 public class cannon_1 : MonoBehaviour
 {
+    private const int DefaultShootCost1 = 20;
+
     public bool shoot1;
     public GameObject cannon1, shootPoint;
-    public int shootCost1;
+    public int shootCost1 = DefaultShootCost1;
     public float step;
     public static int totalDepot;
     [Header("fire rate")]
@@ -57,6 +59,11 @@ public class cannon_1 : MonoBehaviour
 
     private void Start()
     {
+        if (shootCost1 <= 0)
+        {
+            shootCost1 = DefaultShootCost1;
+        }
+
         totalDepot = 100 + (data.cannonDepotlvl * 10);
         step = Time.deltaTime * 15f;
     }
@@ -64,10 +71,11 @@ public class cannon_1 : MonoBehaviour
     void Update()
     {
         shoot1 = data.cannon1;
+        totalDepot = 100 + (data.cannonDepotlvl * 10);
 
         data.fuel1 = Mathf.Clamp(data.fuel1, 0, totalDepot);
 
-        if (shoot1 && data.fuel1 > shootCost1 && !shooting1&&data.PerkLimit != data.totalPerk)
+        if (shoot1 && data.fuel1 >= shootCost1 && !shooting1 && data.PerkLimit != data.totalPerk)
         {
             StartCoroutine(_cannon1());
         }

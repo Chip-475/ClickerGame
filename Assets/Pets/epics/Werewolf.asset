@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::petData
   id: 
   petName: Werewolf
-  sprite: {fileID: 0}
+  sprite: {fileID: -5255540634569531273, guid: c45423f3b87074f42b7a2617658b85c5, type: 3}
   rarity: 2
   baseMoneyMod: 1.1
   baseCritMod: 0.1

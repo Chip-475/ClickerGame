@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::petData
   id: 
   petName: Fox
-  sprite: {fileID: 0}
+  sprite: {fileID: -2497913055475438691, guid: 8b9156ad89b59c04f9fb286c270f7737, type: 3}
   rarity: 1
   baseMoneyMod: 1.1
   baseCritMod: 0.1

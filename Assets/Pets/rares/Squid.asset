@@ -10,17 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c79153894b6b0674392a28cbdbf168d3, type: 3}
-  m_Name: Finch
+  m_Name: Squid
   m_EditorClassIdentifier: Assembly-CSharp::petData
   id: 
-  petName: Finch
-  sprite: {fileID: 0}
-  rarity: 0
-  lvl: 0
-  rank: 0
+  petName: Squid
+  sprite: {fileID: -5605043561969573173, guid: 5614cf1fccbc3d84c842e6611203dc9c, type: 3}
+  rarity: 1
   baseMoneyMod: 1.1
   baseCritMod: 0.1
-  baseUPcost: 50
+  baseUPcost: 250
   finalMoneyMod: 0
   finalCritMod: 0
-  finalUPcost: 0
+  finalUPcost: 50

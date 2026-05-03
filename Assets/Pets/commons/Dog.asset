@@ -14,10 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::petData
   id: 
   petName: Dog
-  sprite: {fileID: 0}
+  sprite: {fileID: -3102553959746880095, guid: 3e2e1d37a7513be4c8bb69f6558ba59e, type: 3}
   rarity: 0
-  lvl: 1
-  rank: 0
   baseMoneyMod: 1.1
   baseCritMod: 0.1
   baseUPcost: 50

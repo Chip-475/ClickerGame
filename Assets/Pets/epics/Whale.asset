@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c79153894b6b0674392a28cbdbf168d3, type: 3}
-  m_Name: Polar Bear
+  m_Name: Whale
   m_EditorClassIdentifier: Assembly-CSharp::petData
   id: 
-  petName: Polar Bear
-  sprite: {fileID: 0}
+  petName: Whale
+  sprite: {fileID: -1689366600, guid: 10461c5759799da4494b7971519330f6, type: 3}
   rarity: 2
   baseMoneyMod: 1.1
   baseCritMod: 0.1

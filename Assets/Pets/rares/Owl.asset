@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c79153894b6b0674392a28cbdbf168d3, type: 3}
-  m_Name: Space Jelly
+  m_Name: Owl
   m_EditorClassIdentifier: Assembly-CSharp::petData
   id: 
-  petName: Space Jelly
-  sprite: {fileID: 0}
-  rarity: 3
-  baseMoneyMod: 1.1
-  baseCritMod: 0.1
-  baseUPcost: 2000
+  petName: Owl
+  sprite: {fileID: 7181115332680600569, guid: e1a6e6ca2b5de9e4881ff8e133b22683, type: 3}
+  rarity: 1
+  baseMoneyMod: 1.25
+  baseCritMod: 0.25
+  baseUPcost: 250
   finalMoneyMod: 0
   finalCritMod: 0
-  finalUPcost: 50
+  finalUPcost: 0

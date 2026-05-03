@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::petData
   id: 
   petName: Crocodile
-  sprite: {fileID: 0}
+  sprite: {fileID: 6507982653818034734, guid: 802d6660d4e299d42a77988e02b53ef0, type: 3}
   rarity: 2
   baseMoneyMod: 1.1
   baseCritMod: 0.1

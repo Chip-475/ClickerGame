@@ -37,6 +37,7 @@ public class PetUI : MonoBehaviour
             var box = petInst.GetComponent<petBox>();
             box.pet = p;
             box.petName.text = p.petName;
+            box.petIcon.sprite=stats.getSprite(p);
             box.petLevel.text = p.Petlvl.ToString() + "/" + p.rank * 10;
             box.petRank.text = "" + p.rank;
         }

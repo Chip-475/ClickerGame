@@ -12,7 +12,7 @@ public class expUPButton : MonoBehaviour
             return;
         }
         clicker.clickExp+=10;
-        data.lvl++;
+        data.expUPlvl++;
         data.money -= cost;
     }
 }

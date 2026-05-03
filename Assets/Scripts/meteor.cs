@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class meteor : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class meteor : MonoBehaviour
     public static int hpMaxMeteor;
     bool isAlive = true;
     public RectTransform rect;
+    public Sprite defaultMeteor;
+    public Sprite goldMeteor;
     Vector2 targetPos = Vector2.zero;
     //for hackclub reviewer:fuck this shit don't even try to understand why this work
     void Start()
@@ -38,6 +41,15 @@ public class meteor : MonoBehaviour
         rect.anchoredPosition = new Vector2(Random.Range(-300f, 300f), 1000f);
 
         isAlive = true;
+        Image meteorImage = met.GetComponent<Image>();
+        if (goldMeteorPerk.isActive)
+        {
+            meteorImage.sprite = goldMeteor;
+        }
+        else
+        {
+            meteorImage.sprite = defaultMeteor;
+        }
     }
 
     IEnumerator FallAndBounce()

@@ -16,7 +16,7 @@ public class sellPet : MonoBehaviour
     {
         box = GetComponentInParent<petBox>();
         sell = stats.getSellValue(box.pet);
-        sellText.text = "sell:" + sell;
+        sellText.text = sell.ToString();
     }
     public void Sell()
     {

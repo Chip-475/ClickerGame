@@ -32,6 +32,18 @@ public class petStats : MonoBehaviour
 
         return null;
     }
+    public Sprite getSprite(PetInstance pet)
+    {
+        foreach (var p in db.allPets)
+        {
+            if (p.petName == pet.petName)
+            {
+                return p.sprite;
+            }
+
+        }
+        return null;
+    }
     public int getMaxlvl(PetInstance pet)
     {
         return 10 * pet.rank;

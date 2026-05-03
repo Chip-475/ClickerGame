@@ -33,9 +33,9 @@ public class expUPManager : MonoBehaviour
         if (data.money >= expUPcost && !IsMaxLevel) { expUPfake.SetActive(false); expUPbutton.SetActive(true); }
         else { expUPbutton.SetActive(false); expUPfake.SetActive(true); }
 
-        header.text = "Click Exp UP<br>" + "Lv. " + data.lvl;
+        header.text = "Click Exp UP<br>" + "Lv. " + data.expUPlvl;
         cost.text = "Cost: " + expUPcost;
-        fake_header.text = "Click Exp UP<br>" + "Lv. " + data.lvl;
+        fake_header.text = "Click Exp UP<br>" + "Lv. " + data.expUPlvl;
         fake_cost.text = "Cost: " + expUPcost;
         if (IsMaxLevel)
         {

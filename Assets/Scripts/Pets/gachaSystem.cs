@@ -5,6 +5,8 @@ public class gachaSystem : MonoBehaviour
     public petDB database;
     public data data;
     public int egg;
+    public static PetInstance lastPulled;
+    public Egganimation eggAnim;
     private void Start()
     {
         data = PetSave.Load();
@@ -19,7 +21,12 @@ public class gachaSystem : MonoBehaviour
             Petlvl = 1,
             rank = 1
         };
-
+        lastPulled = instance;
+        if (egg == 1) StartCoroutine(eggAnim.pullAnim(1));
+        if (egg == 2) StartCoroutine(eggAnim.pullAnim(2));
+        if (egg == 3) StartCoroutine(eggAnim.pullAnim(3));
+        if (egg == 4) StartCoroutine(eggAnim.pullAnim(4));
+        if (egg == 5) StartCoroutine(eggAnim.pullAnim(5));
         data.pets.Add(instance);
         PetSave.Save(data);
         Debug.Log("pet pullato: " + instance.petName + " id pet: " + instance.petId);
@@ -88,45 +95,62 @@ public class gachaSystem : MonoBehaviour
         }
 
         if (list.Count == 0) return null;
-
         return list[Random.Range(0, list.Count)];
     }
     public petData GetPetData(string petName)
     {
         return database.GetPetData(petName);
     }
-    public void DebugInv()
-    {
-        foreach (var p in data.pets)
-        {
-            petData petInfo = GetPetData(p.petName);
-            Debug.Log("inventario: petId: " + p.petId + " petName: " + p.petName + " rarity: " + petInfo.rarity);
-        }
-    }
     public void egg1()
     {
+        if (data.money >= 500)
+        {
         egg = 1;
         pull();
-        DebugInv();
+        data.money -= 500;
+        }
+        else { return; }
+
     }
     public void egg2()
     {
+        if(data.money >= 1000)
+        {
         egg = 2;
         pull();
+        data.money -= 1000;
+        }else { return; }
+
     }
     public void egg3()
     {
-        egg = 3;
-        pull();
+        if (data.money >= 1500)
+        {
+            egg = 3;
+            pull();
+            data.money -= 1500;
+        }
+        else { return ; }
+
     }
     public void egg4()
     {
-        egg = 4;
-        pull();
+        if (data.money >= 2000)
+        {
+            egg = 4;
+            pull();
+            data.money -= 2000;
+        }else { return ; }
+
     }
     public void egg5()
     {
-        egg = 5;
-        pull();
+        if (data.money >= 5000)
+        {
+            egg = 5;
+            pull();
+            data.money -= 5000;
+        }else { return ; }
+
     }
 }

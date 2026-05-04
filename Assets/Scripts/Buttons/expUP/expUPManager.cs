@@ -17,7 +17,7 @@ public class expUPManager : MonoBehaviour
     [Header("Stats")]
     public int expUPcost;
     public int maxLevel = 50;
-    public int startingCost = 300;
+    public int startingCost = 270;
 
     public bool IsMaxLevel = false;
 
@@ -45,7 +45,7 @@ public class expUPManager : MonoBehaviour
 
     public int GetCostForLevel()
     {
-        float rawCost = startingCost * Mathf.Pow(1.34f, data.lvl);
+        float rawCost = startingCost * Mathf.Pow(1.34f, data.expUPlvl);
         return Mathf.RoundToInt(rawCost / CostStep) * CostStep;
     }
 }

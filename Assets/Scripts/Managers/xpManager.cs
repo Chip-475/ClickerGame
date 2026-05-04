@@ -8,6 +8,7 @@ public class xpManager : MonoBehaviour
 {
     public Image xpBar;
     public AudioClip lvlupSFX;
+    public Color gray;
 
     public GameObject lock1;
     public GameObject lock2;
@@ -21,6 +22,18 @@ public class xpManager : MonoBehaviour
     public GameObject egg3;
     public GameObject egg4;
     public GameObject egg5;
+
+    public Image egg1Img;
+    public Image egg2Img;
+    public Image egg3Img;
+    public Image egg4Img;
+    public Image egg5Img;
+
+    public Button egg1Btn;
+    public Button egg2Btn;
+    public Button egg3Btn;
+    public Button egg4Btn;
+    public Button egg5Btn;
 
     public GameObject shop;
 
@@ -61,6 +74,10 @@ public class xpManager : MonoBehaviour
         if (data.lvl >= 20 && !unlock4)
         {
             unlock4 = true;
+            lock1.SetActive(false);
+            lock2.SetActive(false);
+            lock3.SetActive(false);
+            lock4.SetActive(false);
             data.maxEquippedPets = 3;
         }
         if (data.lvl >= 30 && !unlock5)
@@ -82,20 +99,78 @@ public class xpManager : MonoBehaviour
     }
     void Start()
     {
+        Unlock();
+        ColorUtility.TryParseHtmlString("#5A5A5A", out gray);
         lock1.transform.SetParent(shop.transform);
         lock2.transform.SetParent(shop.transform);
         lock3.transform.SetParent(shop.transform);
         lock4.transform.SetParent(shop.transform);
         lock5.transform.SetParent(shop.transform);
+        egg1Img = egg1.GetComponent<Image>();
+        egg2Img = egg2.GetComponent<Image>();
+        egg3Img = egg3.GetComponent<Image>();
+        egg4Img = egg4.GetComponent<Image>();
+        egg5Img = egg5.GetComponent<Image>();
+        egg1Btn = egg1.GetComponent<Button>();
+        egg2Btn = egg2.GetComponent<Button>();
+        egg3Btn = egg3.GetComponent<Button>();
+        egg4Btn = egg4.GetComponent<Button>();
+        egg5Btn = egg5.GetComponent<Button>();
     }
 
     void Update()
     {
-        egg1.SetActive(unlock1);
-        egg2.SetActive(unlock2);
-        egg3.SetActive(unlock3);
-        egg4.SetActive(unlock4);
-        egg5.SetActive(unlock5);
+        if (data.money < 500 || !unlock1 || Egganimation.isPulling)
+        {
+            egg1Img.color = gray;
+            egg1Btn.interactable = false;
+        }
+        else
+        {
+            egg1Img.color = Color.white;
+            egg1Btn.interactable= true;
+        }
+        if (data.money < 1000 || !unlock2 || Egganimation.isPulling)
+        {
+            egg2Img.color = gray;
+            egg2Btn.interactable = false;
+        }
+        else
+        {
+            egg2Img.color = Color.white;
+            egg2Btn.interactable= true;
+        }
+        if (data.money < 1500 || !unlock3 || Egganimation.isPulling)
+        {
+            egg3Img.color = gray;
+            egg3Btn.interactable = false;
+        }
+        else
+        {
+            egg3Img.color = Color.white;
+            egg3Btn.interactable= true;
+        }
+        if (data.money < 2000 || !unlock4 || Egganimation.isPulling)
+        {
+            egg4Img.color = gray;
+            egg4Btn.interactable = false;
+        }
+        else
+        {
+            egg4Img.color = Color.white;
+            egg4Btn.interactable= true;
+        }
+        if (data.money < 5000 || !unlock5 || Egganimation.isPulling)
+        {
+            egg5Img.color = gray;
+            egg5Btn.interactable = false;
+        }
+        else
+        {
+            egg5Img.color = Color.white;
+            egg5Btn.interactable= true;
+        }
+
         Debug.Log(data.maxEquippedPets);
         xpBar.fillAmount = (float)data.xp / data.xpMax;
         lvl.text = "livello:" + data.lvl;

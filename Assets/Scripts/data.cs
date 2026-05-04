@@ -18,7 +18,7 @@ public class data
     public static int baseUPlvl=1;
     public static int critUPlvl = 1;
     public static int critDmg = 2;
-    public static int expUPlvl;
+    public static int expUPlvl=1;
     public static int meteorlvl = 1;
     public static int cannonFireRatelvl=1;
     public static int cannonDepotlvl=1;

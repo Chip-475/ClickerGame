@@ -15,23 +15,21 @@ public class autoClickerManager : MonoBehaviour
     }
     public IEnumerator autoclick(float duration)
     {
-        Debug.Log("autocliker");
         clicker.autoClicker = true;
         float t = duration;
+
         while (t>=0)
         {
+            yield return new WaitForSeconds(0.2f);
+            t -= 0.2f;
             if (met.activeSelf)
             {
                 meteor.hpMeteor -= clicker.clickStr;
-                yield return new WaitForSeconds(1);
-                t--;
                 Debug.Log(t);
             }
             yield return null;
-            Debug.Log("non funziona cane dio");
             Debug.Log(t);
         }
-        Debug.Log("fuori while");
         clicker.autoClicker = false;
     }
 }

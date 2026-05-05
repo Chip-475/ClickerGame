@@ -35,7 +35,7 @@ public class meteor : MonoBehaviour
 
     void ResetMeteor()
     {
-        hpMaxMeteor = Random.Range(data.meteorlvl * 3, data.meteorlvl * 5);
+        hpMaxMeteor = Random.Range(data.meteorlvl * 2, data.meteorlvl * 4);
         hpMeteor = hpMaxMeteor;
         rect.localScale = Vector3.one;
         rect.anchoredPosition = new Vector2(Random.Range(-300f, 300f), 1000f);
@@ -142,11 +142,6 @@ public class meteor : MonoBehaviour
     void meteorLvl()
     {
         data.meteorCrushed++;
-
-        data.meteorlvl = (int)(
-            15 *
-            (1 + data.meteorCrushed / 3f * 0.05f) *
-            Mathf.Pow(1.05f, data.meteorCrushed / 3f)
-        );
+        data.meteorlvl = Mathf.RoundToInt(3f+Mathf.Pow(data.meteorCrushed,1.18f));
     }
 }

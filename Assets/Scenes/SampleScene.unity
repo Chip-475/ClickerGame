@@ -1143,7 +1143,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '1500
+  m_text: '10000
 
 '
   m_isRightToLeft: 0
@@ -11054,7 +11054,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 500
+  m_text: 1000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11555,7 +11555,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 2000
+  m_text: 20000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -12130,7 +12130,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '5000
+  m_text: '50000
 
 '
   m_isRightToLeft: 0
@@ -24702,7 +24702,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '1000
+  m_text: '3000
 
 '
   m_isRightToLeft: 0
@@ -26724,7 +26724,6 @@ MonoBehaviour:
   fake_cost: {fileID: 1060075587}
   baseUPcost: 25
   maxLevel: 50
-  startingCost: 250
   IsMaxLevel: 0
 --- !u!114 &2052279440
 MonoBehaviour:
@@ -26895,6 +26894,7 @@ MonoBehaviour:
   shop: {fileID: 2117689321}
   lvl: {fileID: 742171447}
   exp: {fileID: 1324578609}
+  lvlup: 0
   levelUpPanel: {fileID: 1715073927}
   levelUpText: {fileID: 1811141908}
   levelUpCanvas: {fileID: 1715073928}

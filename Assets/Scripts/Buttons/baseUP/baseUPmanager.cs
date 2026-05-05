@@ -16,8 +16,7 @@ public class baseUPmanager : MonoBehaviour
     public TMP_Text fake_cost;
     [Header("Stats")]
     public int baseUPcost;
-    public int maxLevel = 50;
-    public int startingCost = 250;
+    public int maxLevel = 75;
 
     public bool IsMaxLevel=false;
 
@@ -44,7 +43,7 @@ public class baseUPmanager : MonoBehaviour
 
     public int GetCostForLevel()
     {
-        float rawCost = 250f * Mathf.Pow(1.32f, data.baseUPlvl);
+        float rawCost = 180f * Mathf.Pow(1.25f, data.baseUPlvl);
         return Mathf.RoundToInt(rawCost / CostStep) * CostStep;
     }
 }

@@ -40,7 +40,7 @@ public class xpManager : MonoBehaviour
 
     public TMP_Text lvl;
     public TMP_Text exp;
-
+    public bool lvlup;
 
     private bool unlock1 = false, unlock2 = false, unlock3 = false, unlock4 = false, unlock5 = false;
 
@@ -51,7 +51,7 @@ public class xpManager : MonoBehaviour
     public CanvasGroup levelUpCanvas;
     void Unlock()
     {
-        if (data.lvl >= 5&&!unlock1)
+        if (data.lvl >= 5 && !unlock1)
         {
             unlock1 = true;
             lock1.SetActive(false);
@@ -60,7 +60,7 @@ public class xpManager : MonoBehaviour
         if (data.lvl >= 10 && !unlock2)
         {
             unlock2 = true;
-            data.maxEquippedPets= 2;
+            data.maxEquippedPets = 2;
             lock1.SetActive(false);
             lock2.SetActive(false);
         }
@@ -89,13 +89,17 @@ public class xpManager : MonoBehaviour
             lock4.SetActive(false);
             lock5.SetActive(false);
         }
-
+        if (lvlup)
+        {
             data.money += Mathf.RoundToInt(data.lvl * 50 * data.globalMoneyMod);
             data.totalMoney += Mathf.RoundToInt(data.lvl * 50 * data.globalMoneyMod);
-        if (data.lvl % 5 == 0)
-        {
-            data.PerkLimit++;
+            if (data.lvl % 5 == 0)
+            {
+                data.PerkLimit++;
+            }
+            lvlup= false;
         }
+
     }
     void Start()
     {
@@ -120,7 +124,7 @@ public class xpManager : MonoBehaviour
 
     void Update()
     {
-        if (data.money < 500 || !unlock1 || Egganimation.isPulling)
+        if (data.money < 1000 || !unlock1 || Egganimation.isPulling)
         {
             egg1Img.color = gray;
             egg1Btn.interactable = false;
@@ -130,7 +134,7 @@ public class xpManager : MonoBehaviour
             egg1Img.color = Color.white;
             egg1Btn.interactable= true;
         }
-        if (data.money < 1000 || !unlock2 || Egganimation.isPulling)
+        if (data.money < 3000 || !unlock2 || Egganimation.isPulling)
         {
             egg2Img.color = gray;
             egg2Btn.interactable = false;
@@ -140,7 +144,7 @@ public class xpManager : MonoBehaviour
             egg2Img.color = Color.white;
             egg2Btn.interactable= true;
         }
-        if (data.money < 1500 || !unlock3 || Egganimation.isPulling)
+        if (data.money < 10000 || !unlock3 || Egganimation.isPulling)
         {
             egg3Img.color = gray;
             egg3Btn.interactable = false;
@@ -150,7 +154,7 @@ public class xpManager : MonoBehaviour
             egg3Img.color = Color.white;
             egg3Btn.interactable= true;
         }
-        if (data.money < 2000 || !unlock4 || Egganimation.isPulling)
+        if (data.money < 20000 || !unlock4 || Egganimation.isPulling)
         {
             egg4Img.color = gray;
             egg4Btn.interactable = false;
@@ -160,7 +164,7 @@ public class xpManager : MonoBehaviour
             egg4Img.color = Color.white;
             egg4Btn.interactable= true;
         }
-        if (data.money < 5000 || !unlock5 || Egganimation.isPulling)
+        if (data.money < 50000 || !unlock5 || Egganimation.isPulling)
         {
             egg5Img.color = gray;
             egg5Btn.interactable = false;
@@ -180,11 +184,9 @@ public class xpManager : MonoBehaviour
         {
             data.xp -= data.xpMax;
             data.lvl += 1;
+            lvlup = true;
             Unlock();
-            if (data.lvl < 10)
-                data.xpMax += data.xpMax / 3;
-            else
-                data.xpMax = (int)(100 * Mathf.Pow(data.lvl, 1.5f));
+            data.xpMax = Mathf.RoundToInt(35f * Mathf.Pow(data.lvl, 1.65f));
             StartCoroutine(LevelUpAnimation());
         }
     }

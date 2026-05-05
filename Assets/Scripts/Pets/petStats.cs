@@ -11,10 +11,13 @@ public class petStats : MonoBehaviour
 
     public int UpgradeCost(PetInstance pet)
     {
-
+        int rarityValue=getRarity(pet);
+        float rarityMult = 1f + rarityValue * 0.75f;
+        float rankMult = 1f + (pet.rank - 1) * 0.35f;
+        float lvlGrowth=Mathf.Pow(pet.Petlvl, 1.18f);
         petData data = GetPetData(pet);
         float baseCost = data.baseUPcost;
-        finalCost = (int)baseCost * ((1+(int)data.rarity)*pet.Petlvl);
+        finalCost =Mathf.RoundToInt(baseCost*rarityMult*rankMult*lvlGrowth/10f)*10;
         pet.currentUPcost = finalCost;
 
         return finalCost;
@@ -59,15 +62,17 @@ public class petStats : MonoBehaviour
     }
     public float getCritBonus(PetInstance pet)
     {
-        float progress=(pet.Petlvl-1f)/(getMaxlvl(pet));
+        float progress=(pet.Petlvl-1f)/(getMaxlvl(pet) - 1f);
         int ratityValue = getRarity(pet);
         return progress * (7f + ratityValue * 6f);
     }
     public float getMoneyBonus(PetInstance pet)
     {
-        float progress = (pet.Petlvl - 1f) / (getMaxlvl(pet));
+        float progress = (pet.Petlvl - 1f) / (getMaxlvl(pet) - 1f);
         int ratityValue = getRarity(pet);
-        return 1f+progress * (1f + ratityValue);
+        float rarityBonus = 0.25f + ratityValue * 0.30f;
+        float rankBonus = 1f + (pet.rank - 1) * 0.20f;
+        return 1f + rankBonus * progress * rarityBonus;
     }
 
     public int GetEquippedPetCount()

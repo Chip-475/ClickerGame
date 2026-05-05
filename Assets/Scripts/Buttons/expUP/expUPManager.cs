@@ -16,14 +16,14 @@ public class expUPManager : MonoBehaviour
     public TMP_Text fake_cost;
     [Header("Stats")]
     public int expUPcost;
-    public int maxLevel = 50;
-    public int startingCost = 270;
+    public int maxLevel = 75;
+    public int startingCost = 220;
 
     public bool IsMaxLevel = false;
 
     void Update()
     {
-        if (data.lvl >= maxLevel && !IsMaxLevel)
+        if (data.expUPlvl >= maxLevel && !IsMaxLevel)
         {
             IsMaxLevel = true;
         }
@@ -45,7 +45,7 @@ public class expUPManager : MonoBehaviour
 
     public int GetCostForLevel()
     {
-        float rawCost = startingCost * Mathf.Pow(1.34f, data.expUPlvl);
+        float rawCost = startingCost * Mathf.Pow(1.28f, data.expUPlvl);
         return Mathf.RoundToInt(rawCost / CostStep) * CostStep;
     }
 }

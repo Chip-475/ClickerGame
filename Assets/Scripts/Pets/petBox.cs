@@ -20,4 +20,5 @@ public class petBox : MonoBehaviour
     public TMP_Text equippedText;
     public GameObject sellButton;
     public TMP_Text sellText;
+    public Image border;
 }

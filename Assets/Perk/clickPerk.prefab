@@ -147,6 +147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::perkScript
   parentObject: {fileID: 0}
   arrivalPoint: {fileID: 0}
+  perkSFX: {fileID: 8300000, guid: ae525cb8126abab4786d22a3c98f254b, type: 3}
   targetPosition: {x: 0, y: 0, z: 0}
   moveTime: 0.5
   type: 0

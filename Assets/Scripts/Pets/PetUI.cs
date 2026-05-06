@@ -40,6 +40,22 @@ public class PetUI : MonoBehaviour
             box.petIcon.sprite=stats.getSprite(p);
             box.petLevel.text = p.Petlvl.ToString() + "/" + p.rank * 10;
             box.petRank.text = "" + p.rank;
+            if(stats.getRarity(p) == 0)
+            {
+                box.border.color = Color.gray;
+            }
+            if(stats.getRarity(p)== 1)
+            {
+                box.border.color = Color.blue;
+            }
+            if(stats.getRarity(p)== 2)
+            {
+                box.border.color = Color.pink;
+            }
+            if(stats.getRarity(p)== 3)
+            {
+                box.border.color = Color.yellow;
+            }
         }
         oldPet = data.pets.Count;
         stats.getGlobalBonus();

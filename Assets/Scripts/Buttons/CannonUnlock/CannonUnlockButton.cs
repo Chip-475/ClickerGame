@@ -2,9 +2,11 @@ using UnityEngine;
 
 public class CannonUnlockButton : MonoBehaviour
 {
+    public AudioClip upgradeSFX;
     public void OnClick()
     {
-        if(data.cannon1==false)
+        audioManager.manager.playSFX(upgradeSFX, transform, data.sfx);
+        if (data.cannon1==false)
         {
             data.cannon1 = true;
             data.money -= CannonUnlockManager.cannonUnlock1Cost;

@@ -6,7 +6,7 @@ using UnityEngine.InputSystem.LowLevel;
 public class data
 {
     //resources
-    public static int money = 10000000;
+    public static int money = 0;
     public static long totalMoney;
     public static int PerkLimit=5;
     public static int totalPerk = 0;

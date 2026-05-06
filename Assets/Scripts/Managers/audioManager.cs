@@ -41,7 +41,7 @@ public class audioManager : MonoBehaviour
     public void setBGM(float volume)
     {
         data.music = volume;
-        ApplyMixerVolume("bgm", volume);
+        ApplyMixerVolume("music", volume);
     }
     public void Start()
     {
@@ -49,7 +49,7 @@ public class audioManager : MonoBehaviour
         SyncSlidersWithSavedValues();
         ApplyMixerVolume("master", data.master);
         ApplyMixerVolume("sfx", data.sfx);
-        ApplyMixerVolume("bgm", data.music);
+        ApplyMixerVolume("music", data.music);
     }
 
     private void EnsureSliderReferences()

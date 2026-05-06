@@ -3,6 +3,7 @@ using UnityEngine;
 public class cannonDepotUPButton : MonoBehaviour
 {
     public cannonDepotUPManager manager;
+    public AudioClip upgradeSFX;
     public void UpgradeDepot()
     {
         if (manager.IsMaxLevel)
@@ -15,6 +16,7 @@ public class cannonDepotUPButton : MonoBehaviour
         {
             return;
         }
+        audioManager.manager.playSFX(upgradeSFX, transform, data.sfx);
         data.money -= cost;
         data.cannonDepotlvl++;
         manager.RefillNewCapacity();

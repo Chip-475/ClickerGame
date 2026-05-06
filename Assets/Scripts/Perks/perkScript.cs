@@ -5,10 +5,10 @@ public class perkScript : MonoBehaviour
 {
     public GameObject parentObject;
     public GameObject arrivalPoint;
+    public AudioClip perkSFX;
 
     public Vector3 targetPosition;
     public float moveTime = 0.5f;
-
     public enum perkType
     {
         clickUp,
@@ -50,6 +50,7 @@ public class perkScript : MonoBehaviour
 
     public void onClick()
     {
+        audioManager.manager.playSFX(perkSFX, transform, data.sfx);
         switch (type)
         {
             case perkType.clickUp:

@@ -45,10 +45,13 @@ public class meteor : MonoBehaviour
         if (goldMeteorPerk.isActive)
         {
             meteorImage.sprite = goldMeteor;
+            goldMeteorPerk.isActive = false;
+            Debug.Log("Sprite impostato: GOLD");
         }
         else
         {
             meteorImage.sprite = defaultMeteor;
+            Debug.Log("Sprite impostato: DEF");
         }
     }
 
@@ -124,7 +127,6 @@ public class meteor : MonoBehaviour
         {
             data.money += reward;
             data.totalMoney += reward;
-            goldMeteorPerk.isActive = false;
         }
 
         met.SetActive(false);

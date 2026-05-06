@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,19 +14,30 @@ public class Egganimation : MonoBehaviour
     public float height;
     public static bool isPulling;
     public Transform shop;
+    public GameObject exit;
+    public Button exitButton;
+    public Image exitImage;
+    public Color gray;
 
     float[] values = { -10f, 10f, -20f, 20f, -30f, 30f,0f,0f };
     public GameObject animationEgg;
     public RectTransform animRect;
     public petStats stats;
+    public AudioClip pullSFX;
     private void Start()
     {
         height = egg1.GetComponent<RectTransform>().rect.height;
         width = egg1.GetComponent<RectTransform>().rect.width;
         stats=GetComponent<petStats>();
+        exitButton = exit.GetComponent<Button>();
+        exitImage = exit.GetComponent<Image>();
+        UnityEngine.ColorUtility.TryParseHtmlString("#5A5A5A", out gray);
     }
     public IEnumerator pullAnim(int openedEgg)
     {
+        exitButton.interactable = false;
+        exitImage.color=gray;
+        audioManager.manager.playSFX(pullSFX, transform, data.sfx);
         isPulling = true;
         animationEgg = Instantiate(new GameObject());
         Debug.Log("instaziato");
@@ -124,5 +136,7 @@ public class Egganimation : MonoBehaviour
         Destroy(animationEgg);
         yield return null;
         isPulling = false;
+        exitButton.interactable = false;
+        exitImage.color = Color.white;
     }
 }

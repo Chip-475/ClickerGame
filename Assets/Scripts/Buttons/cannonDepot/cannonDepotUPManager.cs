@@ -23,7 +23,6 @@ public class cannonDepotUPManager : MonoBehaviour
 
     public bool IsMaxLevel =false;
 
-
     void Update()
     {
         if (data.cannonDepotlvl >= maxLevel&&!IsMaxLevel)

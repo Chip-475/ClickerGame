@@ -4888,6 +4888,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::critUPbutton
   manager: {fileID: 2052279442}
+  upgradeSFX: {fileID: 8300000, guid: 40493aecfc4d9294ca0a71ff655f2b5e, type: 3}
 --- !u!1 &389915640
 GameObject:
   m_ObjectHideFlags: 0
@@ -6783,6 +6784,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::cannonDepotUPButton
   manager: {fileID: 2052279445}
+  upgradeSFX: {fileID: 8300000, guid: 40493aecfc4d9294ca0a71ff655f2b5e, type: 3}
 --- !u!1 &534808130
 GameObject:
   m_ObjectHideFlags: 0
@@ -7217,6 +7219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b27635dc99d01294d9e4b2b0ff6b43cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CannonUnlockButton
+  upgradeSFX: {fileID: 8300000, guid: 40493aecfc4d9294ca0a71ff655f2b5e, type: 3}
 --- !u!1 &560388773
 GameObject:
   m_ObjectHideFlags: 0
@@ -8137,6 +8140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::expUPButton
   manager: {fileID: 2052279446}
+  upgradeSFX: {fileID: 8300000, guid: 40493aecfc4d9294ca0a71ff655f2b5e, type: 3}
 --- !u!1 &625161892
 GameObject:
   m_ObjectHideFlags: 0
@@ -10042,7 +10046,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &753917326
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12071,6 +12075,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::clicker
   clickSFX: {fileID: 8300000, guid: 53ea331768ab0ce4c8e766532f8b8e1b, type: 3}
+  critSFX: {fileID: 8300000, guid: 3dc73b104056cfd45873f5e6f8501489, type: 3}
   text: {fileID: 6158913496238992392}
   autoclick: {fileID: 2052279450}
 --- !u!1 &985827368
@@ -14289,7 +14294,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -15565,6 +15570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::baseUPbutton
   manager: {fileID: 2052279438}
+  upgradeSFX: {fileID: 8300000, guid: 40493aecfc4d9294ca0a71ff655f2b5e, type: 3}
 --- !u!1 &1204804544
 GameObject:
   m_ObjectHideFlags: 0
@@ -16938,8 +16944,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 228.4, y: -15.715}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 273.82, y: -15.715}
+  m_SizeDelta: {x: 290.83, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1333722883
 GameObject:
@@ -22810,7 +22816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5754717, g: 0, b: 0.52891153, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -22984,6 +22990,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::cannonFireRateUPButton
   manager: {fileID: 2052279449}
+  upgradeSFX: {fileID: 8300000, guid: 40493aecfc4d9294ca0a71ff655f2b5e, type: 3}
 --- !u!1 &1718778522
 GameObject:
   m_ObjectHideFlags: 0
@@ -24290,7 +24297,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1847316609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26869,7 +26876,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::xpManager
   xpBar: {fileID: 521731557}
-  lvlupSFX: {fileID: 8300000, guid: 9d6dc63027c2ecb4fb0c97005724e646, type: 3}
+  lvlupSFX: {fileID: 8300000, guid: dfcc13e62c8773d46b684179dd25cf6c, type: 3}
   gray: {r: 0, g: 0, b: 0, a: 0}
   lock1: {fileID: 1042511247}
   lock2: {fileID: 1075413445}
@@ -27039,9 +27046,14 @@ MonoBehaviour:
   width: 0
   height: 0
   shop: {fileID: 2117689322}
+  exit: {fileID: 1098773120}
+  exitButton: {fileID: 1098773123}
+  exitImage: {fileID: 1098773124}
+  gray: {r: 0, g: 0, b: 0, a: 0}
   animationEgg: {fileID: 0}
   animRect: {fileID: 0}
   stats: {fileID: 2052279456}
+  pullSFX: {fileID: 8300000, guid: 975d6b766da9005408a028341e05045c, type: 3}
 --- !u!114 &2052279456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27158,7 +27170,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -244024192124701621, guid: 08c389faa39938c42883de808e84b411, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 18a082d607c9197478d8d568eef77b07, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

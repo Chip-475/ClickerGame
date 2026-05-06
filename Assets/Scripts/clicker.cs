@@ -4,6 +4,7 @@ using System.Collections;
 public class clicker : MonoBehaviour
 {
     public AudioClip clickSFX;
+    public AudioClip critSFX;
     public static int clickStr = 1;
     public static int clickExp = 10;
     public GameObject text;
@@ -18,10 +19,6 @@ public class clicker : MonoBehaviour
     {
         autoClickerManager.Instance.stavoltastartadavverolautoclicker();
     }
-    private void Update()
-    {
-
-    }
     IEnumerator critText(GameObject text)
     {
         GameObject text1 = Instantiate(text, transform.position, Quaternion.identity,transform);
@@ -33,14 +30,15 @@ public class clicker : MonoBehaviour
         audioManager.manager.playSFX(clickSFX, transform, data.sfx);
         data.totalClicks++;
         critRate = Mathf.Clamp((int)(data.critUPlvl + data.globalCritMod),0,75);
-        meteor.hpMeteor -= clickStr;
+        meteor.hpMeteor = Mathf.Clamp(meteor.hpMeteor - clickStr, 0, meteor.hpMeteor);
         Debug.Log("click");
         data.xp += clickExp;
         int r = UnityEngine.Random.Range(0, 100);
         if (r < critRate)
         {
+            audioManager.manager.playSFX(critSFX, transform, data.sfx);
             data.xp += clickExp * data.critDmg;
-            meteor.hpMeteor -= clickStr * data.critDmg;
+            meteor.hpMeteor = Mathf.Clamp(meteor.hpMeteor-clickStr * data.critDmg,0,meteor.hpMeteor);
             StartCoroutine(critText(text));
             Debug.Log("crit");
         }

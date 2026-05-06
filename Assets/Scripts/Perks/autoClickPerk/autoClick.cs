@@ -7,8 +7,8 @@ public class autoClick : MonoBehaviour
     public GameObject point;
     public void onClick()
     {
-
         data.autoclickAmount--;
+
         data.perkUsed++;
         click.startAutoclicker();
         Instantiate(timer, point.transform);

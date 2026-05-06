@@ -13,11 +13,9 @@ MonoBehaviour:
   m_Name: Falcon
   m_EditorClassIdentifier: Assembly-CSharp::petData
   id: 
-  petName: Falcon
-  sprite: {fileID: 0}
+  petName: Sheep
+  sprite: {fileID: -3892720493317256745, guid: b9c28efbabc22934eae21613c5892a7c, type: 3}
   rarity: 1
-  lvl: 0
-  rank: 0
   baseMoneyMod: 1.25
   baseCritMod: 0.25
   baseUPcost: 250

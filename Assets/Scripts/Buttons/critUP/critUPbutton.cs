@@ -7,7 +7,7 @@ public class critUPbutton : MonoBehaviour
     public void critUPclick()
     {
         int cost = manager.critUPcost;
-        if (data.money < cost&&manager.IsMaxLevel)
+        if (data.money < cost||manager.IsMaxLevel)
         {
             return;
         }

@@ -30,9 +30,9 @@ public class statsManager : MonoBehaviour
         perkUsed.text=data.perkUsed.ToString();
         totalClicks.text=data.totalClicks.ToString();
         totalDMG.text=clicker.clickStr.ToString();
-        critRate.text=clicker.critRate.ToString();
-        moneyModifier.text=data.globalMoneyMod.ToString();
-        critModifier.text=data.globalCritMod.ToString();
+        critRate.text=clicker.critRate.ToString("0.00");
+        moneyModifier.text = data.globalMoneyMod.ToString("0.00");
+        critModifier.text=data.globalCritMod.ToString("0.00");
         eggsOpened.text=data.totalOpenedEggs.ToString();
     }
 }

@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Diagnostics;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,6 +15,8 @@ public class meteor : MonoBehaviour
     public RectTransform rect;
     public Sprite defaultMeteor;
     public Sprite goldMeteor;
+    int i = 0;
+    bool spawnGold = false;
     Vector2 targetPos = Vector2.zero;
     //for hackclub reviewer:fuck this shit don't even try to understand why this work
     void Start()
@@ -33,25 +36,30 @@ public class meteor : MonoBehaviour
         }
     }
 
-    void ResetMeteor()
+    void ResetMeteor(bool isGold=false)
     {
         hpMaxMeteor = Random.Range(data.meteorlvl * 2, data.meteorlvl * 4);
         hpMeteor = hpMaxMeteor;
+
         rect.localScale = Vector3.one;
         rect.anchoredPosition = new Vector2(Random.Range(-300f, 300f), 1000f);
 
         isAlive = true;
+
+
         Image meteorImage = met.GetComponent<Image>();
-        if (goldMeteorPerk.isActive)
+        if (isGold)
         {
             meteorImage.sprite = goldMeteor;
+            UnityEngine.Debug.Log("Sprite impostato: GOLD");
+            i = 0;
             goldMeteorPerk.isActive = false;
-            Debug.Log("Sprite impostato: GOLD");
+            spawnGold= true;
         }
         else
         {
             meteorImage.sprite = defaultMeteor;
-            Debug.Log("Sprite impostato: DEF");
+            UnityEngine.Debug.Log("Sprite impostato: DEF");
         }
     }
 
@@ -121,13 +129,13 @@ public class meteor : MonoBehaviour
     IEnumerator MeteorRespawn()
     {
         int reward = Mathf.RoundToInt(hpMaxMeteor * data.globalMoneyMod);
+        if (spawnGold)
+        {
+            reward *= 2;
+            UnityEngine.Debug.Log("double reward");
+        }
         data.money += reward;
         data.totalMoney += reward;
-        if (goldMeteorPerk.isActive)
-        {
-            data.money += reward;
-            data.totalMoney += reward;
-        }
 
         met.SetActive(false);
 
@@ -135,9 +143,15 @@ public class meteor : MonoBehaviour
 
         yield return new WaitForSeconds(1.5f);
 
-        ResetMeteor();
-        met.SetActive(true);
 
+        i++;
+        if (spawnGold&&i==1)
+        {
+            spawnGold = false;
+            UnityEngine.Debug.Log("gold meteor spawn");
+        }
+        ResetMeteor(goldMeteorPerk.isActive);
+        met.SetActive(true);
         StartCoroutine(FallAndBounce());
     }
 

@@ -12,6 +12,7 @@ public class Fuel : MonoBehaviour
         {
             return;
         }
-        data.fuel1 += 50;
+        data.fuel1=Mathf.Clamp(data.money, 0, cannon_1.totalDepot);
+        data.money -= 100;
     }
 }

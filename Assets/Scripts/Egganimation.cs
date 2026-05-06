@@ -136,7 +136,7 @@ public class Egganimation : MonoBehaviour
         Destroy(animationEgg);
         yield return null;
         isPulling = false;
-        exitButton.interactable = false;
+        exitButton.interactable = true;
         exitImage.color = Color.white;
     }
 }

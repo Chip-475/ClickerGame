@@ -8,7 +8,7 @@ public class expUPButton : MonoBehaviour
     {
         audioManager.manager.playSFX(upgradeSFX, transform, data.sfx);
         int cost = manager.expUPcost;
-        if (data.money < cost&&manager.IsMaxLevel)
+        if (data.money < cost||manager.IsMaxLevel)
         {
             return;
         }

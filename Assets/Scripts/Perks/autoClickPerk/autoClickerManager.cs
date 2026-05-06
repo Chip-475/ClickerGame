@@ -24,7 +24,7 @@ public class autoClickerManager : MonoBehaviour
             t -= 0.2f;
             if (met.activeSelf)
             {
-                meteor.hpMeteor -= clicker.clickStr;
+                meteor.hpMeteor = Mathf.Clamp(meteor.hpMeteor - clicker.clickStr, 0, meteor.hpMeteor);
                 Debug.Log(t);
             }
             yield return null;

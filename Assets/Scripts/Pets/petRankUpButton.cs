@@ -85,7 +85,7 @@ public class petRankUpButton : MonoBehaviour
                         break;
                     }
                     data.pets[index].rank += pet2.rank;
-                    Mathf.Clamp(data.pets[index].rank, 0, 5);
+                    data.pets[index].rank=Mathf.Clamp(data.pets[index].rank, 0, 5);
                     data.pets[index].Petlvl = 1;
                     data.pets.Remove(pet2);
                     stats.getGlobalBonus();
@@ -93,7 +93,6 @@ public class petRankUpButton : MonoBehaviour
                     ui.buildUI();
                     break;
                 }
-
             }
         }
     }

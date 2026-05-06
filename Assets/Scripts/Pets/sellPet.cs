@@ -25,7 +25,7 @@ public class sellPet : MonoBehaviour
             if (data.pets[i].petId == box.pet.petId)
             {
                 data.money += (int)(sell * data.globalMoneyMod);
-                data.totalMoney = (int)(sell * data.globalMoneyMod);
+                data.totalMoney += (int)(sell * data.globalMoneyMod);
                 data.pets.RemoveAt(i);
                 break;
             }

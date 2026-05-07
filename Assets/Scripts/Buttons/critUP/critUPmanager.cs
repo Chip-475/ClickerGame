@@ -17,7 +17,7 @@ public class critUPmanager : MonoBehaviour
     [Header("Stats")]
     public int critUPcost;
     public int maxLevel = 50;
-    public int startingCost = 300;
+    public int startingCost = 180;
 
     public bool IsMaxLevel = false;
 
@@ -45,7 +45,7 @@ public class critUPmanager : MonoBehaviour
 
     public int GetCostForLevel()
     {
-        float rawCost = startingCost * Mathf.Pow(1.30f, data.critUPlvl);
+        float rawCost = startingCost * Mathf.Pow(1.25f, data.critUPlvl);
         return Mathf.RoundToInt(rawCost / CostStep) * CostStep;
     }
 }

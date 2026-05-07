@@ -177,7 +177,7 @@ public class xpManager : MonoBehaviour
 
         Debug.Log(data.maxEquippedPets);
         xpBar.fillAmount = (float)data.xp / data.xpMax;
-        lvl.text = "livello:" + data.lvl;
+        lvl.text = "level:" + data.lvl;
         exp.text = data.xp + "/" + data.xpMax;
 
         if (data.xp >= data.xpMax)

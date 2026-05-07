@@ -16,19 +16,16 @@ public class autoClickerManager : MonoBehaviour
     public IEnumerator autoclick(float duration)
     {
         clicker.autoClicker = true;
-        float t = duration;
+        float endTime=Time.time+duration;
 
-        while (t>=0)
+        while (Time.time<duration)
         {
-            yield return new WaitForSeconds(0.2f);
-            t -= 0.2f;
             if (met.activeSelf)
             {
                 meteor.hpMeteor = Mathf.Clamp(meteor.hpMeteor - clicker.clickStr, 0, meteor.hpMeteor);
-                Debug.Log(t);
+                Debug.Log(Time.time);
             }
-            yield return null;
-            Debug.Log(t);
+            yield return new WaitForSeconds(0.1f);
         }
         clicker.autoClicker = false;
     }

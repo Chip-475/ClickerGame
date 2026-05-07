@@ -68,6 +68,7 @@ public class SaveAndLoad : MonoBehaviour
             baseUPlvl = data.baseUPlvl,
             critUPlvl = data.critUPlvl,
             critDmg = data.critDmg,
+            expUPlvl = data.expUPlvl,
             meteorlvl = data.meteorlvl,
             cannonFireRatelvl = data.cannonFireRatelvl,
             cannonDepotlvl = data.cannonDepotlvl,
@@ -130,6 +131,7 @@ public class SaveAndLoad : MonoBehaviour
         data.baseUPlvl = saveData.baseUPlvl;
         data.critUPlvl = saveData.critUPlvl;
         data.critDmg = saveData.critDmg;
+        data.expUPlvl=saveData.expUPlvl;
         data.meteorlvl = saveData.meteorlvl;
         data.cannonFireRatelvl = saveData.cannonFireRatelvl;
         data.cannonDepotlvl = saveData.cannonDepotlvl;
@@ -177,6 +179,8 @@ public class SaveAndLoad : MonoBehaviour
         data.baseUPlvl = 1;
         data.critUPlvl = 1;
         data.critDmg = 2;
+        data.expUPlvl = 1;
+
         data.meteorlvl = 1;
         data.cannonFireRatelvl = 1;
         data.cannonDepotlvl = 1;
@@ -238,6 +242,7 @@ public class SaveFileData
     public int baseUPlvl;
     public int critUPlvl;
     public int critDmg;
+    public int expUPlvl;
     public int meteorlvl;
     public int cannonFireRatelvl;
     public int cannonDepotlvl;

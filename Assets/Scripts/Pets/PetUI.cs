@@ -9,6 +9,7 @@ public class PetUI : MonoBehaviour
     public GameObject parent;
     public TMP_Text equippedText;
     [SerializeField] private petStats stats;
+    public sorting sorting;
 
     private int oldPet;
     private void Start()
@@ -31,6 +32,7 @@ public class PetUI : MonoBehaviour
         {
             Destroy(parent.transform.GetChild(i).gameObject);
         }
+        sorting.sort();
         foreach (var p in data.pets)
         {
             var petInst = Instantiate(petPrefab, parent.transform);
@@ -50,7 +52,7 @@ public class PetUI : MonoBehaviour
             }
             if(stats.getRarity(p)== 2)
             {
-                box.border.color = Color.pink;
+                box.border.color = Color.deepPink;
             }
             if(stats.getRarity(p)== 3)
             {

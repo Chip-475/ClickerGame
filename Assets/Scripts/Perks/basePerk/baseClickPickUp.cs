@@ -6,8 +6,8 @@ public class baseClickPickUp : MonoBehaviour
     {
         if (data.PerkLimit > data.totalPerk)
         {
+
             data.clickPerkAmount++;
-            //animationPH
             Destroy(gameObject);
         }
     }

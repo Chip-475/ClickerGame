@@ -8,11 +8,11 @@ public class Fuel : MonoBehaviour
         {
             return;
         }
-        if (data.money < 100)
+        if (data.money < 500)
         {
             return;
         }
         data.fuel1=Mathf.Clamp(data.fuel1+20, 0, cannon_1.totalDepot);
-        data.money -= 100;
+        data.money -= 500;
     }
 }

@@ -14,7 +14,7 @@ public class CannonUnlockManager : MonoBehaviour
     public TMP_Text fake_header;
     public TMP_Text fake_cost;
     public TMP_Text fake_effect;
-    public static int cannonUnlock1Cost = 1500;
+    public static int cannonUnlock1Cost = 2500;
     public static int cannonUnlock2Cost = 5000;
 
     void Update()

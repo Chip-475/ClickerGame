@@ -19,7 +19,7 @@ public class timerManager : MonoBehaviour
         {
             return;
         }
-        if (timer - timeElapsed < 10f)
+        if (timer - timeElapsed < 9f)
         {
             timerText.text = "00:0" + Mathf.CeilToInt(timer - timeElapsed);
         }

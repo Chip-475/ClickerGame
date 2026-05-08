@@ -114,7 +114,7 @@ public class Egganimation : MonoBehaviour
         }//despawn
         animationEgg.GetComponent<Image>().sprite = stats.GetPetData(gachaSystem.lastPulled).sprite;
         Debug.Log(stats.GetPetData(gachaSystem.lastPulled).sprite);
-        duration = 1f;
+        duration = 0.7f;
         elapsed = 0f;
         while (elapsed < duration)
         {
@@ -124,7 +124,7 @@ public class Egganimation : MonoBehaviour
             yield return null;
         }//petSpawning
         yield return new WaitForSeconds(1.5f);
-        duration = 1f;
+        duration = 0.3f;
         elapsed = 0f;
         while (elapsed < duration)
         {

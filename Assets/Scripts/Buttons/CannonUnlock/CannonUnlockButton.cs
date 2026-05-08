@@ -8,7 +8,7 @@ public class CannonUnlockButton : MonoBehaviour
         audioManager.manager.playSFX(upgradeSFX, transform, data.sfx);
         if (data.cannon1==false)
         {
-            if (data.money >= 1500)
+            if (data.money >= 2500)
             {
             data.cannon1 = true;
             data.money -= CannonUnlockManager.cannonUnlock1Cost;

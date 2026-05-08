@@ -20,7 +20,7 @@ public class fuelManager : MonoBehaviour
         {
             if (data.fuel1 < cannon_1.totalDepot)
             {
-                if (data.money >= 100)
+                if (data.money >= 500)
                 {
                     fuelButton.SetActive(true);
                     fuelButtonFake.SetActive(false);

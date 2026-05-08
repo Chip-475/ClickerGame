@@ -103,49 +103,49 @@ public class gachaSystem : MonoBehaviour
     }
     public void egg1()
     {
-        if (data.money >= 1000)
+        if (data.money >= 5000)
         {
         egg = 1;
         pull();
-        data.money -= 1000;
+        data.money -= 5000;
         }
         else { return; }
 
     }
     public void egg2()
     {
-        if(data.money >= 3000)
+        if(data.money >= 10000)
         {
         egg = 2;
         pull();
-        data.money -= 3000;
+        data.money -= 10000;
         }else { return; }
 
     }
     public void egg3()
     {
-        if (data.money >= 10000)
+        if (data.money >= 25000)
         {
             egg = 3;
             pull();
-            data.money -= 10000;
+            data.money -= 25000;
         }
         else { return ; }
 
     }
     public void egg4()
     {
-        if (data.money >= 20000)
+        if (data.money >= 50000)
         {
             egg = 4;
             pull();
-            data.money -= 20000;
+            data.money -= 50000;
         }else { return ; }
 
     }
     public void egg5()
     {
-        if (data.money >= 50000)
+        if (data.money >= 100000)
         {
             egg = 5;
             pull();

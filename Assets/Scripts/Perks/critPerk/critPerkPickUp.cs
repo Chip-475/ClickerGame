@@ -6,6 +6,7 @@ public class critPerkPickUp : MonoBehaviour
     {
         if (data.PerkLimit > data.totalPerk)
         {
+
             data.critPerkAmount++;
             Destroy(gameObject);
         }

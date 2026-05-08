@@ -154,8 +154,8 @@ public class SaveAndLoad : MonoBehaviour
         data.master = saveData.master;
         data.music = saveData.music;
         data.sfx = saveData.sfx;
-        clicker.clickStr = saveData.clickStr <= 0 ? 1 : saveData.clickStr;
-        clicker.clickExp = saveData.clickExp <= 0 ? 10 : saveData.clickExp;
+        clicker.clickStr = saveData.clickStr;
+        clicker.clickExp = saveData.clickExp;
         data.pets = saveData.pets ?? new List<PetInstance>();
 
         hasLoaded = true;
@@ -168,6 +168,11 @@ public class SaveAndLoad : MonoBehaviour
 
     public static void ResetAllData(bool reloadScene = true)
     {
+        baseClickPerk.isActive = false;
+        critPerk.isActive = false;
+        goldMeteorPerk.isActive = false;
+        clicker.autoClicker = false;
+
         data.money = 0;
         data.totalMoney = 0;
         data.PerkLimit = 5;

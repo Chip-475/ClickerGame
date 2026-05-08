@@ -12,16 +12,15 @@ public class critPerk : MonoBehaviour
         data.critPerkAmount--;
         data.perkUsed++;
         isActive = true;
-        data.critDmg *= 2;
         Instantiate(timer, point.transform);
         yield return new WaitForSeconds(duration);
-        data.critDmg /= 2;
         isActive = false;
     }
     public  void onClick()
     {
         if (!isActive)
         {
+            if (isActive || data.critPerkAmount <= 0) return;
             StartCoroutine(critValuePerk());
         }
     }

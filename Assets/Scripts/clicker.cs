@@ -30,7 +30,14 @@ public class clicker : MonoBehaviour
         audioManager.manager.playSFX(clickSFX, transform, data.sfx);
         data.totalClicks++;
         critRate = Mathf.Clamp((int)(data.critUPlvl + data.globalCritMod),0,75);
-        meteor.hpMeteor = Mathf.Clamp(meteor.hpMeteor - clickStr, 0, meteor.hpMeteor);
+        if (baseClickPerk.isActive)
+        {
+            meteor.hpMeteor = Mathf.Clamp(meteor.hpMeteor - (clickStr * 2), 0, meteor.hpMeteor);
+        }
+        else
+        {
+            meteor.hpMeteor = Mathf.Clamp(meteor.hpMeteor - clickStr, 0, meteor.hpMeteor);
+        }
         Debug.Log("click");
         data.xp += clickExp;
         int r = UnityEngine.Random.Range(0, 100);
@@ -38,7 +45,18 @@ public class clicker : MonoBehaviour
         {
             audioManager.manager.playSFX(critSFX, transform, data.sfx);
             data.xp += clickExp * data.critDmg;
-            meteor.hpMeteor = Mathf.Clamp(meteor.hpMeteor-clickStr * data.critDmg,0,meteor.hpMeteor);
+            if(baseClickPerk.isActive^critPerk.isActive)
+            {
+                meteor.hpMeteor = Mathf.Clamp(meteor.hpMeteor - (clickStr * 2*data.critDmg), 0, meteor.hpMeteor);
+            }
+            if(critPerk.isActive&&baseClickPerk.isActive)
+            {
+                meteor.hpMeteor = Mathf.Clamp(meteor.hpMeteor - (clickStr * 4 * data.critDmg), 0, meteor.hpMeteor);
+            }
+            if (!baseClickPerk.isActive && !critPerk.isActive)
+            {
+                meteor.hpMeteor = Mathf.Clamp(meteor.hpMeteor - (clickStr * 2 * data.critDmg), 0, meteor.hpMeteor);
+            }
             StartCoroutine(critText(text));
             Debug.Log("crit");
         }

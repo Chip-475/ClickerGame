@@ -124,7 +124,7 @@ public class xpManager : MonoBehaviour
 
     void Update()
     {
-        if (data.money < 1000 || !unlock1 || Egganimation.isPulling)
+        if (data.money < 5000 || !unlock1 || Egganimation.isPulling)
         {
             egg1Img.color = gray;
             egg1Btn.interactable = false;
@@ -134,7 +134,7 @@ public class xpManager : MonoBehaviour
             egg1Img.color = Color.white;
             egg1Btn.interactable= true;
         }
-        if (data.money < 3000 || !unlock2 || Egganimation.isPulling)
+        if (data.money < 10000 || !unlock2 || Egganimation.isPulling)
         {
             egg2Img.color = gray;
             egg2Btn.interactable = false;
@@ -144,7 +144,7 @@ public class xpManager : MonoBehaviour
             egg2Img.color = Color.white;
             egg2Btn.interactable= true;
         }
-        if (data.money < 10000 || !unlock3 || Egganimation.isPulling)
+        if (data.money < 25000 || !unlock3 || Egganimation.isPulling)
         {
             egg3Img.color = gray;
             egg3Btn.interactable = false;
@@ -154,7 +154,7 @@ public class xpManager : MonoBehaviour
             egg3Img.color = Color.white;
             egg3Btn.interactable= true;
         }
-        if (data.money < 20000 || !unlock4 || Egganimation.isPulling)
+        if (data.money < 50000 || !unlock4 || Egganimation.isPulling)
         {
             egg4Img.color = gray;
             egg4Btn.interactable = false;
@@ -164,7 +164,7 @@ public class xpManager : MonoBehaviour
             egg4Img.color = Color.white;
             egg4Btn.interactable= true;
         }
-        if (data.money < 50000 || !unlock5 || Egganimation.isPulling)
+        if (data.money < 100000 || !unlock5 || Egganimation.isPulling)
         {
             egg5Img.color = gray;
             egg5Btn.interactable = false;

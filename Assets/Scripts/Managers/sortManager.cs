@@ -7,6 +7,7 @@ public class sortManager : MonoBehaviour
     public Button rankButton;
     public Button levelButton;
     public PetUI ui;
+    public bool sortOrder;
     public enum sorting
     {
         rarity,
@@ -16,10 +17,10 @@ public class sortManager : MonoBehaviour
     static public sorting type;
     public void setRaritySort()
     {
-        type = sorting.rarity;
-        rarityButton.interactable = false;
-        rankButton.interactable = true;
-        levelButton.interactable = true;
+            type = sorting.rarity;
+            rarityButton.interactable = false;
+            rankButton.interactable = true;
+            levelButton.interactable = true;
         ui.buildUI();
     }
     public void setRankSort()
@@ -38,8 +39,13 @@ public class sortManager : MonoBehaviour
         rarityButton.interactable= true;
         ui.buildUI();
     }
+    public void toggleSortOrder()
+    {
+            sortOrder = !sortOrder;
+    }
     void Start()
     {
         type= sorting.rarity;
+        sortOrder = true;
     }
 }

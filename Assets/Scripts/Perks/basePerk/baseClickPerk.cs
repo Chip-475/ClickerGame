@@ -13,14 +13,13 @@ public class baseClickPerk : MonoBehaviour
         data.clickPerkAmount--;
         data.perkUsed++;
         isActive = true;
-        clicker.clickStr *= 2;
         Instantiate(timer, point.transform);
         yield return new WaitForSeconds(duration);
-        clicker.clickStr /= 2;
         isActive = false;
     }
     public void onClick()
     {
+        if (isActive || data.baseUPlvl <= 0) return;
         StartCoroutine(ClickPerk());
     }
 }

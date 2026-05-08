@@ -40,7 +40,7 @@ public class cannon_2 : MonoBehaviour
 
         Quaternion targetRotation = Quaternion.FromToRotation(cannon2.transform.position, new Vector3(x, y, 0));
 
-        while (cannon2.transform.rotation != targetRotation)
+        while (Quaternion.Angle(cannon2.transform.rotation, targetRotation) > 0.1f)
         {
             cannon2.transform.rotation = Quaternion.RotateTowards(
                 cannon2.transform.rotation,

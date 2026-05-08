@@ -7,6 +7,7 @@ public class autoClick : MonoBehaviour
     public GameObject point;
     public void onClick()
     {
+        if (clicker.autoClicker||data.autoclickAmount<=0) return;
         data.autoclickAmount--;
 
         data.perkUsed++;

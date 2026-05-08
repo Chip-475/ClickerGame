@@ -18,7 +18,7 @@ public class autoClickerManager : MonoBehaviour
         clicker.autoClicker = true;
         float endTime=Time.time+duration;
 
-        while (Time.time<duration)
+        while (Time.time<endTime)
         {
             if (met.activeSelf)
             {

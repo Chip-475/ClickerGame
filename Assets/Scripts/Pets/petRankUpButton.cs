@@ -22,7 +22,7 @@ public class petRankUpButton : MonoBehaviour
         {
             return false;
         }
-        foreach (var otherPet in data.pets)
+        foreach(var otherPet in data.pets)
         {
             if (otherPet.petId == pet.petId)
             {
@@ -32,11 +32,11 @@ public class petRankUpButton : MonoBehaviour
             {
                 continue;
             }
-            if (otherPet.Petlvl != stats.getMaxlvl(otherPet))
+            if (otherPet.Petlvl<stats.getMaxlvl(otherPet))
             {
                 continue;
             }
-            if (otherPet.Petlvl == 5)
+            if (otherPet.rank == 5)
             {
                 continue;
             }
@@ -69,7 +69,7 @@ public class petRankUpButton : MonoBehaviour
                 {
                     foreach (var otherPet in data.pets)
                     {
-                        if (otherPet.petId == box.pet.petId)
+                        if(otherPet.petId == box.pet.petId)
                         {
                             continue;
                         }
@@ -77,7 +77,7 @@ public class petRankUpButton : MonoBehaviour
                         {
                             continue;
                         }
-                        if (otherPet.Petlvl != stats.getMaxlvl(otherPet))
+                        if (otherPet.Petlvl< stats.getMaxlvl(otherPet))
                         {
                             continue;
                         }

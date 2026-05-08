@@ -21,7 +21,7 @@ public class data
     public static int expUPlvl=1;
     public static int meteorlvl = 1;
     public static int cannonFireRatelvl=1;
-    public static int cannonDepotlvl=1;
+    public static int cannonDepotlvl=0;
 
     //exp
     public static int xp = 0;
@@ -32,6 +32,8 @@ public class data
     public static bool cannon1;
     public static bool cannon2;
     public static int fuel1=1;
+    public static int spawnedPerkCount;
+    public static int pendingPerkCount;
     public static float fireRateReductionPerLevel;
     public static int depotBonusPerLevel;
 

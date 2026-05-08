@@ -30,7 +30,7 @@ public class perkManager : MonoBehaviour
     public TMP_Text autoClickerPerkFake_amount;
     void Update()
     {
-        data.totalPerk = data.clickPerkAmount + data.critPerkAmount + data.goldMeteorAmount + data.autoclickAmount;
+        data.totalPerk = data.clickPerkAmount + data.critPerkAmount + data.goldMeteorAmount + data.autoclickAmount + data.spawnedPerkCount + data.pendingPerkCount;
         perkCap.text = data.totalPerk + "/" + data.PerkLimit;
         {
             critPerk_amount.text = "Amount:" + data.critPerkAmount;

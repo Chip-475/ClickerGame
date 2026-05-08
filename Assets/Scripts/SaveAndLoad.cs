@@ -192,6 +192,8 @@ public class SaveAndLoad : MonoBehaviour
         data.cannon1 = false;
         data.cannon2 = false;
         data.fuel1 = 1;
+        data.spawnedPerkCount = 0;
+        data.pendingPerkCount = 0;
         data.fireRateReductionPerLevel = 0f;
         data.depotBonusPerLevel = 0;
 

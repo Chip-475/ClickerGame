@@ -13,6 +13,7 @@ public class fuelManager : MonoBehaviour
     }
     void Update()
     {
+        Debug.Log(data.fuel1);
         fuelText.text = data.fuel1.ToString() + "/" + cannon_1.totalDepot;
         fuelTextFake.text = data.fuel1.ToString() + "/" + cannon_1.totalDepot;
         if (data.cannon1)

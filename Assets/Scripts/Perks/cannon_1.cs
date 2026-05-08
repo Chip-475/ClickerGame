@@ -15,13 +15,20 @@ public class cannon_1 : MonoBehaviour
     public float baseWaitingTime = 7.5f;
     public float fireRateReductionPerLevel = 0.05f;
 
-    [Header("depot")]
-    public int baseMaxFuel1 = 100;
-    public int depotBonusPerLevel = 25;
 
     public GameObject[] perk = new GameObject[0];
 
     private bool shooting1;
+
+    private static int CurrentPerkCount()
+    {
+        return data.clickPerkAmount
+            + data.critPerkAmount
+            + data.goldMeteorAmount
+            + data.autoclickAmount
+            + data.spawnedPerkCount
+            + data.pendingPerkCount;
+    }
 
     IEnumerator _cannon1()
     {
@@ -75,8 +82,9 @@ public class cannon_1 : MonoBehaviour
 
         data.fuel1 = Mathf.Clamp(data.fuel1, 0, totalDepot);
 
-        if (shoot1 && data.fuel1 >= shootCost1 && !shooting1 && data.PerkLimit != data.totalPerk)
+        if (shoot1 && data.fuel1 >= shootCost1 && !shooting1 && data.PerkLimit > CurrentPerkCount())
         {
+            data.pendingPerkCount++;
             StartCoroutine(_cannon1());
         }
     }

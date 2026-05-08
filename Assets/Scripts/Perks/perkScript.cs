@@ -18,6 +18,30 @@ public class perkScript : MonoBehaviour
     }
 
     public perkType type;
+    private bool countedAsSpawned;
+
+    private void OnEnable()
+    {
+        if (countedAsSpawned)
+        {
+            return;
+        }
+
+        data.pendingPerkCount = Mathf.Max(0, data.pendingPerkCount - 1);
+        countedAsSpawned = true;
+        data.spawnedPerkCount++;
+    }
+
+    private void OnDestroy()
+    {
+        if (!countedAsSpawned)
+        {
+            return;
+        }
+
+        data.spawnedPerkCount = Mathf.Max(0, data.spawnedPerkCount - 1);
+        countedAsSpawned = false;
+    }
 
     IEnumerator move()
     {

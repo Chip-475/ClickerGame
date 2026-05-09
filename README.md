@@ -1,13 +1,28 @@
 ---
-*Space Clicker*
+#Space Clicker*
 ---
 
 
-# Descrizione del gioco e delle sue meccaniche 
+## Game Description
 
-il gioco consiste nel distruggerre un meteorite cliccandoci sopra che si trova al centro dello schermo per poter guadagnare  *COINS*,*inoltre all interno del gioco ci sono dei cannoni che casualmente possono sparare dei perk per il giocatore che possono essere attivati e utilizzati nel proprio menu apposito dei perk,i cannoni vanno ricaricati con i soldi e periodicamente saprano uno dei 4 perk casualmente in giro per lo schermo di gioco con un range predifinito
+The game is about destroying a meteor by tapping on it, you'll earn *COINS* every time you destroy one and there are cannons that randomly shoot perks you can collect and use in a dedicated menu.
 
-# Potenziamenti disponibili permanenti
+## Permanent Upgrades
+
+### Click Upgrades
+
+*Base Click UP: gives +1 damage for each click (maximum level is set to 75)
+
+*Crit Chance UP: gives +1% chance of dealing a critical hit (x2 damage) (maximum level is set to 50)
+
+*Experience UP: gives +10 experience for each click (maximum level is set to 75)
+
+### Cannon Upgrades
+: You have to unlock at least one of the two cannons first
+
+*Fire Rate UP: reduces time between shots (maximum level is set to 25)
+
+*Cannon Depot UP: +10 capacity to fuel deposit (maximum level is set to 50)
 
 * per poter sbloccare il potenziamento della statistica del fire rate dei cannoni bisogna prima avere i cannoni sbloccati ed anchesso é un potenziamento acquistabile nel negozio potenziamenti
 
@@ -21,21 +36,29 @@ il gioco consiste nel distruggerre un meteorite cliccandoci sopra che si trova a
 
 * il fuel massimo dei cannoni puo essere pure lui potenziata per aumentarne la capienza fino al livello 50 dove la capienza riesce a raggiungere 600.
 
-# perk temporanei
+## Perk
+
+* *Golden Meteor:* next meteor will give double the money on destruction
 
 * *meteorite d oro:* il meteorite successivo fara guadagnare al giocatore il doppio dei soldi dalla sua distruzione
+
+* *autoclicker:* for 30 second activate an autoclicker at the ratio of 10 clicks per second
 
 * *sfruttamento alieno(autoclicker): *per un periodo ti tempo limitato si ottiene un autoclicker della durata di 30 secondi che clicca
 autonomamente il meteorite e di conseguenza aiuta a distruggerlo piu in fretta 
 
+* *Crit Damage Perk:* for the next 30 seconds critacal hits will deal x3 damage
+
 * **tocco stellare: *i colpi critici inflitti al meteorite per i successivi 30 secondi sono significativamente aumentati  
+
+* *Base Click Perk*:for the next 30 seconds doubles damage dealth to the meteor 
 
 * *rabbia intergalattica* *aumenta il danno del colpo base per i successivi 30 secondi *
 
 
-# EGG AND PET RARITY
+## EGG AND PET RARITY
 
-### un altra meccanica portante del gioco sono i pet e il suo sistema di ritrovamento che sono le uova,esistono 5 tipi di uova diverse che variano in costo e percentuali di ritrovamente deigli animali che sono divisi 
+#### un altra meccanica portante del gioco sono i pet e il suo sistema di ritrovamento che sono le uova,esistono 5 tipi di uova diverse che variano in costo e percentuali di ritrovamente deigli animali che sono divisi 
 in 4 rarita:
 
 * Comune

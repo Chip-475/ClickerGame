@@ -28826,7 +28826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::sorting
   stats: {fileID: 2052279456}
-  toggle: {fileID: 0}
+  toggle: {fileID: 2052279457}
 --- !u!1 &2053047654
 GameObject:
   m_ObjectHideFlags: 0
@@ -29846,7 +29846,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2117689322
 RectTransform:
   m_ObjectHideFlags: 0

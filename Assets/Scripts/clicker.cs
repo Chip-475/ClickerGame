@@ -38,7 +38,6 @@ public class clicker : MonoBehaviour
         {
             meteor.hpMeteor = Mathf.Clamp(meteor.hpMeteor - clickStr, 0, meteor.hpMeteor);
         }
-        Debug.Log("click");
         data.xp += clickExp;
         int r = UnityEngine.Random.Range(0, 100);
         if (r < critRate)
@@ -58,7 +57,6 @@ public class clicker : MonoBehaviour
                 meteor.hpMeteor = Mathf.Clamp(meteor.hpMeteor - (clickStr * 2 * data.critDmg), 0, meteor.hpMeteor);
             }
             StartCoroutine(critText(text));
-            Debug.Log("crit");
         }
     }
 }

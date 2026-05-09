@@ -41,7 +41,8 @@ public class sortManager : MonoBehaviour
     }
     public void toggleSortOrder()
     {
-            sortOrder = !sortOrder;
+        sortOrder = !sortOrder;
+        ui.buildUI();
     }
     void Start()
     {

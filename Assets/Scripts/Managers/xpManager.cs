@@ -175,7 +175,6 @@ public class xpManager : MonoBehaviour
             egg5Btn.interactable= true;
         }
 
-        Debug.Log(data.maxEquippedPets);
         xpBar.fillAmount = (float)data.xp / data.xpMax;
         lvl.text = "level:" + data.lvl;
         exp.text = data.xp + "/" + data.xpMax;

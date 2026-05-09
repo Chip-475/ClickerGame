@@ -19,7 +19,7 @@ public class baseClickPerk : MonoBehaviour
     }
     public void onClick()
     {
-        if (isActive || data.baseUPlvl <= 0) return;
+        if (isActive || data.clickPerkAmount <= 0) return;
         StartCoroutine(ClickPerk());
     }
 }

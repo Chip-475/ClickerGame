@@ -149,7 +149,7 @@ public class gachaSystem : MonoBehaviour
         {
             egg = 5;
             pull();
-            data.money -= 50000;
+            data.money -= 100000;
         }else { return ; }
 
     }

@@ -5,9 +5,15 @@
 
 ## Game Description
 
-The game is about destroying a meteor by tapping on it, you'll earn *COINS* every time you destroy one and there are cannons that randomly shoot perks you can collect and use in a dedicated menu.
+Space Clicker is an android clicker game made with unity where the player have to destroy falling meteors by tapping on them.Each meteor destroyed rewards the player with money that can be used to buy upgrade and progress faster.
+The game include a gacha mechanic where you can use your earned moneys to pull for unique pets.
 
+Space Clicker is an android clicker game made with unity about destroying a meteor by tapping on it, you'll earn *COINS* every time you destroy one and there are cannons that randomly shoot perks you can collect and use in a dedicated menu.
+
+## Experience
+Space Clicker features a level up system where each tap give 10 experience point
 ## Permanent Upgrades
+
 
 ### Click Upgrades
 
@@ -24,50 +30,27 @@ The game is about destroying a meteor by tapping on it, you'll earn *COINS* ever
 
 *Cannon Depot UP: +10 capacity to fuel deposit (maximum level is set to 50)
 
-* per poter sbloccare il potenziamento della statistica del fire rate dei cannoni bisogna prima avere i cannoni sbloccati ed anchesso é un potenziamento acquistabile nel negozio potenziamenti
-
-* l intervallo di tempo che passa tra uno sparo dei cannoni e l altro puo cambiare e diminuire se potenziata la sua statistica il limite massimo potenziabile é 25
-
-* abbiamo anche il potenziamento al click base di +1 per ogni livello acquistato con un limite di 75
-
-* il tasso critico puo essere potenziato manualmente dall apposita schermata fino al livello 50 e dopodiche serviranno i pet per potenziare le statistiche per l equivalente di ulteriori 25 lvl per un totale di 75 lvl
-
-* poi abbiamo l exp up che é la quantita di exp guadagnata per ogni click in cui il lvl massimo é il 75
-
-* il fuel massimo dei cannoni puo essere pure lui potenziata per aumentarne la capienza fino al livello 50 dove la capienza riesce a raggiungere 600.
-
 ## Perk
 
 * *Golden Meteor:* next meteor will give double the money on destruction
 
-* *meteorite d oro:* il meteorite successivo fara guadagnare al giocatore il doppio dei soldi dalla sua distruzione
-
 * *autoclicker:* for 30 second activate an autoclicker at the ratio of 10 clicks per second
-
-* *sfruttamento alieno(autoclicker): *per un periodo ti tempo limitato si ottiene un autoclicker della durata di 30 secondi che clicca
-autonomamente il meteorite e di conseguenza aiuta a distruggerlo piu in fretta 
 
 * *Crit Damage Perk:* for the next 30 seconds critacal hits will deal x3 damage
 
-* **tocco stellare: *i colpi critici inflitti al meteorite per i successivi 30 secondi sono significativamente aumentati  
-
 * *Base Click Perk*:for the next 30 seconds doubles damage dealth to the meteor 
-
-* *rabbia intergalattica* *aumenta il danno del colpo base per i successivi 30 secondi *
 
 
 ## EGG AND PET RARITY
+#### pet are also a foundamental game mechanic,you can get them by opening different eggs,each of the 5 avaible egg have different cost and pull rates.
+pet rarities:
 
-#### un altra meccanica portante del gioco sono i pet e il suo sistema di ritrovamento che sono le uova,esistono 5 tipi di uova diverse che variano in costo e percentuali di ritrovamente deigli animali che sono divisi 
-in 4 rarita:
+* common
+* rare
+* epic 
+* leggendary
 
-* Comune
-* Raro
-* Epico 
-* Leggendario
-
-
-ci sono molti tipi di pet,tra i piu divertenti e #ironici# opppure ci sono anche i pet che sono appositamente piu #maestosi# e disegnati per essere tali.le loro caratteristiche principali oltre al design sono il bootst delle statistiche e in particolare l aumento della statistica percentuale di critico,inoltre un altro aumento delle statistiche sta nei soldi guadagnati grazie all ausilio dei pet che aumentano a dismisura in base alla rarita del pet che si possiede.quando viene comprato un pet nella schermata dedicata per lo #shop# dopo l animazione dell uovo che si apre e viene mostrato il pet ritrovato questo va nell #inventario apposito# dove possiamo vedere tutti i pet in nostro possesso ed equipaggiare/disequpaggiare i pet massimi equipaggiabili che dipendono dal livello a cui si ci trova,inoltre sempre nel menu dei pet insieme ai tasti equipaggia/disequipaggia ci sono i tasti per aumentare il livello del pet al prezzo di una certa quantita di *soldi per incrementare il boost delle satistiche che il pet fornisce e per ogni x livello che aumenta tra un rank up e l altro si puo apppunto eseguire l aumento di rank del pet avendo due pet uguali con il livello richiesto necessario al rank up fino al rank 5,il sistema di exp serve ad ottenere diverse ricomprense,ogni level up fa ottenere un ammontare proggressivo di *soldi e ad diversi intervalli man mano si sblocca/aumenta uno slot in piu per i perk e dei posti nell inventario dei pet per poterli equipaggiare/disequipaggiare*
+there are many different pets going from the funniest to the most majestic.Each pet give different boost depending on it's rarity,level and rank,they boost critical rate and give a money multiplier.You can buy eggs from the shop section,after a short animation showing what you got your pet will be added to the pet inventory that is accessable through a dropdown menu where you can equip your pet for a maximum of three pet at once,upgrade your pet and rank them up,at first your pet will reach his maximum power at level 10 but if you level tw opet of the same type to their max level you can then merge them up creating a new pet of a hightier rank with a new,bigger,level cap.
 
 
 

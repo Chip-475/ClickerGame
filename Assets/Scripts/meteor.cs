@@ -18,6 +18,8 @@ public class meteor : MonoBehaviour
     int i = 0;
     bool spawnGold = false;
     Vector2 targetPos = Vector2.zero;
+    public GameObject moneyText;
+    public GameObject safeArea;
     //for hackclub reviewer:fuck this shit don't even try to understand why this work
     void Start()
     {
@@ -134,6 +136,8 @@ public class meteor : MonoBehaviour
             reward *= 2;
             UnityEngine.Debug.Log("double reward");
         }
+        moneyFloating.reward = reward;
+        Instantiate(moneyText,safeArea.transform);
         data.money += reward;
         data.totalMoney += reward;
 

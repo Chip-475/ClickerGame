@@ -42,14 +42,13 @@ public class gachaSystem : MonoBehaviour
             if (roll < 80) return getRarity(rarity.common);
             if (roll < 95) return getRarity(rarity.rare);
             if (roll <= 100) return getRarity(rarity.epic);
-            return getRarity(rarity.legendary);
         }
         if (egg == 2)
         {
             Debug.Log("uovo2");
             int roll = Random.Range(0, 100);
-            if (roll < 75) return getRarity(rarity.common);
-            if (roll < 87) return getRarity(rarity.rare);
+            if (roll < 65) return getRarity(rarity.common);
+            if (roll < 90) return getRarity(rarity.rare);
             if (roll < 99) return getRarity(rarity.epic);
             return getRarity(rarity.legendary);
         }
@@ -57,8 +56,8 @@ public class gachaSystem : MonoBehaviour
         {
             Debug.Log("uovo3");
             int roll = Random.Range(0, 100);
-            if (roll < 65) return getRarity(rarity.common);
-            if (roll < 82) return getRarity(rarity.rare);
+            if (roll < 45) return getRarity(rarity.common);
+            if (roll < 80) return getRarity(rarity.rare);
             if (roll < 97) return getRarity(rarity.epic);
             return getRarity(rarity.legendary);
         }
@@ -66,7 +65,7 @@ public class gachaSystem : MonoBehaviour
         {
             Debug.Log("uovo4");
             int roll = Random.Range(0, 100);
-            if (roll < 30) return getRarity(rarity.common);
+            if (roll < 25) return getRarity(rarity.common);
             if (roll < 70) return getRarity(rarity.rare);
             if (roll < 95) return getRarity(rarity.epic);
             return getRarity(rarity.legendary);
@@ -75,9 +74,8 @@ public class gachaSystem : MonoBehaviour
         {
             Debug.Log("uovo5");
             int roll = Random.Range(0, 100);
-            if (roll < 20) return getRarity(rarity.common);
-            if (roll < 60) return getRarity(rarity.rare);
-            if (roll < 90) return getRarity(rarity.epic);
+            if (roll < 50) return getRarity(rarity.rare);
+            if (roll < 80) return getRarity(rarity.epic);
             return getRarity(rarity.legendary);
         }
         return null;

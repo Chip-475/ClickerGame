@@ -7,7 +7,10 @@ public class sortManager : MonoBehaviour
     public Button rankButton;
     public Button levelButton;
     public PetUI ui;
+    public Sprite toggleSort1;
+    public Sprite toggleSort2;
     public bool sortOrder;
+    public Image toggleSprite;
     public enum sorting
     {
         rarity,
@@ -42,11 +45,20 @@ public class sortManager : MonoBehaviour
     public void toggleSortOrder()
     {
         sortOrder = !sortOrder;
+        if( sortOrder )
+        {
+            toggleSprite.sprite = toggleSort1;
+        }
+        else
+        {
+            toggleSprite.sprite = toggleSort2;
+        }
         ui.buildUI();
     }
     void Start()
     {
         type= sorting.rarity;
+        toggleSprite.sprite = toggleSort1;
         sortOrder = true;
     }
 }

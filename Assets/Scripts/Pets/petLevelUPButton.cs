@@ -22,7 +22,7 @@ public class petLevelUPButton : MonoBehaviour
         lvl=stats.getLvl(box.pet);
         maxLvl=stats.getMaxlvl(box.pet);
         costText.text=cost.ToString();
-        if (cost < data.money&&lvl<maxLvl)
+        if (cost <= data.money&&lvl<maxLvl)
         {
             box.lvlUPButton.SetActive(true);
             box.lvlUPButtonFake.SetActive(false);

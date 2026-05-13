@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4191395879437902528}
   - component: {fileID: 1207100178158112492}
   - component: {fileID: 218529368877503822}
-  - component: {fileID: 6802443408183862242}
+  - component: {fileID: 7216563883556591814}
   m_Layer: 5
   m_Name: sellButton
   m_TagString: Untagged
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6802443408183862242}
+      - m_Target: {fileID: 7216563883556591814}
         m_TargetAssemblyTypeName: sellPet, Assembly-CSharp
         m_MethodName: Sell
         m_Mode: 1
@@ -134,7 +134,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &6802443408183862242
+--- !u!114 &7216563883556591814
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

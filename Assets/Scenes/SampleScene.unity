@@ -28420,6 +28420,7 @@ GameObject:
   - component: {fileID: 2052279456}
   - component: {fileID: 2052279457}
   - component: {fileID: 2052279458}
+  - component: {fileID: 2052279459}
   m_Layer: 0
   m_Name: gameManager
   m_TagString: Untagged
@@ -28834,6 +28835,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::sorting
   stats: {fileID: 2052279456}
   toggle: {fileID: 2052279457}
+--- !u!114 &2052279459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052279436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee475f1312802904caadfa7817edc0c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::notificationManager
+  ChannelID: game_reminders
 --- !u!1 &2053047654
 GameObject:
   m_ObjectHideFlags: 0

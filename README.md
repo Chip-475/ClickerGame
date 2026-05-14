@@ -21,7 +21,9 @@
 
 * **Fire Rate UP:** *reduces time between shots (maximum level is set to 25)*
 
-* **Base Click UP:** *gives +1 damage for each click (maximum level is set to 75)*
+* **Cannon Depot UP:** *+10 capacity to fuel deposit (maximum level is set to 50)*
+
+
 
 ![](./public/cannon_up.jpeg)
 
@@ -31,7 +33,7 @@
 
 * **Experience UP:** *gives +10 experience for each click (maximum level is set to 75)*
 
-* **Cannon Depot UP:** *+10 capacity to fuel deposit (maximum level is set to 50)*
+* **Base Click UP:** *gives +1 damage for each click (maximum level is set to 75)*
 
 ![](./public/click_up.jpeg)
 
@@ -131,7 +133,7 @@ pet rarities:
 |   1  | $1,510 | $2,270 | $3,780 | $6,050    |
 
 
-# now a bit of maths
+# Now a bit of maths
 
 
 ## pet upgrade cost
@@ -175,7 +177,7 @@ public int UpgradeCost(PetInstance pet)
 
 --------------------------------------------------------------------------------------
 
-## level up experience scaling
+## Level up experience scaling
 
 ```csharp
 if (data.xp >= data.xpMax)

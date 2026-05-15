@@ -5,7 +5,7 @@
 
 # Game Description and of its mechanics
 
-*Space Clicker is an android clicker game made with Unity where the player have to destroy falling meteors by tapping on them.Each meteor destroyed rewards the player with money that can be used to buy upgrade and progress faster. The game include a gacha mechanic where you can use your earned moneys to pull for unique pets.*
+*Space Clicker is an android clicker game made with Unity where the player have to destroy falling meteors by tapping on them. Each meteor destroyed rewards the player with money that can be used to buy upgrade and progress faster. The game include a gacha mechanic where you can use your earned moneys to pull for unique pets.*
 
 
 **Experience**

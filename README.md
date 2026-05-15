@@ -9,7 +9,7 @@
 
 
 **Experience**
-*Space Clicker features a level up system where each tap give 10 experience point*
+*Space Clicker features a level up system where each tap give 10 experience points*
 
 ![](./public/exp.jpeg)
 
@@ -38,15 +38,15 @@
 ![](./public/click_up.jpeg)
 
 
-# Temporary perk
+# Temporary perks
 
 * **Golden Meteor:** next meteor will give double the money on destruction
 
-* **Alien exploitation(autoclicker)**: for 30 second activate an autoclicker at the ratio of 10 clicks per second
+* **Alien exploitation(autoclicker)**: for 30 second activate an autoclicker at the rate of 10 clicks per second
 
-* **starry touch(Crit Damage Perk):** *for the next 30 seconds critacal hits will deal x3 damage*  
+* **Starry touch(Crit Damage Perk):** *for the next 30 seconds critical hits will deal x3 damage*  
 
-* **intergalactic rage(Base Click Perk):** *for the next 30 seconds doubles damage dealth to the meteor*
+* **Intergalactic rage(Base Click Perk):** *for the next 30 seconds doubles damage dealt to the meteor*
 
 
 ![](./public/perk_shop.jpeg)
@@ -55,9 +55,9 @@
 
 # EGG AND PET RARITY
 
-### pet are also a foundamental game mechanic,you can get them by opening different eggs,each of the 5 avaible egg have different cost and pull rates.
+### Pets are also a fundamental game mechanic.You can get them by opening different eggs, each of the 5 available eggs have different costs and pull rates.
 
-pet rarities:
+Pet rarities:
 
 * Common
 * Rare
@@ -65,9 +65,9 @@ pet rarities:
 * Leggendary
 
 
-*there are many different pets going from the funniest to the most majestic.Each pet give different boost depending on it's rarity,level and rank,they boost critical rate and give a money multiplier.*
+*There are many different pets going from the funniest to the most majestic. Each pet gives different boosts depending on its rarity,level and rank,they boost critical rate and give a money multiplier.*
 
-*You can buy eggs from the shop section*
+*You can buy eggs from the shop section.*
 
 ![](./public/pet_shop.jpeg)
 
@@ -112,7 +112,7 @@ pet rarities:
 
 
 
- *will be added to the pet inventory that is accessable through a dropdown menu where you can equip your pet for a maximum of three pet at once*
+ *will be added to the pets inventory that is accessible through a dropdown menu where you can equip your pet for a maximum of three pet at once*
  
  ![](./public/pet_menu.jpeg)
 

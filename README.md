@@ -9,7 +9,7 @@
 
 
 **Experience**
-*Space Clicker features a level up system where each tap give 10 experience points*
+*Space Clicker features a level up system where each tap give 10 experience points.*
 
 ![](./public/exp.jpeg)
 
@@ -17,11 +17,11 @@
 # Permanent Upgrades
 
 
-* **Cannon Upgrades:** *You have to unlock at least one of the two cannons first*
+* **Cannon Upgrades:** *You have to unlock at least one of the two cannons first.*
 
-* **Fire Rate UP:** *reduces time between shots (maximum level is set to 25)*
+* **Fire Rate UP:** *reduces time between shots (maximum level is set to 25).*
 
-* **Cannon Depot UP:** *+10 capacity to fuel deposit (maximum level is set to 50)*
+* **Cannon Depot UP:** *+10 capacity to fuel deposit (maximum level is set to 50).*
 
 
 
@@ -29,24 +29,24 @@
 
 
 
-* **Crit Chance UP:** *gives +1% chance of dealing a critical hit (x2 damage) (maximum level is set to 50)*
+* **Crit Chance UP:** *gives +1% chance of dealing a critical hit (x2 damage) (maximum level is set to 50).*
 
-* **Experience UP:** *gives +10 experience for each click (maximum level is set to 75)*
+* **Experience UP:** *gives +10 experience for each click (maximum level is set to 75).*
 
-* **Base Click UP:** *gives +1 damage for each click (maximum level is set to 75)*
+* **Base Click UP:** *gives +1 damage for each click (maximum level is set to 75).*
 
 ![](./public/click_up.jpeg)
 
 
 # Temporary perks
 
-* **Golden Meteor:** next meteor will give double the money on destruction
+* **Golden Meteor:** *next meteor will give double the money on destruction.*
 
-* **Alien exploitation(autoclicker)**: for 30 second activate an autoclicker at the rate of 10 clicks per second
+* **Alien exploitation(autoclicker):** *for 30 second activate an autoclicker at the rate of 10 clicks per second.*
 
-* **Starry touch(Crit Damage Perk):** *for the next 30 seconds critical hits will deal x3 damage*  
+* **Starry touch(Crit Damage Perk):** *for the next 30 seconds critical hits will deal x3 damage.*  
 
-* **Intergalactic rage(Base Click Perk):** *for the next 30 seconds doubles damage dealt to the meteor*
+* **Intergalactic rage(Base Click Perk):** *for the next 30 seconds doubles damage dealt to the meteor.*
 
 
 ![](./public/perk_shop.jpeg)
@@ -55,7 +55,7 @@
 
 # EGG AND PET RARITY
 
-### Pets are also a fundamental game mechanic.You can get them by opening different eggs, each of the 5 available eggs have different costs and pull rates.
+### Pets are also a fundamental game mechanic. You can get them by opening 5 different eggs, each of them having different costs and pull rates.
 
 Pet rarities:
 
@@ -65,7 +65,7 @@ Pet rarities:
 * Leggendary
 
 
-*There are many different pets going from the funniest to the most majestic. Each pet gives different boosts depending on its rarity,level and rank,they boost critical rate and give a money multiplier.*
+*There are many different pets going from the funniest to the most majestic. Each pet gives different boosts depending on its rarity, level and rank. They boost critical rate and give a money multiplier.*
 
 *You can buy eggs from the shop section.*
 
@@ -106,17 +106,17 @@ Pet rarities:
 
 
 
-*after a short animation showing what you got your pet*
+*after a short animation showing what you got,*
 
 ![](./public/aperturauovo.gif)
 
 
 
- *will be added to the pets inventory that is accessible through a dropdown menu where you can equip your pet for a maximum of three pet at once*
+your pet will be added to the inventory that is accessible through the dropdown menu, where you can equip your pet up to a maximum of three pets at once.*
  
  ![](./public/pet_menu.jpeg)
 
- upgrade your pet and rank them up,at first your pet will reach his maximum power at level 10 but if you level two pet of the same type to their max level you can then merge them up creating a new pet of a hightier rank with a new,bigger,level cap.*
+Upgrade your pet and rank them up! At first your pet will reach its maximum power at level 10, but if you level up two pets of the same type to their max level you can then merge them to create a new pet of a higher rank with a new, bigger level cap.*
  
 
 | Level | Common | Rare   | Epic   | Legendary |
@@ -165,7 +165,7 @@ public int UpgradeCost(PetInstance pet)
     return finalCost;
 }
 ```
-*upgrade cost start from 100 coins and increase by 60% for each rarity (common doesn't increase base cost) than another 35% for every rank going from 1 to 5 lastly current pet level also is used to calc next level cost,this cost is rounded to the nearest 10 multiple*
+*Upgrade costs start from 100 coins and increases by 60% for each rarity(common doesn't increase base cost), then another 35% for each rank, going from 1 to 5. Lastly, current pet level is also used to calculate upgrade cost, this cost is then rounded to the nearest multiple of 10.*
 
 
 
@@ -194,4 +194,4 @@ if (data.xp >= data.xpMax)
 }
 ```
 ![xp scaling graph](./public/grafic_xp.png)
-*required experience scales with player level to 1,65(value found with various balancing tests)multiplied with a coefficient of 35 also obtained by testing,allat rounded to the nearest int*
+*Required experience scales with player level to 1,65(value found with various balancing tests) multiplied by a coefficient of 35(also obtained by testing), and rounded to the nearest integer.*

@@ -198,10 +198,10 @@ if (data.xp >= data.xpMax)
 ## AI Usage Disclosure
 
 AI tools were used for:
-- balancing formulas
-- debug code
-- optimizing code with unity specific function
-No AI-generated image or sounds were directly used in the final game.
+- Balancing formulas
+- Debug code
+- Optimizing code with Unity specific functions
+No AI-generated images or sounds were directly used in the final game.
 
 ## License
 

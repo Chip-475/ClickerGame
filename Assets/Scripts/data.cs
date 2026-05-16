@@ -50,6 +50,10 @@ public class data
     public static float globalCritMod;
     public static int totalOpenedEggs;
 
+    //offline reward
+    public static int offlineBonusReward;
+    public static double offlineBonusSeconds;
+
     //music
     public static float master = 1f;
     public static float music = 1f;

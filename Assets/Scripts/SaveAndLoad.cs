@@ -10,6 +10,8 @@ public class SaveAndLoad : MonoBehaviour
     private static SaveAndLoad instance;
     private static readonly string SavePath = Path.Combine(Application.persistentDataPath, "save.json");
     private static bool hasLoaded;
+    public static long LastLoadedUtcTicks { get; private set; }
+    public static long LastSavedUtcTicks { get; private set; }
 
     [SerializeField] private float autoSaveInterval = 5f;
 
@@ -54,6 +56,14 @@ public class SaveAndLoad : MonoBehaviour
         SaveNow();
     }
 
+    private void OnApplicationPause(bool pauseStatus)
+    {
+        if (pauseStatus)
+        {
+            SaveNow();
+        }
+    }
+
     public static void SaveNow()
     {
         SaveFileData saveData = new SaveFileData
@@ -93,9 +103,11 @@ public class SaveAndLoad : MonoBehaviour
             sfx = data.sfx,
             clickStr = clicker.clickStr,
             clickExp = clicker.clickExp,
+            lastSaveUtcTicks = DateTime.UtcNow.Ticks,
             pets = new List<PetInstance>(data.pets)
         };
 
+        LastSavedUtcTicks = saveData.lastSaveUtcTicks;
         string json = JsonUtility.ToJson(saveData, true);
         File.WriteAllText(SavePath, json);
     }
@@ -104,6 +116,8 @@ public class SaveAndLoad : MonoBehaviour
     {
         if (!File.Exists(SavePath))
         {
+            LastLoadedUtcTicks = 0;
+            LastSavedUtcTicks = 0;
             hasLoaded = true;
             if (data.pets == null)
             {
@@ -157,6 +171,8 @@ public class SaveAndLoad : MonoBehaviour
         clicker.clickStr = saveData.clickStr;
         clicker.clickExp = saveData.clickExp;
         data.pets = saveData.pets ?? new List<PetInstance>();
+        LastLoadedUtcTicks = saveData.lastSaveUtcTicks;
+        LastSavedUtcTicks = saveData.lastSaveUtcTicks;
 
         hasLoaded = true;
     }
@@ -212,6 +228,9 @@ public class SaveAndLoad : MonoBehaviour
         data.globalMoneyMod = 1f;
         data.globalCritMod = 0f;
         data.totalOpenedEggs = 0;
+        data.offlineBonusReward = 0;
+        data.offlineBonusSeconds = 0;
+        LastLoadedUtcTicks = 0;
 
         data.master = 1f;
         data.music = 1f;
@@ -274,5 +293,6 @@ public class SaveFileData
     public float sfx;
     public int clickStr;
     public int clickExp;
+    public long lastSaveUtcTicks;
     public List<PetInstance> pets = new List<PetInstance>();
 }

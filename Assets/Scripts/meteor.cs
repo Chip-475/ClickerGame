@@ -20,7 +20,6 @@ public class meteor : MonoBehaviour
     Vector2 targetPos = Vector2.zero;
     public GameObject moneyText;
     public GameObject safeArea;
-    //for hackclub reviewer:fuck this shit don't even try to understand why this work
     void Start()
     {
         ResetMeteor();

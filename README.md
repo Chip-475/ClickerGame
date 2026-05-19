@@ -195,7 +195,7 @@ if (data.xp >= data.xpMax)
 ```
 ![xp scaling graph](./public/grafic_xp.png)
 *Required experience scales with player level to 1,65(value found with various balancing tests) multiplied by a coefficient of 35(also obtained by testing), and rounded to the nearest integer.*
-## AI Usage Disclosure
+# AI Usage Disclosure
 
 AI tools were used for:
 - Balancing formulas
@@ -203,7 +203,7 @@ AI tools were used for:
 - Optimizing code with Unity specific functions
 No AI-generated images or sounds were directly used in the final game.
 
-## License
+# License
 
 This project is proprietary software.
 The repository is public for portfolio and viewing purposes only.

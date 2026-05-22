@@ -195,6 +195,10 @@ if (data.xp >= data.xpMax)
 ```
 ![xp scaling graph](./public/grafic_xp.png)
 *Required experience scales with player level to 1,65(value found with various balancing tests) multiplied by a coefficient of 35(also obtained by testing), and rounded to the nearest integer.*
+
+# How to install
+Open the linked itch.io page on the product and download the build.
+
 # AI Usage Disclosure
 
 AI tools were used for:

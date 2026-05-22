@@ -38,10 +38,10 @@ public class data
     public static int depotBonusPerLevel;
 
     //perklist
-    public static int critPerkAmount = 1;
-    public static int clickPerkAmount = 1;
-    public static int goldMeteorAmount = 1;
-    public static int autoclickAmount = 1;
+    public static int critPerkAmount = 0;
+    public static int clickPerkAmount = 0;
+    public static int goldMeteorAmount = 0;
+    public static int autoclickAmount = 0;
 
     //pets
     public static List<PetInstance> pets= new List<PetInstance>();

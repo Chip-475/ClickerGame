@@ -7,13 +7,8 @@ public class fuelManager : MonoBehaviour
     public GameObject fuelButtonFake;
     public TMP_Text fuelText;
     public TMP_Text fuelTextFake;
-    void Start()
-    {
-        
-    }
     void Update()
     {
-        Debug.Log(data.fuel1);
         fuelText.text = data.fuel1.ToString() + "/" + cannon_1.totalDepot;
         fuelTextFake.text = data.fuel1.ToString() + "/" + cannon_1.totalDepot;
         if (data.cannon1)

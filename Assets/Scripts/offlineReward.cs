@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class offlineReward : MonoBehaviour
 {
+    private const int UnlockLevel = 10;
     private const double MinOfflineSeconds = 60;
     private const double MaxOfflineSeconds = 4d * 60d * 60d;
     private const float OfflineEfficiency = 0.25f;
@@ -69,6 +70,11 @@ public class offlineReward : MonoBehaviour
     {
         ResetState();
 
+        if (data.lvl < UnlockLevel)
+        {
+            return;
+        }
+
         if (savedUtcTicks <= 0)
         {
             return;
@@ -119,7 +125,7 @@ public class offlineReward : MonoBehaviour
         popupObject.transform.SetAsLastSibling();
 
         TMP_Text rewardText = popupObject.GetComponentInChildren<TMP_Text>();
-        rewardText.text = $"Guadagno offline\n+{data.offlineBonusReward} Money\n{FormatOfflineTime(data.offlineBonusSeconds)}";
+        rewardText.text = $"Offline earnings:\n+{data.offlineBonusReward} Money\n{FormatOfflineTime(data.offlineBonusSeconds)}";
 
         if (popupCoroutine != null)
         {
@@ -196,7 +202,7 @@ public class offlineReward : MonoBehaviour
     {
         TimeSpan time = TimeSpan.FromSeconds(seconds);
 
-        if (time.TotalHours >= 1d)
+        if (time.TotalHours >= 1)
         {
             return $"{(int)time.TotalHours}h {time.Minutes}m offline";
         }

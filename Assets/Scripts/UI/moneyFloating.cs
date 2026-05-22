@@ -12,7 +12,7 @@ public class moneyFloating : MonoBehaviour
     {
         Destroy(gameObject,1.5f);
         text = GetComponent<TMP_Text>();
-        text.text=reward.ToString();
+        text.text="+"+reward.ToString();
         rect= GetComponent<RectTransform>();
         StartCoroutine(floating());
     }

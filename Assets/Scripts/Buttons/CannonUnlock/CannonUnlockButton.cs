@@ -20,7 +20,7 @@ public class CannonUnlockButton : MonoBehaviour
 
             }
         }
-        if(data.cannon2==false)
+        else if(data.cannon2==false)
         {
             if (data.money >= 5000)
             {

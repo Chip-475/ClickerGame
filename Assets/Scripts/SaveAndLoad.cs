@@ -218,10 +218,10 @@ public class SaveAndLoad : MonoBehaviour
         data.fireRateReductionPerLevel = 0f;
         data.depotBonusPerLevel = 0;
 
-        data.critPerkAmount = 1;
-        data.clickPerkAmount = 1;
-        data.goldMeteorAmount = 1;
-        data.autoclickAmount = 1;
+        data.critPerkAmount = 0;
+        data.clickPerkAmount = 0;
+        data.goldMeteorAmount = 0;
+        data.autoclickAmount = 0;
 
         data.pets = new List<PetInstance>();
         data.maxEquippedPets = 0;

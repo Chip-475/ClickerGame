@@ -204,7 +204,7 @@ public class xpManager : MonoBehaviour
                     levelUpText.text = "Level: " + data.lvl + "<br>Obtained:" + data.lvl * 50 + "<br>New Perk Cap:" + data.PerkLimit + "<br>Pet Unlocked";
                     break;
                 case 10:
-                    levelUpText.text = "Level: " + data.lvl + "<br>Obtained:" + data.lvl * 50 + "<br>New Perk Cap:" + data.PerkLimit + "<br>2nd Pet Slot Unlocked";
+                    levelUpText.text = "Level: " + data.lvl + "<br>Obtained:" + data.lvl * 50 + "<br>New Perk Cap:" + data.PerkLimit + "<br>2nd Pet Slot Unlocked<br>Offline Reward Unlocked";
                     break;
                 case 20:
                     levelUpText.text = "Level: " + data.lvl + "<br>Obtained:" + data.lvl * 50 + "<br>New Perk Cap:" + data.PerkLimit + "<br>3rd Pet Slot Unlocked";
